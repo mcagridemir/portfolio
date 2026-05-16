@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — mcagridemir</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg: #F5F4F0; --text: #111111; --muted: #666666; --border: #DDDDD8; --accent: #1558D6; }
+    body { font-family: 'IBM Plex Mono', monospace; background: var(--bg); color: var(--text); min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2rem; padding: 2rem; text-align: center;
+      background-image: radial-gradient(var(--border) 1px, transparent 1px); background-size: 28px 28px; }
+    .code { font-family: 'Cormorant Garamond', serif; font-size: clamp(100px, 20vw, 180px); font-weight: 300; line-height: 1; color: var(--text); opacity: 0.15; }
+    .title { font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); }
+    .msg { font-size: 12px; color: var(--muted); letter-spacing: 0.05em; max-width: 300px; line-height: 1.8; }
+    .home-link { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text); text-decoration: none; border: 1px solid var(--border); padding: 12px 28px; transition: all 0.2s; margin-top: 1rem; }
+    .home-link:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="code">404</div>
+  <p class="title">Page not found</p>
+  <p class="msg">The page you're looking for doesn't exist — or maybe it moved.</p>
+  <a href="/" class="home-link">← Back to portfolio</a>
+</body>
+</html>
