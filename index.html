@@ -455,26 +455,26 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
     <h1 class="hero-name">Muhammed<br>Çağrı <em>Demir</em></h1>
     <p class="hero-desc" data-i18n="hero_desc">Senior iOS engineer with 6+ years delivering banking and e-commerce apps for 250K+ users. Building toward machine learning and AI&nbsp;—&nbsp;energy prediction pipelines, medical imaging models, on-device inference.</p>
     <div class="hero-btns">
-      <a href="#contact" class="btn btn-primary">Get in touch</a>
-      <a href="#projects" class="btn btn-secondary">View work ↓</a>
+      <a href="#contact" class="btn btn-primary" data-i18n="btn_contact">Get in touch</a>
+      <a href="#projects" class="btn btn-secondary" data-i18n="btn_viewwork">View work ↓</a>
     </div>
   </div>
   <div class="hero-stats">
     <div class="hero-stat">
       <div class="stat-num" data-target="6" data-suffix="+">6+</div>
-      <div class="stat-label">Years experience</div>
+      <div class="stat-label" data-i18n="stat_years_exp">Years experience</div>
     </div>
     <div class="hero-stat">
       <div class="stat-num" data-target="250" data-suffix="K+">250K+</div>
-      <div class="stat-label">App users</div>
+      <div class="stat-label" data-i18n="stat_users">App users</div>
     </div>
     <div class="hero-stat">
       <div class="stat-num" data-target="9" data-suffix="">9</div>
-      <div class="stat-label">Apps shipped</div>
+      <div class="stat-label" data-i18n="stat_apps">Apps shipped</div>
     </div>
     <div class="hero-stat">
       <div class="stat-num" data-target="5" data-suffix="+">5+</div>
-      <div class="stat-label">Countries</div>
+      <div class="stat-label" data-i18n="stat_countries">Countries</div>
     </div>
   </div>
 </section>
@@ -611,13 +611,13 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
 <section id="projects" aria-label="Projects">
   <span class="sec-num">03</span>
   <p class="sec-eyebrow" data-i18n="nav_projects">Projects</p>
-  <h2 class="sec-title">Work &amp; Projects</h2>
+  <h2 class="sec-title" data-i18n="title_projects">Work &amp; Projects</h2>
   <p class="sec-intro" data-i18n="projects_intro">Production apps shipped for global brands and financial institutions, plus personal machine learning projects.</p>
   <div class="filter-bar">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="ios">iOS</button>
-    <button class="filter-btn" data-filter="aiml">AI / ML</button>
-    <button class="filter-btn" data-filter="oss">Open Source</button>
+    <button class="filter-btn active" data-filter="all" data-i18n="filter_all">All</button>
+    <button class="filter-btn" data-filter="ios" data-i18n="filter_ios">iOS</button>
+    <button class="filter-btn" data-filter="aiml" data-i18n="filter_aiml">AI / ML</button>
+    <button class="filter-btn" data-filter="oss" data-i18n="filter_oss">Open Source</button>
   </div>
   <div class="proj-grid" id="projGrid">
     <div class="proj-card featured fade-up" data-cat="ios">
@@ -726,10 +726,10 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
   <h2 class="sec-title" data-i18n="title_experience">Work History</h2>
   <p class="sec-intro" data-i18n="exp_intro">6+ years across fintech, global retail, and energy tech — from İzmir to Istanbul, with teams spanning Europe, the UK, the Middle East, and the Balkans.</p>
   <div class="stats-row">
-    <div class="stat-cell"><div class="stat-cell-num">6+</div><div class="stat-cell-lbl">Years</div></div>
-    <div class="stat-cell"><div class="stat-cell-num">3</div><div class="stat-cell-lbl">Employers</div></div>
-    <div class="stat-cell"><div class="stat-cell-num">9</div><div class="stat-cell-lbl">Apps Shipped</div></div>
-    <div class="stat-cell"><div class="stat-cell-num">5</div><div class="stat-cell-lbl">Countries</div></div>
+    <div class="stat-cell"><div class="stat-cell-num">6+</div><div class="stat-cell-lbl" data-i18n="exp_stat_years">Years</div></div>
+    <div class="stat-cell"><div class="stat-cell-num">3</div><div class="stat-cell-lbl" data-i18n="exp_stat_employers">Employers</div></div>
+    <div class="stat-cell"><div class="stat-cell-num">9</div><div class="stat-cell-lbl" data-i18n="exp_stat_apps">Apps Shipped</div></div>
+    <div class="stat-cell"><div class="stat-cell-num">5</div><div class="stat-cell-lbl" data-i18n="exp_stat_countries">Countries</div></div>
   </div>
   <div class="timeline">
     <div class="tl-item fade-up">
@@ -737,7 +737,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
       <div class="tl-date"><div class="tl-year">2022</div>Dec 2022 — Present</div>
       <div>
         <h3 class="tl-title">iOS Engineer</h3>
-        <p class="tl-sub">OBSS &amp; BKT · Istanbul / Tirana, Albania (Remote) <span class="current">Current</span></p>
+        <p class="tl-sub">OBSS &amp; BKT · Istanbul / Tirana, Albania (Remote) <span class="current" data-i18n="badge_current">Current</span></p>
         <p class="tl-desc">Built and maintained iOS banking apps for 250K+ users using Clean Architecture and SwiftUI. Delivered 99%+ bug-free releases through unit and UI testing. Integrated QR payments, RIA Money Transfer, JWT authentication, Keychain credential storage, and SSL pinning for end-to-end security. Enhanced UX with WidgetKit home screen widgets and Lottie animation sequences. Managed CI/CD pipelines with Bitrise in an Agile environment across Istanbul, Albania, and remote Europe.</p>
         <div class="tl-tags"><span class="tech-tag">Swift</span><span class="tech-tag">SwiftUI</span><span class="tech-tag">Clean Arch</span><span class="tech-tag">Bitrise</span><span class="tech-tag">Firebase</span><span class="tech-tag">JWT</span><span class="tech-tag">SSL Pinning</span><span class="tech-tag">WidgetKit</span></div>
       </div>
@@ -810,7 +810,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
     </div>
   </div>
 
-  <h3 style="font-family:var(--display);font-size:clamp(26px,3.5vw,40px);font-weight:800;letter-spacing:-.02em;margin-top:4rem;margin-bottom:1.5rem">Languages</h3>
+  <h3 style="font-family:var(--display);font-size:clamp(26px,3.5vw,40px);font-weight:800;letter-spacing:-.02em;margin-top:4rem;margin-bottom:1.5rem" data-i18n="languages_title">Languages</h3>
   <div class="lang-grid">
     <div class="lang-item fade-up">
       <div class="lang-name">Turkish</div>
@@ -831,7 +831,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
     </div>
   </div>
 
-  <h3 style="font-family:var(--display);font-size:clamp(22px,3vw,34px);font-weight:800;letter-spacing:-.02em;margin-bottom:1.25rem">Certificates</h3>
+  <h3 style="font-family:var(--display);font-size:clamp(22px,3vw,34px);font-weight:800;letter-spacing:-.02em;margin-bottom:1.25rem" data-i18n="certs_title">Certificates</h3>
   <div class="cert-list">
     <div class="cert-item fade-up"><span class="cert-name">KMK Zeugnisbewertung — Equivalent to German Bachelor's (Reg.-Nr. LN2025/77597-1)</span><span class="cert-meta">KMK · Aug 2025</span></div>
     <div class="cert-item fade-up"><span class="cert-name">telc Deutsch C1 Hochschule — Befriedigend · 154/214 Pkt. (Schriftlich 115/166 · Mündlich 39/48)</span><span class="cert-meta">telc · Mar 2026</span></div>
@@ -1037,13 +1037,17 @@ const translations = {
     hero_tag:'Senior iOS Engineer · AI / ML · Istanbul',
     hero_desc:'Senior iOS engineer with 6+ years delivering banking and e-commerce apps for 250K+ users. Building toward machine learning and AI — energy prediction pipelines, medical imaging models, on-device inference.',
     available_pill:'Available · İstanbul',
-    title_about:'Who I am',title_skills:'Technical Expertise',title_experience:'Work History',title_education:'Academic Background',title_references:'Recommendations',title_beyond:'Outside of Work',title_contact:"Get in Touch",
+    title_about:'Who I am',title_skills:'Technical Expertise',title_projects:'Work & Projects',title_experience:'Work History',title_education:'Academic Background',title_references:'Recommendations',title_beyond:'Outside of Work',title_contact:"Get in Touch",
     about_p1:'Senior iOS Engineer at OBSS & BKT — building the banking apps that hundreds of thousands of customers in Kosovo and Albania rely on every day.',
     about_p2:"Over six-plus years I've shipped production apps for global brands — <strong>Nike, Under Armour, Bloomingdale's</strong> — and enterprise banking clients, leading architecture decisions and CI/CD pipelines in multinational teams across Europe, the UK, Dubai, and Albania.",
     about_p3:'Alongside iOS, my work has naturally taken me toward machine learning. At <strong>carbon.ninja</strong> I built ETL pipelines and trained forecasting models. I\'ve explored deep learning — a pneumonia detection model using <strong>EfficientNet-B0 with Grad-CAM</strong> — and brought on-device inference into iOS via <strong>Core ML</strong>.',
     about_p4:'My degree has been officially evaluated by the <strong>KMK Zentralstelle</strong> as equivalent to a German Bachelor\'s. I hold a <strong>telc Deutsch C1 Hochschule</strong> certificate (March 2026) and <strong>IELTS Academic 6.5</strong> (April 2026).',
     pull_quote:'"Six years in, I care about code that ships, teams that communicate, and problems worth solving."',
     now_label:'Now',now_job:'iOS Engineer @ OBSS & BKT — Banking',now_ml:'Exploring deep learning & Core ML',now_location:'Based in İstanbul, Turkey',
+    btn_contact:'Get in touch',btn_viewwork:'View work ↓',
+    stat_years_exp:'Years experience',stat_users:'App users',stat_apps:'Apps shipped',stat_countries:'Countries',
+    exp_stat_years:'Years',exp_stat_employers:'Employers',exp_stat_apps:'Apps Shipped',exp_stat_countries:'Countries',
+    badge_current:'Current',filter_all:'All',filter_ios:'iOS',filter_aiml:'AI / ML',filter_oss:'Open Source',
     skills_intro:'Core skills are highlighted in amber — tools I use every day in production. Everything else is actively applied in professional or personal projects.',
     currently_exploring:'Currently Exploring',
     projects_intro:'Production apps shipped for global brands and financial institutions, plus personal machine learning projects.',
@@ -1065,13 +1069,17 @@ const translations = {
     hero_tag:'Senior iOS Engineer · KI / ML · Istanbul',
     hero_desc:'Senior iOS Engineer mit 6+ Jahren Erfahrung in Banking- und E-Commerce-Apps für 250K+ Nutzer. Ich baue auf Machine Learning und KI hin — Energievorhersage-Pipelines, medizinische Bildgebung, On-Device-Inferenz.',
     available_pill:'Verfügbar · İstanbul',
-    title_about:'Über mich',title_skills:'Technische Kenntnisse',title_experience:'Berufserfahrung',title_education:'Akademischer Hintergrund',title_references:'Empfehlungen',title_beyond:'Außerhalb der Arbeit',title_contact:'Kontakt aufnehmen',
+    title_about:'Über mich',title_skills:'Technische Kenntnisse',title_projects:'Arbeiten & Projekte',title_experience:'Berufserfahrung',title_education:'Akademischer Hintergrund',title_references:'Empfehlungen',title_beyond:'Außerhalb der Arbeit',title_contact:'Kontakt aufnehmen',
     about_p1:'Senior iOS Engineer bei OBSS & BKT — ich entwickle die Banking-Apps, auf die hunderttausende Kunden in Kosovo und Albanien täglich angewiesen sind.',
     about_p2:"In mehr als sechs Jahren habe ich Produktions-Apps für globale Marken geliefert — <strong>Nike, Under Armour, Bloomingdale's</strong> — sowie für Enterprise-Banking-Kunden, wobei ich Architekturentscheidungen und CI/CD-Pipelines in multinationalen Teams leitete.",
     about_p3:'Neben iOS hat mich meine Arbeit natürlich in Richtung Machine Learning und Daten geführt. Bei <strong>carbon.ninja</strong> habe ich automatisierte ETL-Pipelines aufgebaut und Vorhersagemodelle trainiert. Ich habe Deep Learning erkundet — ein Pneumonie-Erkennungsmodell mit <strong>EfficientNet-B0 und Grad-CAM</strong> — und On-Device-Inferenz in iOS via <strong>Core ML</strong> integriert.',
     about_p4:'Mein türkisches Abschlusszeugnis wurde von der <strong>KMK Zentralstelle</strong> als äquivalent zu einem deutschen Bachelorabschluss anerkannt. Ich besitze das <strong>telc Deutsch C1 Hochschule</strong>-Zertifikat (März 2026) sowie <strong>IELTS Academic 6.5</strong> (April 2026).',
     pull_quote:'"Nach sechs Jahren kümmere ich mich um Code, der läuft, Teams die kommunizieren, und Probleme, die es wert sind gelöst zu werden."',
     now_label:'Aktuell',now_job:'iOS Engineer @ OBSS & BKT',now_ml:'Deep Learning & Core ML erkunden',now_location:'Ansässig in İstanbul, Türkei',
+    btn_contact:'Kontakt aufnehmen',btn_viewwork:'Projekte ansehen ↓',
+    stat_years_exp:'Jahre Erfahrung',stat_users:'App-Nutzer',stat_apps:'Apps veröffentlicht',stat_countries:'Länder',
+    exp_stat_years:'Jahre',exp_stat_employers:'Arbeitgeber',exp_stat_apps:'Apps',exp_stat_countries:'Länder',
+    badge_current:'Aktuell',filter_all:'Alle',filter_ios:'iOS',filter_aiml:'KI / ML',filter_oss:'Open Source',
     skills_intro:'Core-Skills sind in Amber hervorgehoben — das sind die Werkzeuge, die ich täglich in der Produktion einsetze. Alles andere wird aktiv in beruflichen oder persönlichen Projekten genutzt.',
     currently_exploring:'Derzeit am Erkunden',
     projects_intro:'Produktions-Apps für globale Marken und Finanzinstitute sowie persönliche Machine-Learning-Projekte.',
@@ -1093,13 +1101,17 @@ const translations = {
     hero_tag:'Kıdemli iOS Mühendisi · YZ / ML · İstanbul',
     hero_desc:"İnsanların güvendiği iOS uygulamaları geliştiriyorum — Avrupa ve Orta Doğu'daki 250.000'den fazla kullanıcı için bankacılık, ödeme ve e-ticaret. Makine öğrenmesi ve yapay zeka yönünde büyüyorum.",
     available_pill:'Müsait · İstanbul',
-    title_about:'Hakkımda',title_skills:'Teknik Yetkinlikler',title_experience:'İş Geçmişi',title_education:'Akademik Geçmiş',title_references:'Tavsiye Mektupları',title_beyond:'İş Dışında',title_contact:'İletişime Geçin',
+    title_about:'Hakkımda',title_skills:'Teknik Yetkinlikler',title_projects:'İşler & Projeler',title_experience:'İş Geçmişi',title_education:'Akademik Geçmiş',title_references:'Tavsiye Mektupları',title_beyond:'İş Dışında',title_contact:'İletişime Geçin',
     about_p1:"OBSS & BKT'de Kıdemli iOS Mühendisi olarak Kosova ve Arnavutluk'taki yüz binlerce müşterinin her gün kullandığı bankacılık uygulamalarını geliştiriyorum.",
     about_p2:"Altı yılı aşkın kariyerimde global markalar için — <strong>Nike, Under Armour, Bloomingdale's</strong> — ve kurumsal bankacılık müşterileri için üretim uygulamaları teslim ettim.",
     about_p3:"iOS'un yanı sıra çalışmalarım makine öğrenmesine yöneldi. <strong>carbon.ninja</strong>'da ETL pipeline'ları kurdum ve elektrik tüketimi tahmin modelleri eğittim. <strong>EfficientNet-B0 ve Grad-CAM</strong> ile pnömoni tespiti yaptım, <strong>Core ML</strong> ile iOS'a on-device çıkarım entegre ettim.",
     about_p4:"Yazılım Mühendisliği diplomam <strong>KMK</strong> tarafından Almanya lisans derecesiyle eşdeğer olarak tanındı. <strong>telc Deutsch C1 Hochschule</strong> (Mart 2026) ve <strong>IELTS Academic 6.5</strong> (Nisan 2026) sertifikalarına sahibim.",
     pull_quote:'"Altı yılın sonunda önem verdiğim şeyler: işe yarayan kod, iyi iletişim kuran ekipler ve çözmeye değer problemler."',
     now_label:'Şu An',now_job:'iOS Mühendisi @ OBSS & BKT',now_ml:'Derin öğrenme & Core ML araştırıyorum',now_location:'İstanbul, Türkiye',
+    btn_contact:'İletişime Geç',btn_viewwork:'Çalışmalarımı Gör ↓',
+    stat_years_exp:'Yıl Deneyim',stat_users:'Uygulama Kullanıcısı',stat_apps:'Uygulama',stat_countries:'Ülke',
+    exp_stat_years:'Yıl',exp_stat_employers:'İşveren',exp_stat_apps:'Uygulama',exp_stat_countries:'Ülke',
+    badge_current:'Güncel',filter_all:'Tümü',filter_ios:'iOS',filter_aiml:'YZ / ML',filter_oss:'Açık Kaynak',
     skills_intro:'Core beceriler amber olarak öne çıkarılmıştır — bunlar her gün üretimde kullandığım araçlardır.',
     currently_exploring:'Şu An Araştırıyorum',
     projects_intro:'Global markalar ve finans kuruluşları için üretim uygulamaları ve kişisel makine öğrenmesi projeleri.',
