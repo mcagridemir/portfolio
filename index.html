@@ -136,7 +136,7 @@ body{font-family:var(--display);background:var(--bg);color:var(--text);line-heig
 .hero-bg-grid{position:absolute;inset:0;background-image:radial-gradient(var(--border-hi) 1px,transparent 1px);background-size:32px 32px;pointer-events:none;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 0%,transparent 100%)}
 .hero-tag{font-family:var(--mono);font-size:11px;color:var(--accent);letter-spacing:.18em;text-transform:uppercase;display:flex;align-items:center;gap:.75rem;margin-bottom:1.5rem;opacity:0;animation:fadeUp .6s .1s ease forwards}
 .hero-tag::before{content:'';width:28px;height:1px;background:var(--accent)}
-.hero-name{font-family:var(--display);font-size:clamp(52px,8.5vw,114px);font-weight:800;line-height:.92;letter-spacing:-.03em;margin-bottom:2rem;opacity:0;animation:fadeUp .6s .2s ease forwards}
+.hero-name{font-family:var(--display);font-size:clamp(44px,6.5vw,86px);font-weight:800;line-height:.92;letter-spacing:-.03em;margin-bottom:2rem;opacity:0;animation:fadeUp .6s .2s ease forwards;overflow-wrap:break-word;min-width:0}
 .hero-name em{font-family:var(--serif);font-weight:400;font-style:italic;letter-spacing:-.01em}
 .hero-desc{font-size:17px;color:var(--muted);max-width:500px;line-height:1.85;margin-bottom:2.5rem;opacity:0;animation:fadeUp .6s .3s ease forwards}
 .hero-btns{display:flex;gap:1rem;flex-wrap:wrap;opacity:0;animation:fadeUp .6s .4s ease forwards}
@@ -461,19 +461,19 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
   </div>
   <div class="hero-stats">
     <div class="hero-stat">
-      <div class="stat-num" data-target="6" data-suffix="+">0+</div>
+      <div class="stat-num" data-target="6" data-suffix="+">6+</div>
       <div class="stat-label">Years experience</div>
     </div>
     <div class="hero-stat">
-      <div class="stat-num" data-target="250" data-suffix="K+">0K+</div>
+      <div class="stat-num" data-target="250" data-suffix="K+">250K+</div>
       <div class="stat-label">App users</div>
     </div>
     <div class="hero-stat">
-      <div class="stat-num" data-target="9" data-suffix="">0</div>
+      <div class="stat-num" data-target="9" data-suffix="">9</div>
       <div class="stat-label">Apps shipped</div>
     </div>
     <div class="hero-stat">
-      <div class="stat-num" data-target="5" data-suffix="+">0+</div>
+      <div class="stat-num" data-target="5" data-suffix="+">5+</div>
       <div class="stat-label">Countries</div>
     </div>
   </div>
@@ -1232,7 +1232,8 @@ function runCounters(){
     requestAnimationFrame(step);
   });
 }
-setTimeout(runCounters, 500);
+setTimeout(runCounters, 400);
+window.addEventListener('load', () => setTimeout(runCounters, 200));
 
 /* ── LANGUAGE BARS ────────────────────────────────────── */
 let barsRan = false;
@@ -1250,9 +1251,28 @@ function tryBars(){
 
 /* ── SCROLL REVEAL ────────────────────────────────────── */
 const revealObs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
-}, {threshold: .08});
+  entries.forEach(e => {
+    if(e.isIntersecting){
+      e.target.classList.add('visible');
+      revealObs.unobserve(e.target);
+    }
+  });
+}, {threshold: .06, rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.fade-up').forEach(el => revealObs.observe(el));
+// Fire immediately for elements already in viewport on load
+window.addEventListener('load', () => {
+  document.querySelectorAll('.fade-up').forEach(el => {
+    const r = el.getBoundingClientRect();
+    if(r.top < window.innerHeight && r.bottom > 0) el.classList.add('visible');
+  });
+});
+// Fallback: reveal anything still hidden after a generous delay
+setTimeout(() => {
+  document.querySelectorAll('.fade-up:not(.visible)').forEach(el => {
+    const r = el.getBoundingClientRect();
+    if(r.top < window.innerHeight + 300) el.classList.add('visible');
+  });
+}, 1200);
 
 /* ── PROJECT FILTER ───────────────────────────────────── */
 document.querySelectorAll('.filter-btn').forEach(btn => {
