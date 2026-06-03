@@ -1302,8 +1302,23 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
 /* ── FORM ─────────────────────────────────────────────── */
 function handleSubmit(e){
   e.preventDefault();
-  document.getElementById('form-msg').style.display = 'block';
-  e.target.reset();
+  const form = e.target;
+  const msg = document.getElementById('form-msg');
+  fetch('/', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+    body: new URLSearchParams(new FormData(form)).toString()
+  })
+  .then(() => {
+    msg.textContent = 'Message sent — I\'ll be in touch soon.';
+    msg.style.display = 'block';
+    form.reset();
+  })
+  .catch(() => {
+    msg.textContent = 'Something went wrong. Please email me directly at cagriidemirr@gmail.com';
+    msg.style.color = 'var(--muted)';
+    msg.style.display = 'block';
+  });
 }
 
 /* ── KEYBOARD SHORTCUTS ───────────────────────────────── */

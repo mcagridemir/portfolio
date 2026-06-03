@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#F5F4F0"/>
+  <rect width="1200" height="630" fill="none" stroke="#DDDDD8" stroke-width="1"/>
+  <!-- Grid dots -->
+  <pattern id="dots" x="0" y="0" width="28" height="28" patternUnits="userSpaceOnUse">
+    <circle cx="1" cy="1" r="1" fill="#DDDDD8"/>
+  </pattern>
+  <rect width="1200" height="630" fill="url(#dots)" opacity="0.6"/>
+  <!-- Left accent line -->
+  <rect x="80" y="160" width="3" height="310" fill="#1558D6"/>
+  <!-- Name -->
+  <text x="110" y="250" font-family="Georgia, serif" font-size="72" font-weight="400" fill="#111111" letter-spacing="-2">Muhammed Çağrı</text>
+  <text x="110" y="340" font-family="Georgia, serif" font-size="72" font-weight="400" fill="#111111" font-style="italic" letter-spacing="-2">Demir</text>
+  <!-- Title -->
+  <text x="112" y="400" font-family="monospace" font-size="18" fill="#1558D6" letter-spacing="3">SENIOR iOS ENGINEER · AI / ML</text>
+  <!-- Stats row -->
+  <text x="112" y="460" font-family="monospace" font-size="14" fill="#666666" letter-spacing="1">6+ years  ·  250K+ users  ·  KMK-recognised  ·  Deutsch C1  ·  IELTS 6.5</text>
+  <!-- URL -->
+  <text x="112" y="520" font-family="monospace" font-size="14" fill="#1558D6" letter-spacing="1">mcagridemir.netlify.app</text>
+  <!-- Right side accent -->
+  <rect x="900" y="0" width="300" height="630" fill="#1558D6" opacity="0.04"/>
+  <text x="950" y="320" font-family="Georgia, serif" font-size="180" font-weight="300" fill="#1558D6" opacity="0.08">Ç</text>
+</svg>
