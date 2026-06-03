@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Muhammed Çağrı Demir · Senior iOS Engineer · Istanbul</title>
+<title>Muhammed Çağrı Demir · Senior iOS Engineer · İzmir</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23c47a0a' rx='6'/><text x='50%25' y='56%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='20' font-family='serif'>Ç</text></svg>">
 <meta name="google-site-verification" content="p5vL63czR1Id5fqQUY4b9k3Khd0-VtgrxErYZJNJxLo">
 <meta name="robots" content="index, follow, max-image-preview:large">
@@ -12,8 +12,8 @@
 <link rel="alternate" hreflang="de" href="https://mcagridemir.netlify.app/">
 <link rel="alternate" hreflang="tr" href="https://mcagridemir.netlify.app/">
 <link rel="alternate" hreflang="x-default" href="https://mcagridemir.netlify.app/">
-<meta name="description" content="Muhammed Çağrı Demir — Senior iOS Engineer based in Istanbul, Turkey. 6+ years building Swift & SwiftUI apps for 250K+ users. Machine learning with PyTorch & Core ML. KMK-recognised degree, Deutsch C1, IELTS 6.5.">
-<meta name="keywords" content="Muhammed Çağrı Demir, iOS Engineer, Swift Developer, SwiftUI, UIKit, Machine Learning, Core ML, PyTorch, Deep Learning, iOS Developer Istanbul, iOS Developer Turkey, BKT Mobile, OBSS, KMK anerkannt, Software Engineer">
+<meta name="description" content="Muhammed Çağrı Demir — Senior iOS Engineer based in İzmir, Turkey. 6+ years building Swift & SwiftUI apps for 250K+ users. Machine learning with PyTorch & Core ML. KMK-recognised degree, Deutsch C1, IELTS 6.5.">
+<meta name="keywords" content="Muhammed Çağrı Demir, iOS Engineer, Swift Developer, SwiftUI, UIKit, Machine Learning, Core ML, PyTorch, Deep Learning, iOS Developer İzmir, iOS Developer Turkey, BKT Mobile, OBSS, KMK anerkannt, Software Engineer">
 <meta name="author" content="Muhammed Çağrı Demir">
 <meta property="og:title" content="Muhammed Çağrı Demir — iOS Engineer & AI/ML">
 <meta property="og:description" content="Senior iOS Engineer · 250K+ users · KMK-recognised · Deutsch C1 · AI/ML">
@@ -28,7 +28,7 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Muhammed Çağrı Demir — Senior iOS Engineer">
-<meta name="twitter:description" content="Senior iOS Engineer, Istanbul. 6+ years · 250K+ users · Swift, SwiftUI, Core ML, PyTorch.">
+<meta name="twitter:description" content="Senior iOS Engineer, İzmir. 6+ years · 250K+ users · Swift, SwiftUI, Core ML, PyTorch.">
 <meta name="twitter:image" content="https://mcagridemir.netlify.app/og-image.svg">
 <meta name="twitter:creator" content="@mcagridemir">
 <meta name="theme-color" content="#c47a0a">
@@ -40,11 +40,11 @@
   "givenName": "Muhammed Çağrı",
   "familyName": "Demir",
   "jobTitle": "Senior iOS Engineer",
-  "description": "Senior iOS Engineer based in Istanbul, Turkey with 6+ years experience building Swift and SwiftUI apps for 250K+ users. Exploring machine learning with PyTorch and Core ML.",
+  "description": "Senior iOS Engineer based in İzmir, Turkey with 6+ years experience building Swift and SwiftUI apps for 250K+ users. Exploring machine learning with PyTorch and Core ML.",
   "url": "https://mcagridemir.netlify.app",
   "email": "cagriidemirr@gmail.com",
   "telephone": "+905533849394",
-  "address": { "@type": "PostalAddress", "addressLocality": "İstanbul", "addressCountry": "TR" },
+  "address": { "@type": "PostalAddress", "addressLocality": "İzmir", "addressCountry": "TR" },
   "alumniOf": [
     { "@type": "CollegeOrUniversity", "name": "Yaşar University", "address": { "@type": "PostalAddress", "addressLocality": "İzmir", "addressCountry": "TR" } },
     { "@type": "CollegeOrUniversity", "name": "Anadolu University", "address": { "@type": "PostalAddress", "addressLocality": "Eskişehir", "addressCountry": "TR" } }
@@ -404,6 +404,42 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
 
 /* ─── MAGNETIC BTN ────────────────────────────────────────── */
 .btn-primary{transition:background .2s,filter .2s,transform .15s ease}
+
+/* ─── REDUCED MOTION ──────────────────────────────────────── */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .fade-up{opacity:1;transform:none}
+  .marquee-inner{animation:none}
+  .avail-dot{animation:none}
+  html{scroll-behavior:auto}
+}
+
+/* ─── PRINT / PDF ─────────────────────────────────────────── */
+@media print{
+  *{animation:none!important;transition:none!important}
+  :root{--bg:#fff;--surface:#fff;--card:#fff;--text:#111;--muted:#555;--border:#ddd;--border-hi:#ccc;--accent:#b45309}
+  body{background:#fff;color:#111}
+  body::before,#cursor-glow,#progress,#back-top,.nav-hamburger,
+  .lang-btn,.theme-btn,.marquee-wrap,.filter-bar,#tweaks-panel,
+  .avail-chip,.hero-btns,.tw-slider,
+  .btn,.btn-primary,.btn-secondary{display:none!important}
+  .nav{position:static;border-bottom:1px solid #ddd;padding:12px var(--pad);box-shadow:none}
+  .nav-links{display:flex!important}
+  section{break-inside:avoid;padding:32px var(--pad)}
+  .hero{padding-top:40px;grid-template-columns:1fr}
+  .hero-stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid #ddd}
+  .about-grid{grid-template-columns:160px 1fr;gap:2rem}
+  .about-photo{max-width:160px}
+  .skills-grid{grid-template-columns:repeat(3,1fr)}
+  .timeline::before{display:none}
+  .tl-item{grid-template-columns:1fr}
+  .proj-card,.ref-card,.beyond-card{break-inside:avoid;box-shadow:none;border:1px solid #ddd}
+  .proj-grid{grid-template-columns:1fr 1fr}
+  .fade-up{opacity:1;transform:none}
+  footer{border-top:1px solid #ddd;padding:16px var(--pad)}
+  a[href^='http']::after{content:' (' attr(href) ')';font-size:10px;color:#888}
+  .nav-logo::after,.btn::after{content:none}
+}
 </style>
 </head>
 <body>
@@ -450,8 +486,8 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
   <div class="hero-bg"></div>
   <div class="hero-bg-grid"></div>
   <div style="position:relative;z-index:1;min-width:0">
-    <div class="avail-chip"><span class="avail-dot"></span><span data-i18n="available_pill">Available · İstanbul</span></div>
-    <p class="hero-tag" data-i18n="hero_tag">Senior iOS Engineer · AI / ML · Istanbul</p>
+    <div class="avail-chip"><span class="avail-dot"></span><span data-i18n="available_pill">Available · İzmir</span></div>
+    <p class="hero-tag" data-i18n="hero_tag">Senior iOS Engineer · AI / ML · İzmir</p>
     <h1 class="hero-name">Muhammed<br>Çağrı <em>Demir</em></h1>
     <p class="hero-desc" data-i18n="hero_desc">Senior iOS engineer with 6+ years delivering banking and e-commerce apps for 250K+ users. Building toward machine learning and AI&nbsp;—&nbsp;energy prediction pipelines, medical imaging models, on-device inference.</p>
     <div class="hero-btns">
@@ -482,7 +518,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
 <!-- ── MARQUEE ───────────────────────────────────────────── -->
 <div class="marquee-wrap" aria-hidden="true">
   <div class="marquee-inner">
-    <span class="m-item hi">Swift</span><span class="m-item">SwiftUI</span><span class="m-item">UIKit</span><span class="m-item">Clean Architecture</span><span class="m-item hi">PyTorch</span><span class="m-item">Deep Learning</span><span class="m-item">Core ML</span><span class="m-item hi">Nike</span><span class="m-item">Under Armour</span><span class="m-item">Bloomingdale's</span><span class="m-item hi">BKT · 250K+ Users</span><span class="m-item">EfficientNet</span><span class="m-item">Grad-CAM</span><span class="m-item hi">CI/CD</span><span class="m-item">Bitrise</span><span class="m-item">Firebase</span><span class="m-item hi">ETL Pipelines</span><span class="m-item">MVVM</span><span class="m-item">Istanbul</span><span class="m-item hi">6+ Years</span><span class="m-item">Apache Airflow</span><span class="m-item">SSL Pinning</span><span class="m-item hi">Swift</span><span class="m-item">SwiftUI</span><span class="m-item">UIKit</span><span class="m-item">Clean Architecture</span><span class="m-item hi">PyTorch</span><span class="m-item">Deep Learning</span><span class="m-item">Core ML</span><span class="m-item hi">Nike</span><span class="m-item">Under Armour</span><span class="m-item">Bloomingdale's</span><span class="m-item hi">BKT · 250K+ Users</span><span class="m-item">EfficientNet</span><span class="m-item">Grad-CAM</span><span class="m-item hi">CI/CD</span><span class="m-item">Bitrise</span><span class="m-item">Firebase</span><span class="m-item hi">ETL Pipelines</span><span class="m-item">MVVM</span><span class="m-item">Istanbul</span><span class="m-item hi">6+ Years</span><span class="m-item">Apache Airflow</span><span class="m-item">SSL Pinning</span>
+    <span class="m-item hi">Swift</span><span class="m-item">SwiftUI</span><span class="m-item">UIKit</span><span class="m-item">Clean Architecture</span><span class="m-item hi">PyTorch</span><span class="m-item">Deep Learning</span><span class="m-item">Core ML</span><span class="m-item hi">Nike</span><span class="m-item">Under Armour</span><span class="m-item">Bloomingdale's</span><span class="m-item hi">BKT · 250K+ Users</span><span class="m-item">EfficientNet</span><span class="m-item">Grad-CAM</span><span class="m-item hi">CI/CD</span><span class="m-item">Bitrise</span><span class="m-item">Firebase</span><span class="m-item hi">ETL Pipelines</span><span class="m-item">MVVM</span><span class="m-item">İzmir</span><span class="m-item hi">6+ Years</span><span class="m-item">Apache Airflow</span><span class="m-item">SSL Pinning</span><span class="m-item hi">Swift</span><span class="m-item">SwiftUI</span><span class="m-item">UIKit</span><span class="m-item">Clean Architecture</span><span class="m-item hi">PyTorch</span><span class="m-item">Deep Learning</span><span class="m-item">Core ML</span><span class="m-item hi">Nike</span><span class="m-item">Under Armour</span><span class="m-item">Bloomingdale's</span><span class="m-item hi">BKT · 250K+ Users</span><span class="m-item">EfficientNet</span><span class="m-item">Grad-CAM</span><span class="m-item hi">CI/CD</span><span class="m-item">Bitrise</span><span class="m-item">Firebase</span><span class="m-item hi">ETL Pipelines</span><span class="m-item">MVVM</span><span class="m-item">İzmir</span><span class="m-item hi">6+ Years</span><span class="m-item">Apache Airflow</span><span class="m-item">SSL Pinning</span>
   </div>
 </div>
 
@@ -513,7 +549,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
         <p class="now-label" data-i18n="now_label">Now</p>
         <div class="now-item"><span class="now-dot"></span><span data-i18n="now_job">iOS Engineer @ OBSS &amp; BKT — Banking</span></div>
         <div class="now-item"><span class="now-dot"></span><span data-i18n="now_ml">Exploring deep learning &amp; Core ML</span></div>
-        <div class="now-item"><span class="now-dot"></span><span data-i18n="now_location">Based in İstanbul, Turkey</span></div>
+        <div class="now-item"><span class="now-dot"></span><span data-i18n="now_location">Based in İzmir, Turkey</span></div>
       </div>
     </div>
   </div>
@@ -995,7 +1031,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
 </section>
 
 <footer>
-  <p>© 2026 Muhammed Çağrı Demir · Senior iOS Engineer · Istanbul</p>
+  <p>© 2026 Muhammed Çağrı Demir · Senior iOS Engineer · İzmir</p>
   <p>Built with precision · <a href="#hero">Back to top ↑</a></p>
 </footer>
 
@@ -1034,16 +1070,16 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
 const translations = {
   en: {
     nav_about:'About',nav_skills:'Skills',nav_projects:'Projects',nav_experience:'Experience',nav_education:'Education',nav_references:'References',nav_beyond:'Beyond',nav_contact:'Contact',
-    hero_tag:'Senior iOS Engineer · AI / ML · Istanbul',
+    hero_tag:'Senior iOS Engineer · AI / ML · İzmir',
     hero_desc:'Senior iOS engineer with 6+ years delivering banking and e-commerce apps for 250K+ users. Building toward machine learning and AI — energy prediction pipelines, medical imaging models, on-device inference.',
-    available_pill:'Available · İstanbul',
+    available_pill:'Available · İzmir',
     title_about:'Who I am',title_skills:'Technical Expertise',title_projects:'Work & Projects',title_experience:'Work History',title_education:'Academic Background',title_references:'Recommendations',title_beyond:'Outside of Work',title_contact:"Get in Touch",
     about_p1:'Senior iOS Engineer at OBSS & BKT — building the banking apps that hundreds of thousands of customers in Kosovo and Albania rely on every day.',
     about_p2:"Over six-plus years I've shipped production apps for global brands — <strong>Nike, Under Armour, Bloomingdale's</strong> — and enterprise banking clients, leading architecture decisions and CI/CD pipelines in multinational teams across Europe, the UK, Dubai, and Albania.",
     about_p3:'Alongside iOS, my work has naturally taken me toward machine learning. At <strong>carbon.ninja</strong> I built ETL pipelines and trained forecasting models. I\'ve explored deep learning — a pneumonia detection model using <strong>EfficientNet-B0 with Grad-CAM</strong> — and brought on-device inference into iOS via <strong>Core ML</strong>.',
     about_p4:'My degree has been officially evaluated by the <strong>KMK Zentralstelle</strong> as equivalent to a German Bachelor\'s. I hold a <strong>telc Deutsch C1 Hochschule</strong> certificate (March 2026) and <strong>IELTS Academic 6.5</strong> (April 2026).',
     pull_quote:'"Six years in, I care about code that ships, teams that communicate, and problems worth solving."',
-    now_label:'Now',now_job:'iOS Engineer @ OBSS & BKT — Banking',now_ml:'Exploring deep learning & Core ML',now_location:'Based in İstanbul, Turkey',
+    now_label:'Now',now_job:'iOS Engineer @ OBSS & BKT — Banking',now_ml:'Exploring deep learning & Core ML',now_location:'Based in İzmir, Turkey',
     btn_contact:'Get in touch',btn_viewwork:'View work ↓',
     stat_years_exp:'Years experience',stat_users:'App users',stat_apps:'Apps shipped',stat_countries:'Countries',
     exp_stat_years:'Years',exp_stat_employers:'Employers',exp_stat_apps:'Apps Shipped',exp_stat_countries:'Countries',
@@ -1063,19 +1099,21 @@ const translations = {
     contact_desc:'Open to senior iOS engineering roles and AI/ML positions — particularly in Germany or with remote-friendly European companies. Let\'s talk.',
     form_name:'Name',form_email:'Email',form_message:'Message',form_send:'Send message →',
     form_name_ph:'Your name',form_email_ph:'your@email.com',form_message_ph:"What's on your mind?",
+    form_success:"Message sent — I'll be in touch soon.",
+    form_error:'Something went wrong. Please email me directly at cagriidemirr@gmail.com',
   },
   de: {
     nav_about:'Über mich',nav_skills:'Kenntnisse',nav_projects:'Projekte',nav_experience:'Erfahrung',nav_education:'Ausbildung',nav_references:'Referenzen',nav_beyond:'Persönliches',nav_contact:'Kontakt',
-    hero_tag:'Senior iOS Engineer · KI / ML · Istanbul',
+    hero_tag:'Senior iOS Engineer · KI / ML · İzmir',
     hero_desc:'Senior iOS Engineer mit 6+ Jahren Erfahrung in Banking- und E-Commerce-Apps für 250K+ Nutzer. Ich baue auf Machine Learning und KI hin — Energievorhersage-Pipelines, medizinische Bildgebung, On-Device-Inferenz.',
-    available_pill:'Verfügbar · İstanbul',
+    available_pill:'Verfügbar · İzmir',
     title_about:'Über mich',title_skills:'Technische Kenntnisse',title_projects:'Arbeiten & Projekte',title_experience:'Berufserfahrung',title_education:'Akademischer Hintergrund',title_references:'Empfehlungen',title_beyond:'Außerhalb der Arbeit',title_contact:'Kontakt aufnehmen',
     about_p1:'Senior iOS Engineer bei OBSS & BKT — ich entwickle die Banking-Apps, auf die hunderttausende Kunden in Kosovo und Albanien täglich angewiesen sind.',
     about_p2:"In mehr als sechs Jahren habe ich Produktions-Apps für globale Marken geliefert — <strong>Nike, Under Armour, Bloomingdale's</strong> — sowie für Enterprise-Banking-Kunden, wobei ich Architekturentscheidungen und CI/CD-Pipelines in multinationalen Teams leitete.",
     about_p3:'Neben iOS hat mich meine Arbeit natürlich in Richtung Machine Learning und Daten geführt. Bei <strong>carbon.ninja</strong> habe ich automatisierte ETL-Pipelines aufgebaut und Vorhersagemodelle trainiert. Ich habe Deep Learning erkundet — ein Pneumonie-Erkennungsmodell mit <strong>EfficientNet-B0 und Grad-CAM</strong> — und On-Device-Inferenz in iOS via <strong>Core ML</strong> integriert.',
     about_p4:'Mein türkisches Abschlusszeugnis wurde von der <strong>KMK Zentralstelle</strong> als äquivalent zu einem deutschen Bachelorabschluss anerkannt. Ich besitze das <strong>telc Deutsch C1 Hochschule</strong>-Zertifikat (März 2026) sowie <strong>IELTS Academic 6.5</strong> (April 2026).',
     pull_quote:'"Nach sechs Jahren kümmere ich mich um Code, der läuft, Teams die kommunizieren, und Probleme, die es wert sind gelöst zu werden."',
-    now_label:'Aktuell',now_job:'iOS Engineer @ OBSS & BKT',now_ml:'Deep Learning & Core ML erkunden',now_location:'Ansässig in İstanbul, Türkei',
+    now_label:'Aktuell',now_job:'iOS Engineer @ OBSS & BKT',now_ml:'Deep Learning & Core ML erkunden',now_location:'Ansässig in İzmir, Türkei',
     btn_contact:'Kontakt aufnehmen',btn_viewwork:'Projekte ansehen ↓',
     stat_years_exp:'Jahre Erfahrung',stat_users:'App-Nutzer',stat_apps:'Apps veröffentlicht',stat_countries:'Länder',
     exp_stat_years:'Jahre',exp_stat_employers:'Arbeitgeber',exp_stat_apps:'Apps',exp_stat_countries:'Länder',
@@ -1095,19 +1133,21 @@ const translations = {
     contact_desc:'Ob Programmkoordinator, Mitarbeiter oder Arbeitgeber — ich freue mich sehr auf ein Gespräch.',
     form_name:'Name',form_email:'E-Mail',form_message:'Nachricht',form_send:'Nachricht senden →',
     form_name_ph:'Ihr Name',form_email_ph:'ihre@email.de',form_message_ph:'Ich würde gerne über... sprechen.',
+    form_success:'Nachricht gesendet — ich melde mich bald.',
+    form_error:'Etwas ist schiefgelaufen. Bitte schreiben Sie mir direkt an cagriidemirr@gmail.com',
   },
   tr: {
     nav_about:'Hakkımda',nav_skills:'Beceriler',nav_projects:'Projeler',nav_experience:'Deneyim',nav_education:'Eğitim',nav_references:'Referanslar',nav_beyond:'Kişisel',nav_contact:'İletişim',
-    hero_tag:'Kıdemli iOS Mühendisi · YZ / ML · İstanbul',
+    hero_tag:'Kıdemli iOS Mühendisi · YZ / ML · İzmir',
     hero_desc:"İnsanların güvendiği iOS uygulamaları geliştiriyorum — Avrupa ve Orta Doğu'daki 250.000'den fazla kullanıcı için bankacılık, ödeme ve e-ticaret. Makine öğrenmesi ve yapay zeka yönünde büyüyorum.",
-    available_pill:'Müsait · İstanbul',
+    available_pill:'Müsait · İzmir',
     title_about:'Hakkımda',title_skills:'Teknik Yetkinlikler',title_projects:'İşler & Projeler',title_experience:'İş Geçmişi',title_education:'Akademik Geçmiş',title_references:'Tavsiye Mektupları',title_beyond:'İş Dışında',title_contact:'İletişime Geçin',
     about_p1:"OBSS & BKT'de Kıdemli iOS Mühendisi olarak Kosova ve Arnavutluk'taki yüz binlerce müşterinin her gün kullandığı bankacılık uygulamalarını geliştiriyorum.",
     about_p2:"Altı yılı aşkın kariyerimde global markalar için — <strong>Nike, Under Armour, Bloomingdale's</strong> — ve kurumsal bankacılık müşterileri için üretim uygulamaları teslim ettim.",
     about_p3:"iOS'un yanı sıra çalışmalarım makine öğrenmesine yöneldi. <strong>carbon.ninja</strong>'da ETL pipeline'ları kurdum ve elektrik tüketimi tahmin modelleri eğittim. <strong>EfficientNet-B0 ve Grad-CAM</strong> ile pnömoni tespiti yaptım, <strong>Core ML</strong> ile iOS'a on-device çıkarım entegre ettim.",
     about_p4:"Yazılım Mühendisliği diplomam <strong>KMK</strong> tarafından Almanya lisans derecesiyle eşdeğer olarak tanındı. <strong>telc Deutsch C1 Hochschule</strong> (Mart 2026) ve <strong>IELTS Academic 6.5</strong> (Nisan 2026) sertifikalarına sahibim.",
     pull_quote:'"Altı yılın sonunda önem verdiğim şeyler: işe yarayan kod, iyi iletişim kuran ekipler ve çözmeye değer problemler."',
-    now_label:'Şu An',now_job:'iOS Mühendisi @ OBSS & BKT',now_ml:'Derin öğrenme & Core ML araştırıyorum',now_location:'İstanbul, Türkiye',
+    now_label:'Şu An',now_job:'iOS Mühendisi @ OBSS & BKT',now_ml:'Derin öğrenme & Core ML araştırıyorum',now_location:'İzmir, Türkiye',
     btn_contact:'İletişime Geç',btn_viewwork:'Çalışmalarımı Gör ↓',
     stat_years_exp:'Yıl Deneyim',stat_users:'Uygulama Kullanıcısı',stat_apps:'Uygulama',stat_countries:'Ülke',
     exp_stat_years:'Yıl',exp_stat_employers:'İşveren',exp_stat_apps:'Uygulama',exp_stat_countries:'Ülke',
@@ -1127,10 +1167,14 @@ const translations = {
     contact_desc:"İster program koordinatörü, ister iş birlikçi, ister motive bir mühendis arayan bir işveren olun — konuşmaktan büyük memnuniyet duyarım.",
     form_name:'İsim',form_email:'E-posta',form_message:'Mesaj',form_send:'Mesaj Gönder →',
     form_name_ph:'Adınız',form_email_ph:'siz@ornek.com',form_message_ph:'Şunları konuşmak istiyorum...',
+    form_success:'Mesajınız gönderildi — yakında yazarım.',
+    form_error:'Bir hata oluştu. Lütfen doğrudan cagriidemirr@gmail.com adresine e-posta gönderin.',
   }
 };
 
+let currentLang = 'en';
 function setLang(lang){
+  currentLang = lang;
   const t = translations[lang] || translations.en;
   document.querySelectorAll('[data-i18n]').forEach(el=>{
     const k=el.dataset.i18n; if(t[k]!==undefined) el.innerHTML=t[k];
@@ -1310,12 +1354,15 @@ function handleSubmit(e){
     body: new URLSearchParams(new FormData(form)).toString()
   })
   .then(() => {
-    msg.textContent = 'Message sent — I\'ll be in touch soon.';
+    const t = translations[currentLang] || translations.en;
+    msg.textContent = t.form_success;
+    msg.style.color = '';
     msg.style.display = 'block';
     form.reset();
   })
   .catch(() => {
-    msg.textContent = 'Something went wrong. Please email me directly at cagriidemirr@gmail.com';
+    const t = translations[currentLang] || translations.en;
+    msg.textContent = t.form_error;
     msg.style.color = 'var(--muted)';
     msg.style.display = 'block';
   });
