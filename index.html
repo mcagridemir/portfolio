@@ -1025,6 +1025,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
     </div>
     <div>
       <form class="form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleSubmit(event)">
+        <input type="hidden" name="form-name" value="contact">
         <input type="hidden" name="bot-field">
         <div class="form-group">
           <label class="form-label" for="inp-name" data-i18n="form_name">Name</label>
