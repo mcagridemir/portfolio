@@ -2,13 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://mcagridemir.netlify.app/</loc>
-    <lastmod>2026-06-04</lastmod>
+    <loc>https://mcagridemir.github.io/portfolio/</loc>
+    <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mcagridemir.netlify.app/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://mcagridemir.netlify.app/"/>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://mcagridemir.netlify.app/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mcagridemir.netlify.app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mcagridemir.github.io/portfolio/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mcagridemir.github.io/portfolio/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://mcagridemir.github.io/portfolio/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mcagridemir.github.io/portfolio/"/>
   </url>
 </urlset>
