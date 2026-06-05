@@ -68,6 +68,9 @@ button{cursor:pointer;font-family:inherit;background:none;border:none}
 a{color:inherit;text-decoration:none}
 ul{list-style:none}
 
+/* Focus ring — keyboard navigation */
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+
 :root{
   --bg:#0d0c0a;
   --surface:#141210;
@@ -145,6 +148,8 @@ body{font-family:var(--display);background:var(--bg);color:var(--text);line-heig
 .btn-primary:hover{filter:brightness(1.12);transform:translateY(-1px)}
 .btn-secondary{border:1px solid var(--border-hi);color:var(--text)}
 .btn-secondary:hover{border-color:var(--accent);color:var(--accent)}
+.btn-ghost{border:1px solid var(--border);color:var(--muted)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
 
 .hero-stats{display:flex;flex-direction:column;gap:1px;background:var(--border-hi);border:1px solid var(--border-hi);opacity:0;animation:fadeUp .6s .3s ease forwards;align-self:center;position:relative;z-index:1}
 .hero-stat{background:var(--surface);padding:1.5rem 1.75rem;min-width:148px;transition:background .2s}
@@ -508,6 +513,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
     <div class="hero-btns">
       <a href="#contact" class="btn btn-primary" data-i18n="btn_contact">Get in touch</a>
       <a href="#projects" class="btn btn-secondary" data-i18n="btn_viewwork">View work ↓</a>
+      <a href="cv.pdf" download class="btn btn-ghost" data-i18n="btn_cv">Download CV ↓</a>
     </div>
   </div>
   <div class="hero-stats">
@@ -970,7 +976,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
   <!-- Art gallery -->
   <div class="art-grid" aria-label="Favourite artworks">
     <div class="art-card fade-up">
-      <img src="art1.jpg" alt="Henri Matisse — Open Window, Collioure" loading="lazy">
+      <img src="art1.jpg" alt="Henri Matisse — Open Window, Collioure" loading="lazy" width="500" height="602">
       <div class="art-caption">
         <p class="art-eyebrow">Henri Matisse · 1905</p>
         <p class="art-title">Open Window, Collioure</p>
@@ -978,7 +984,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
       </div>
     </div>
     <div class="art-card fade-up">
-      <img src="art2.jpg" alt="Van Gogh — Almond Blossom" loading="lazy">
+      <img src="art2.jpg" alt="Van Gogh — Almond Blossom" loading="lazy" width="700" height="552">
       <div class="art-caption">
         <p class="art-eyebrow">Vincent van Gogh · 1890</p>
         <p class="art-title">Almond Blossom</p>
@@ -986,7 +992,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
       </div>
     </div>
     <div class="art-card fade-up">
-      <img src="art3.jpg" alt="Vermeer — Girl with a Pearl Earring" loading="lazy">
+      <img src="art3.jpg" alt="Vermeer — Girl with a Pearl Earring" loading="lazy" width="591" height="700">
       <div class="art-caption">
         <p class="art-eyebrow">Johannes Vermeer · c. 1665</p>
         <p class="art-title">Girl with a Pearl Earring</p>
@@ -1096,7 +1102,7 @@ const translations = {
     about_p4:'My degree has been officially evaluated by the <strong>KMK Zentralstelle</strong> as equivalent to a German Bachelor\'s. I hold a <strong>telc Deutsch C1 Hochschule</strong> certificate (March 2026) and <strong>IELTS Academic 6.5</strong> (April 2026).',
     pull_quote:'"Six years in, I care about code that ships, teams that communicate, and problems worth solving."',
     now_label:'Now',now_job:'iOS Engineer @ OBSS & BKT — Banking',now_ml:'Exploring deep learning & Core ML',now_location:'Based in İzmir, Turkey',
-    btn_contact:'Get in touch',btn_viewwork:'View work ↓',
+    btn_contact:'Get in touch',btn_viewwork:'View work ↓',btn_cv:'Download CV ↓',
     stat_years_exp:'Years experience',stat_users:'App users',stat_apps:'Apps shipped',stat_countries:'Countries',
     exp_stat_years:'Years',exp_stat_employers:'Employers',exp_stat_apps:'Apps Shipped',exp_stat_countries:'Countries',
     badge_current:'Current',filter_all:'All',filter_ios:'iOS',filter_aiml:'AI / ML',filter_oss:'Open Source',
@@ -1130,7 +1136,7 @@ const translations = {
     about_p4:'Mein türkisches Abschlusszeugnis wurde von der <strong>KMK Zentralstelle</strong> als äquivalent zu einem deutschen Bachelorabschluss anerkannt. Ich besitze das <strong>telc Deutsch C1 Hochschule</strong>-Zertifikat (März 2026) sowie <strong>IELTS Academic 6.5</strong> (April 2026).',
     pull_quote:'"Nach sechs Jahren kümmere ich mich um Code, der läuft, Teams die kommunizieren, und Probleme, die es wert sind gelöst zu werden."',
     now_label:'Aktuell',now_job:'iOS Engineer @ OBSS & BKT',now_ml:'Deep Learning & Core ML erkunden',now_location:'Ansässig in İzmir, Türkei',
-    btn_contact:'Kontakt aufnehmen',btn_viewwork:'Projekte ansehen ↓',
+    btn_contact:'Kontakt aufnehmen',btn_viewwork:'Projekte ansehen ↓',btn_cv:'Lebenslauf herunterladen ↓',
     stat_years_exp:'Jahre Erfahrung',stat_users:'App-Nutzer',stat_apps:'Apps veröffentlicht',stat_countries:'Länder',
     exp_stat_years:'Jahre',exp_stat_employers:'Arbeitgeber',exp_stat_apps:'Apps',exp_stat_countries:'Länder',
     badge_current:'Aktuell',filter_all:'Alle',filter_ios:'iOS',filter_aiml:'KI / ML',filter_oss:'Open Source',
@@ -1164,7 +1170,7 @@ const translations = {
     about_p4:"Yazılım Mühendisliği diplomam <strong>KMK</strong> tarafından Almanya lisans derecesiyle eşdeğer olarak tanındı. <strong>telc Deutsch C1 Hochschule</strong> (Mart 2026) ve <strong>IELTS Academic 6.5</strong> (Nisan 2026) sertifikalarına sahibim.",
     pull_quote:'"Altı yılın sonunda önem verdiğim şeyler: işe yarayan kod, iyi iletişim kuran ekipler ve çözmeye değer problemler."',
     now_label:'Şu An',now_job:'iOS Mühendisi @ OBSS & BKT',now_ml:'Derin öğrenme & Core ML araştırıyorum',now_location:'İzmir, Türkiye',
-    btn_contact:'İletişime Geç',btn_viewwork:'Çalışmalarımı Gör ↓',
+    btn_contact:'İletişime Geç',btn_viewwork:'Çalışmalarımı Gör ↓',btn_cv:'CV İndir ↓',
     stat_years_exp:'Yıl Deneyim',stat_users:'Uygulama Kullanıcısı',stat_apps:'Uygulama',stat_countries:'Ülke',
     exp_stat_years:'Yıl',exp_stat_employers:'İşveren',exp_stat_apps:'Uygulama',exp_stat_countries:'Ülke',
     badge_current:'Güncel',filter_all:'Tümü',filter_ios:'iOS',filter_aiml:'YZ / ML',filter_oss:'Açık Kaynak',
