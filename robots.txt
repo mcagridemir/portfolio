@@ -6,4 +6,4 @@ User-agent: Googlebot
 Allow: /
 Crawl-delay: 5
 
-Sitemap: https://mcagridemir.netlify.app/sitemap.xml
+Sitemap: https://mcagridemir.github.io/portfolio/sitemap.xml
