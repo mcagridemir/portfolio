@@ -12,7 +12,7 @@
   <rect x="80" y="155" width="3" height="320" fill="#e08c1a"/>
   <!-- Name -->
   <text x="110" y="250" font-family="Georgia, serif" font-size="74" font-weight="400" fill="#ede8de" letter-spacing="-2">Muhammed Çağrı</text>
-  <text x="110" y="342" font-family="Georgia, serif" font-size="74" font-weight="400" fill="#ede8de" font-style="italic" letter-spacing="-2">Demir</text>
+  <text x="110" y="342" font-family="Georgia, serif" font-size="74" font-weight="400" fill="#ede8de" letter-spacing="-2">Demir</text>
   <!-- Title -->
   <text x="112" y="402" font-family="monospace" font-size="18" fill="#e08c1a" letter-spacing="3">SENIOR iOS ENGINEER · AI / ML</text>
   <!-- Stats row -->
