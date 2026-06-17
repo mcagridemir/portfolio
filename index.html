@@ -585,8 +585,8 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
   <p class="sec-intro" data-i18n="skills_intro">Core skills are highlighted in amber — tools I use every day in production. Everything else is actively applied in professional or personal projects.</p>
   <div class="skills-grid">
     <div class="skill-cat fade-up">
-      <p class="skill-cat-name">iOS / Swift</p>
-      <p class="skill-tier">Core</p>
+      <p class="skill-cat-name" data-i18n="sk_ios">iOS / Swift</p>
+      <p class="skill-tier" data-i18n="sk_core">Core</p>
       <div class="skill-tags">
         <span class="skill-tag core">Swift 5–6</span>
         <span class="skill-tag core">SwiftUI</span>
@@ -594,7 +594,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
         <span class="skill-tag core">Clean Architecture</span>
         <span class="skill-tag core">MVVM</span>
       </div>
-      <p class="skill-tier">Frameworks &amp; Tools</p>
+      <p class="skill-tier" data-i18n="sk_fw">Frameworks &amp; Tools</p>
       <div class="skill-tags">
         <span class="skill-tag">Objective-C</span>
         <span class="skill-tag">Core ML</span>
@@ -609,15 +609,15 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
       </div>
     </div>
     <div class="skill-cat fade-up">
-      <p class="skill-cat-name">AI / ML / Data</p>
-      <p class="skill-tier">Core</p>
+      <p class="skill-cat-name" data-i18n="sk_aiml">AI / ML / Data</p>
+      <p class="skill-tier" data-i18n="sk_core">Core</p>
       <div class="skill-tags">
         <span class="skill-tag core">Python</span>
         <span class="skill-tag core">PyTorch</span>
         <span class="skill-tag core">Deep Learning</span>
         <span class="skill-tag core">ETL Pipelines</span>
       </div>
-      <p class="skill-tier">Libraries &amp; Tools</p>
+      <p class="skill-tier" data-i18n="sk_lib">Libraries &amp; Tools</p>
       <div class="skill-tags">
         <span class="skill-tag">EfficientNet · Grad-CAM</span>
         <span class="skill-tag">Transfer Learning</span>
@@ -632,15 +632,15 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
       </div>
     </div>
     <div class="skill-cat fade-up">
-      <p class="skill-cat-name">Engineering</p>
-      <p class="skill-tier">Core</p>
+      <p class="skill-cat-name" data-i18n="sk_eng">Engineering</p>
+      <p class="skill-tier" data-i18n="sk_core">Core</p>
       <div class="skill-tags">
         <span class="skill-tag core">CI/CD</span>
         <span class="skill-tag core">Bitrise · CircleCI</span>
         <span class="skill-tag core">Git</span>
         <span class="skill-tag core">Unit &amp; UI Testing</span>
       </div>
-      <p class="skill-tier">Tools &amp; Practices</p>
+      <p class="skill-tier" data-i18n="sk_tools">Tools &amp; Practices</p>
       <div class="skill-tags">
         <span class="skill-tag">Fastlane</span>
         <span class="skill-tag">Firebase</span>
@@ -682,7 +682,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
       <span class="proj-card-num">01</span>
       <p class="proj-tag">AI · iOS · Health</p>
       <h3 class="proj-title">Sana — AI Health &amp; Nutrition</h3>
-      <p class="proj-desc">SwiftUI health app integrating the Claude AI API (Anthropic) for personalised meal recommendations and calorie tracking. Real-time inference on HealthKit data, allergy and diet personalisation, and full 6-language localisation (TR, DE, EN, ES, PT, FR).</p>
+      <p class="proj-desc" data-i18n="pd_sana">SwiftUI health app integrating the Claude AI API (Anthropic) for personalised meal recommendations and calorie tracking. Real-time inference on HealthKit data, allergy and diet personalisation, and full 6-language localisation (TR, DE, EN, ES, PT, FR).</p>
       <div class="tech-tags"><span class="tech-tag">SwiftUI</span><span class="tech-tag">HealthKit</span><span class="tech-tag">Claude API</span><span class="tech-tag">Anthropic</span><span class="tech-tag">Core ML</span><span class="tech-tag">i18n</span></div>
       <span class="proj-link" style="cursor:default">⊙ Coming soon · App Store</span>
     </div>
@@ -690,7 +690,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
       <span class="proj-card-num">02</span>
       <p class="proj-tag">Banking · iOS · Kosovo · Albania</p>
       <h3 class="proj-title">BKT Smart &amp; BKT Kosova Mobile</h3>
-      <p class="proj-desc">Core developer of two banking apps serving 250K+ users. Built National ID onboarding, account management, fund transfers, cardless withdrawals, QR payments, and RIA Money Transfer. Secured with SSL pinning, Wultra Shield, Keychain, and JWT.</p>
+      <p class="proj-desc" data-i18n="pd_bkt">Core developer of two banking apps serving 250K+ users. Built National ID onboarding, account management, fund transfers, cardless withdrawals, QR payments, and RIA Money Transfer. Secured with SSL pinning, Wultra Shield, Keychain, and JWT.</p>
       <div class="tech-tags"><span class="tech-tag">Swift</span><span class="tech-tag">SwiftUI</span><span class="tech-tag">Clean Arch</span><span class="tech-tag">WidgetKit</span><span class="tech-tag">Bitrise</span><span class="tech-tag">JWT</span><span class="tech-tag">SSL Pinning</span></div>
       <a href="https://apps.apple.com/search?term=BKT+Smart+Kosovo" target="_blank" rel="noopener noreferrer" class="proj-link">&#xf8ff; App Store →</a>
     </div>
@@ -698,7 +698,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
       <span class="proj-card-num">03</span>
       <p class="proj-tag">Sports · Global · Middle East</p>
       <h3 class="proj-title">Nike iOS App</h3>
-      <p class="proj-desc">Built foundational architecture and core features for Nike's regional iOS app: splash screen, fluid animations, Arabic-English RTL localisation, user registration flows, and main navigation. Analytics via SnowplowTracker and Firebase.</p>
+      <p class="proj-desc" data-i18n="pd_nike">Built foundational architecture and core features for Nike's regional iOS app: splash screen, fluid animations, Arabic-English RTL localisation, user registration flows, and main navigation. Analytics via SnowplowTracker and Firebase.</p>
       <div class="tech-tags"><span class="tech-tag">Swift</span><span class="tech-tag">MVVM</span><span class="tech-tag">SOLID</span><span class="tech-tag">GCD</span><span class="tech-tag">CircleCI</span><span class="tech-tag">Firebase</span></div>
       <a href="https://apps.apple.com/us/app/nike-shoes-clothing-stories/id1095014518" target="_blank" rel="noopener noreferrer" class="proj-link">&#xf8ff; App Store →</a>
     </div>
@@ -706,7 +706,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
       <span class="proj-card-num">04</span>
       <p class="proj-tag">E-Commerce · Middle East</p>
       <h3 class="proj-title">Under Armour ME</h3>
-      <p class="proj-desc">Key iOS developer for product detail pages, address management, and multi-step checkout across UAE, Saudi Arabia, and Kuwait. Full Arabic-English RTL support. Implemented Click &amp; Collect with Google Maps, MapKit, and CoreLocation.</p>
+      <p class="proj-desc" data-i18n="pd_ua">Key iOS developer for product detail pages, address management, and multi-step checkout across UAE, Saudi Arabia, and Kuwait. Full Arabic-English RTL support. Implemented Click &amp; Collect with Google Maps, MapKit, and CoreLocation.</p>
       <div class="tech-tags"><span class="tech-tag">Swift</span><span class="tech-tag">UIKit</span><span class="tech-tag">MapKit</span><span class="tech-tag">RTL</span><span class="tech-tag">Firebase</span><span class="tech-tag">SnapKit</span></div>
       <a href="https://apps.apple.com/search?term=Under+Armour" target="_blank" rel="noopener noreferrer" class="proj-link">&#xf8ff; App Store →</a>
     </div>
@@ -714,7 +714,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
       <span class="proj-card-num">05</span>
       <p class="proj-tag">Luxury E-Commerce · iOS</p>
       <h3 class="proj-title">Bloomingdale's</h3>
-      <p class="proj-desc">Contributed to the Bloomingdale's iOS app across UAE, Saudi Arabia, and Kuwait. Developed product browse, wishlist and bag management, and Apple Pay checkout. Implemented Face ID / Touch ID biometric auth with pixel-perfect luxury UI.</p>
+      <p class="proj-desc" data-i18n="pd_bloom">Contributed to the Bloomingdale's iOS app across UAE, Saudi Arabia, and Kuwait. Developed product browse, wishlist and bag management, and Apple Pay checkout. Implemented Face ID / Touch ID biometric auth with pixel-perfect luxury UI.</p>
       <div class="tech-tags"><span class="tech-tag">Swift</span><span class="tech-tag">UIKit</span><span class="tech-tag">Apple Pay</span><span class="tech-tag">Face ID</span><span class="tech-tag">SnapKit</span><span class="tech-tag">Firebase</span></div>
       <a href="https://apps.apple.com/search?term=Bloomingdales" target="_blank" rel="noopener noreferrer" class="proj-link">&#xf8ff; App Store →</a>
     </div>
@@ -722,7 +722,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
       <span class="proj-card-num">06</span>
       <p class="proj-tag">Sneakers / Fashion · iOS</p>
       <h3 class="proj-title">Dropkick</h3>
-      <p class="proj-desc">Built the Dropkick sneaker and streetwear app from scratch using MVVM-R: product listings, size selectors, time-limited and raffle purchase flows, push notifications for exclusive drops, and full App Store submission pipeline.</p>
+      <p class="proj-desc" data-i18n="pd_dropkick">Built the Dropkick sneaker and streetwear app from scratch using MVVM-R: product listings, size selectors, time-limited and raffle purchase flows, push notifications for exclusive drops, and full App Store submission pipeline.</p>
       <div class="tech-tags"><span class="tech-tag">Swift</span><span class="tech-tag">MVVM-R</span><span class="tech-tag">UIKit</span><span class="tech-tag">Push Notifications</span><span class="tech-tag">Quick/Nimble</span></div>
       <a href="https://apps.apple.com/tr/search?term=Dropkick" target="_blank" rel="noopener noreferrer" class="proj-link">&#xf8ff; App Store →</a>
     </div>
@@ -730,7 +730,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
       <span class="proj-card-num">07</span>
       <p class="proj-tag">Luxury Retail · iOS · UAE</p>
       <h3 class="proj-title">THAT Concept Store</h3>
-      <p class="proj-desc">Developed core shopping flows and modular UI for this UAE luxury retail app. Secure payment flows with Keychain, optimised background processing with GCD, networking via Alamofire and URLSession.</p>
+      <p class="proj-desc" data-i18n="pd_that">Developed core shopping flows and modular UI for this UAE luxury retail app. Secure payment flows with Keychain, optimised background processing with GCD, networking via Alamofire and URLSession.</p>
       <div class="tech-tags"><span class="tech-tag">Swift</span><span class="tech-tag">UIKit</span><span class="tech-tag">SnapKit</span><span class="tech-tag">Keychain</span><span class="tech-tag">Alamofire</span><span class="tech-tag">GCD</span></div>
       <a href="https://apps.apple.com/ae/search?term=THAT+Concept+Store" target="_blank" rel="noopener noreferrer" class="proj-link">&#xf8ff; App Store →</a>
     </div>
@@ -738,7 +738,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
       <span class="proj-card-num">08</span>
       <p class="proj-tag">Fashion · iOS · Turkey / UAE</p>
       <h3 class="proj-title">Nice Stores</h3>
-      <p class="proj-desc">Built a full MVC-R shopping app from scratch for the Nice Stores fashion brand — implementing core shopping flows, modular reusable components, Firebase and Salesforce analytics, and App Store submission pipeline. Managed all networking via Alamofire/URLSession and optimised UI performance using GCD.</p>
+      <p class="proj-desc" data-i18n="pd_nice">Built a full MVC-R shopping app from scratch for the Nice Stores fashion brand — implementing core shopping flows, modular reusable components, Firebase and Salesforce analytics, and App Store submission pipeline. Managed all networking via Alamofire/URLSession and optimised UI performance using GCD.</p>
       <div class="tech-tags"><span class="tech-tag">Swift</span><span class="tech-tag">MVC-R</span><span class="tech-tag">UIKit</span><span class="tech-tag">Firebase</span><span class="tech-tag">Salesforce</span><span class="tech-tag">Alamofire</span><span class="tech-tag">GCD</span></div>
       <a href="https://apps.apple.com/tr/search?term=Nice+Stores" target="_blank" rel="noopener noreferrer" class="proj-link">&#xf8ff; App Store →</a>
     </div>
@@ -746,14 +746,14 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
       <span class="proj-card-num">09</span>
       <p class="proj-tag">AI · Python &amp; R · Energy</p>
       <h3 class="proj-title">carbon.ninja — Energy AI Platform</h3>
-      <p class="proj-desc">Built automated ML data pipelines for large-scale energy and weather data ingestion. Developed and validated regression and time-series models for electricity consumption forecasting and demand-peak prevention.</p>
+      <p class="proj-desc" data-i18n="pd_carbon">Built automated ML data pipelines for large-scale energy and weather data ingestion. Developed and validated regression and time-series models for electricity consumption forecasting and demand-peak prevention.</p>
       <div class="tech-tags"><span class="tech-tag">Python</span><span class="tech-tag">R</span><span class="tech-tag">Apache Airflow</span><span class="tech-tag">MySQL</span><span class="tech-tag">ETL</span><span class="tech-tag">ML Forecasting</span></div>
     </div>
     <div class="proj-card featured fade-up" data-cat="aiml oss">
       <span class="proj-card-num">10</span>
       <p class="proj-tag">Deep Learning · Medical AI</p>
       <h3 class="proj-title">Chest X-Ray AI — Pneumonia Detection</h3>
-      <p class="proj-desc">End-to-end deep learning pipeline for pneumonia detection from chest X-rays. Fine-tuned EfficientNet-B0 with transfer learning on the NIH dataset; Grad-CAM integration for transparent, interpretable predictions.</p>
+      <p class="proj-desc" data-i18n="pd_xray">End-to-end deep learning pipeline for pneumonia detection from chest X-rays. Fine-tuned EfficientNet-B0 with transfer learning on the NIH dataset; Grad-CAM integration for transparent, interpretable predictions.</p>
       <div class="tech-tags"><span class="tech-tag">PyTorch</span><span class="tech-tag">EfficientNet-B0</span><span class="tech-tag">Grad-CAM</span><span class="tech-tag">Transfer Learning</span><span class="tech-tag">Python</span></div>
       <a href="https://github.com/mcagridemir/chest-xray-ai" target="_blank" rel="noopener noreferrer" class="proj-link">View on GitHub →</a>
     </div>
@@ -761,7 +761,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
       <span class="proj-card-num">11</span>
       <p class="proj-tag">NLP · Job Market · Python</p>
       <h3 class="proj-title">ML Job Analyzer</h3>
-      <p class="proj-desc">Scrapes and analyses ML and AI job listings to extract skill trends, salary ranges, and employer demand signals — built to understand what the market requires from ML engineers and guide learning priorities.</p>
+      <p class="proj-desc" data-i18n="pd_mljob">Scrapes and analyses ML and AI job listings to extract skill trends, salary ranges, and employer demand signals — built to understand what the market requires from ML engineers and guide learning priorities.</p>
       <div class="tech-tags"><span class="tech-tag">Python</span><span class="tech-tag">NLP</span><span class="tech-tag">pandas</span><span class="tech-tag">Data Analysis</span></div>
       <a href="https://github.com/mcagridemir/ml-job-analyzer" target="_blank" rel="noopener noreferrer" class="proj-link">View on GitHub →</a>
     </div>
@@ -769,7 +769,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
       <span class="proj-card-num">12</span>
       <p class="proj-tag">NLP · Voice · Python</p>
       <h3 class="proj-title">Basic Voice Assistant</h3>
-      <p class="proj-desc">Voice-controlled assistant combining speech recognition, intent parsing, and TTS synthesis — an exploration of applied NLP and human-computer interaction in a constrained, real-time environment.</p>
+      <p class="proj-desc" data-i18n="pd_voice">Voice-controlled assistant combining speech recognition, intent parsing, and TTS synthesis — an exploration of applied NLP and human-computer interaction in a constrained, real-time environment.</p>
       <div class="tech-tags"><span class="tech-tag">Python</span><span class="tech-tag">Speech Recognition</span><span class="tech-tag">NLP</span><span class="tech-tag">TTS</span></div>
       <a href="https://github.com/mcagridemir/BasicVoiceAssistant" target="_blank" rel="noopener noreferrer" class="proj-link">View on GitHub →</a>
     </div>
@@ -777,7 +777,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
       <span class="proj-card-num">13</span>
       <p class="proj-tag">Robotics · ROS · Python</p>
       <h3 class="proj-title">ConcentricCircle</h3>
-      <p class="proj-desc">A mobile robotics project built with ROS and Python — implementing concentric circular motion patterns for autonomous robot navigation. Developed for the Mobile Robotics Programming course at Yaşar University.</p>
+      <p class="proj-desc" data-i18n="pd_ros">A mobile robotics project built with ROS and Python — implementing concentric circular motion patterns for autonomous robot navigation. Developed for the Mobile Robotics Programming course at Yaşar University.</p>
       <div class="tech-tags"><span class="tech-tag">Python</span><span class="tech-tag">ROS</span><span class="tech-tag">Mobile Robotics</span><span class="tech-tag">Autonomous Navigation</span></div>
       <a href="https://github.com/mcagridemir/ConcentricCircle" target="_blank" rel="noopener noreferrer" class="proj-link">View on GitHub →</a>
     </div>
@@ -802,9 +802,9 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
       <div class="tl-dot"></div>
       <div class="tl-date"><div class="tl-year">2022</div>Dec 2022 — Present</div>
       <div>
-        <h3 class="tl-title">iOS Engineer</h3>
+        <h3 class="tl-title" data-i18n="exp1_title">iOS Engineer</h3>
         <p class="tl-sub">OBSS &amp; BKT · Istanbul / Tirana, Albania (Remote) <span class="current" data-i18n="badge_current">Current</span></p>
-        <p class="tl-desc">Built and maintained iOS banking apps for 250K+ users using Clean Architecture and SwiftUI. Delivered 99%+ bug-free releases through unit and UI testing. Integrated QR payments, RIA Money Transfer, JWT authentication, Keychain credential storage, and SSL pinning for end-to-end security. Enhanced UX with WidgetKit home screen widgets and Lottie animation sequences. Managed CI/CD pipelines with Bitrise in an Agile environment across Istanbul, Albania, and remote Europe.</p>
+        <p class="tl-desc" data-i18n="exp1_desc">Built and maintained iOS banking apps for 250K+ users using Clean Architecture and SwiftUI. Delivered 99%+ bug-free releases through unit and UI testing. Integrated QR payments, RIA Money Transfer, JWT authentication, Keychain credential storage, and SSL pinning for end-to-end security. Enhanced UX with WidgetKit home screen widgets and Lottie animation sequences. Managed CI/CD pipelines with Bitrise in an Agile environment across Istanbul, Albania, and remote Europe.</p>
         <div class="tl-tags"><span class="tech-tag">Swift</span><span class="tech-tag">SwiftUI</span><span class="tech-tag">Clean Arch</span><span class="tech-tag">Bitrise</span><span class="tech-tag">Firebase</span><span class="tech-tag">JWT</span><span class="tech-tag">SSL Pinning</span><span class="tech-tag">WidgetKit</span></div>
       </div>
     </div>
@@ -812,9 +812,9 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
       <div class="tl-dot"></div>
       <div class="tl-date"><div class="tl-year">2020</div>Oct 2020 — Dec 2022</div>
       <div>
-        <h3 class="tl-title">iOS Developer</h3>
+        <h3 class="tl-title" data-i18n="exp2_title">iOS Developer</h3>
         <p class="tl-sub">EPAM Systems / Emakina · İzmir</p>
-        <p class="tl-desc">Delivered production iOS apps for Nike, Under Armour ME, Bloomingdale's, and Dropkick — serving users across the UAE, Saudi Arabia, and Kuwait. Built pixel-perfect UIs with SnapKit and Core Animation. Integrated Apple Pay, Face ID/Touch ID, and Click &amp; Collect location flows. Led Objective-C → Swift migration for legacy modules. Managed CircleCI pipelines with SonarQube static analysis.</p>
+        <p class="tl-desc" data-i18n="exp2_desc">Delivered production iOS apps for Nike, Under Armour ME, Bloomingdale's, and Dropkick — serving users across the UAE, Saudi Arabia, and Kuwait. Built pixel-perfect UIs with SnapKit and Core Animation. Integrated Apple Pay, Face ID/Touch ID, and Click &amp; Collect location flows. Led Objective-C → Swift migration for legacy modules. Managed CircleCI pipelines with SonarQube static analysis.</p>
         <div class="tl-tags"><span class="tech-tag">Swift</span><span class="tech-tag">UIKit</span><span class="tech-tag">Obj-C</span><span class="tech-tag">Apple Pay</span><span class="tech-tag">CircleCI</span><span class="tech-tag">MapKit</span><span class="tech-tag">SnapKit</span></div>
       </div>
     </div>
@@ -822,9 +822,9 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
       <div class="tl-dot"></div>
       <div class="tl-date"><div class="tl-year">2020</div>Apr 2020 — Jul 2020</div>
       <div>
-        <h3 class="tl-title">Software Developer &amp; Junior Data Scientist</h3>
+        <h3 class="tl-title" data-i18n="exp3_title">Software Developer &amp; Junior Data Scientist</h3>
         <p class="tl-sub">Onur Enerji · İzmir (carbon.ninja platform)</p>
-        <p class="tl-desc">Built automated ETL data pipelines in Python and Apache Airflow for the carbon.ninja energy intelligence platform. Developed and validated supervised ML models — regression and ensemble approaches — for electricity consumption forecasting and demand-peak prevention. Performed feature engineering, hyperparameter tuning, cross-validation, and produced data visualisations in R and Python.</p>
+        <p class="tl-desc" data-i18n="exp3_desc">Built automated ETL data pipelines in Python and Apache Airflow for the carbon.ninja energy intelligence platform. Developed and validated supervised ML models — regression and ensemble approaches — for electricity consumption forecasting and demand-peak prevention. Performed feature engineering, hyperparameter tuning, cross-validation, and produced data visualisations in R and Python.</p>
         <div class="tl-tags"><span class="tech-tag">Python</span><span class="tech-tag">R</span><span class="tech-tag">Apache Airflow</span><span class="tech-tag">MySQL</span><span class="tech-tag">ML Forecasting</span><span class="tech-tag">ETL Pipelines</span></div>
       </div>
     </div>
@@ -832,9 +832,9 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
       <div class="tl-dot"></div>
       <div class="tl-date"><div class="tl-year">2019</div>Jun 2019 — Jul 2019</div>
       <div>
-        <h3 class="tl-title">Software Engineer Intern</h3>
+        <h3 class="tl-title" data-i18n="exp4_title">Software Engineer Intern</h3>
         <p class="tl-sub">Onur Enerji · İzmir</p>
-        <p class="tl-desc">Designed and implemented automated data ingestion pipelines using Apache NiFi, Java, and regex-based text processing to collect and normalise electricity market data from the EPIAS REST API. Structured raw market data into relational schemas in MySQL for downstream analysis and reporting.</p>
+        <p class="tl-desc" data-i18n="exp4_desc">Designed and implemented automated data ingestion pipelines using Apache NiFi, Java, and regex-based text processing to collect and normalise electricity market data from the EPIAS REST API. Structured raw market data into relational schemas in MySQL for downstream analysis and reporting.</p>
         <div class="tl-tags"><span class="tech-tag">Java</span><span class="tech-tag">Apache NiFi</span><span class="tech-tag">MySQL</span><span class="tech-tag">REST API</span><span class="tech-tag">Data Engineering</span></div>
       </div>
     </div>
@@ -859,18 +859,18 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
       <div class="tl-dot"></div>
       <div class="tl-date"><div class="tl-year">2019</div>2019 — ongoing</div>
       <div>
-        <h3 class="tl-title">BSc Management of Information Systems</h3>
+        <h3 class="tl-title" data-i18n="edu1_title">BSc Management of Information Systems</h3>
         <p class="tl-sub">Anadolu University · Eskişehir, Turkey · GPA 2.72</p>
-        <p class="tl-desc">Part-time open education degree pursued alongside a full professional career. Coursework in information systems, business analytics, database programming, algorithms, and data mining — providing a complementary perspective on the business and systems context of software and AI applications.</p>
+        <p class="tl-desc" data-i18n="edu1_desc">Part-time open education degree pursued alongside a full professional career. Coursework in information systems, business analytics, database programming, algorithms, and data mining — providing a complementary perspective on the business and systems context of software and AI applications.</p>
       </div>
     </div>
     <div class="tl-item fade-up">
       <div class="tl-dot"></div>
       <div class="tl-date"><div class="tl-year">2016</div>2016 — 2020</div>
       <div>
-        <h3 class="tl-title">BSc Software Engineering</h3>
+        <h3 class="tl-title" data-i18n="edu2_title">BSc Software Engineering</h3>
         <p class="tl-sub">Yaşar University · İzmir, Turkey · GPA 2.7 / 4.0</p>
-        <p class="tl-desc">Full-time software engineering programme, all instruction 100% in English. Covered algorithms, data structures, software architecture, operating systems, databases, NLP, AI, mobile development, and mobile robotics. Graduated with A / A− on both Senior Design Projects. KMK-evaluated as equivalent to a German Bachelor's degree (August 2025).</p>
+        <p class="tl-desc" data-i18n="edu2_desc">Full-time software engineering programme, all instruction 100% in English. Covered algorithms, data structures, software architecture, operating systems, databases, NLP, AI, mobile development, and mobile robotics. Graduated with A / A− on both Senior Design Projects. KMK-evaluated as equivalent to a German Bachelor's degree (August 2025).</p>
         <div class="tl-tags"><span class="tech-tag">AI &amp; NLP</span><span class="tech-tag">Mobile Robotics</span><span class="tech-tag">KMK-recognised</span></div>
       </div>
     </div>
@@ -880,7 +880,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
   <div class="lang-grid">
     <div class="lang-item fade-up">
       <div class="lang-name">Turkish</div>
-      <div class="lang-level">Native</div>
+      <div class="lang-level" data-i18n="lang_native">Native</div>
       <div class="lang-bar-wrap"><div class="lang-bar" data-width="100"></div></div>
     </div>
     <div class="lang-item fade-up">
@@ -918,55 +918,55 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
     <div class="ref-card fade-up">
       <div class="ref-header">
         <div class="ref-avatar" style="background:#1a52b8">MSÜ</div>
-        <span class="ref-source">Academic · Yaşar University</span>
+        <span class="ref-source" data-i18n="ref_src_acad">Academic · Yaşar University</span>
       </div>
       <h3 class="ref-name">Prof. Dr. Mehmet S. Ünlütürk</h3>
-      <p class="ref-role">Software Engineering Dept. · PhD from IIT Chicago</p>
+      <p class="ref-role" data-i18n="ref1_role">Software Engineering Dept. · PhD from IIT Chicago</p>
       <p class="ref-quote">"He demonstrates a strong ability to rapidly grasp and apply practical knowledge in AI, Python, operating systems, and software engineering. His capacity to integrate them effectively is truly impressive."</p>
     </div>
     <div class="ref-card fade-up">
       <div class="ref-header">
         <div class="ref-avatar" style="background:#0d3d8a">KK</div>
-        <span class="ref-source">Academic · Yaşar University</span>
+        <span class="ref-source" data-i18n="ref_src_acad">Academic · Yaşar University</span>
       </div>
       <h3 class="ref-name">Assoc. Prof. Dr. Korhan Karabulut</h3>
-      <p class="ref-role">Head of Software Engineering Dept.</p>
+      <p class="ref-role" data-i18n="ref2_role">Head of Software Engineering Dept.</p>
       <p class="ref-quote">"He has the mental capacity to perform well above average and the dedication and personality to accomplish a wide range of goals. I recommend him without reservation."</p>
     </div>
     <div class="ref-card fade-up">
       <div class="ref-header">
         <div class="ref-avatar" style="background:#1256a3">KE</div>
-        <span class="ref-source">Academic · Yaşar University</span>
+        <span class="ref-source" data-i18n="ref_src_acad">Academic · Yaşar University</span>
       </div>
       <h3 class="ref-name">Asst. Prof. Dr. Kazım Erdoğdu</h3>
-      <p class="ref-role">Department of Software Engineering</p>
+      <p class="ref-role" data-i18n="ref3_role">Department of Software Engineering</p>
       <p class="ref-quote">"Strong analytical and algorithmic thinking, capable of solving complex computer science problems — quick thinking and sound approaches to problem-solving, coding, and logical reasoning."</p>
     </div>
     <div class="ref-card fade-up">
       <div class="ref-header">
         <div class="ref-avatar" style="background:#1f2e7a">OG</div>
-        <span class="ref-source">Industry · Onur Enerji</span>
+        <span class="ref-source" data-i18n="ref_src_onur">Industry · Onur Enerji</span>
       </div>
       <h3 class="ref-name">Onur Günduru</h3>
-      <p class="ref-role">CEO, Onur Enerji &amp; carbon.ninja</p>
+      <p class="ref-role" data-i18n="ref4_role">CEO, Onur Enerji &amp; carbon.ninja</p>
       <p class="ref-quote">"He excelled in data visualisation, transforming raw, complex datasets into clear and actionable insights. His solid foundation in data engineering will make him a valuable asset to any organisation."</p>
     </div>
     <div class="ref-card fade-up">
       <div class="ref-header">
         <div class="ref-avatar" style="background:#1948b0">ÖND</div>
-        <span class="ref-source">Industry · OBSS</span>
+        <span class="ref-source" data-i18n="ref_src_obss">Industry · OBSS</span>
       </div>
       <h3 class="ref-name">Özge Narin Dağ</h3>
-      <p class="ref-role">AI GTM Lead, Google · Former Manager at OBSS</p>
+      <p class="ref-role" data-i18n="ref5_role">AI GTM Lead, Google · Former Manager at OBSS</p>
       <p class="ref-quote">"Çağrı is analytical, intellectually curious, and takes full ownership of everything he works on. He asks the right questions, thinks carefully about why — not just how — and does not settle for surface-level solutions."</p>
     </div>
     <div class="ref-card fade-up">
       <div class="ref-header">
         <div class="ref-avatar" style="background:#10377a">BY</div>
-        <span class="ref-source">Industry · EPAM Systems</span>
+        <span class="ref-source" data-i18n="ref_src_epam">Industry · EPAM Systems</span>
       </div>
       <h3 class="ref-name">F. Bedirhan Yıldız</h3>
-      <p class="ref-role">Mobile Tech Lead, EPAM Systems</p>
+      <p class="ref-role" data-i18n="ref6_role">Mobile Tech Lead, EPAM Systems</p>
       <p class="ref-quote">"Beyond his technical skills, Çağrı possesses a disciplined and analytical mindset. He approaches every project with genuine curiosity and a strong commitment to excellence."</p>
     </div>
   </div>
@@ -1139,6 +1139,29 @@ const translations = {
     languages_title:'Languages',certs_title:'Certificates',
     kmk_label:'Official German Recognition',kmk_title:'KMK Zeugnisbewertung — Degree equivalent to German Bachelor\'s',kmk_desc:'Issued by the Kultusministerkonferenz (KMK) Zentralstelle für ausländisches Bildungswesen, Bonn. Reg.-Nr.: LN2025/77597-1 · August 2025. Officially confirmed as equivalent to a German Hochschulabschluss auf Bachelor-Ebene.',
     ref_intro:'Reference letters from academic supervisors at Yaşar University and from industry managers at OBSS, EPAM Systems, and Onur Enerji. All available upon request.',
+    sk_ios:"iOS / Swift",sk_aiml:"AI / ML / Data",sk_eng:"Engineering",sk_core:"Core",sk_fw:"Frameworks & Tools",sk_lib:"Libraries & Tools",sk_tools:"Tools & Practices",lang_native:"Native",
+    exp1_title:"iOS Engineer",exp2_title:"iOS Developer",exp3_title:"Software Developer & Junior Data Scientist",exp4_title:"Software Engineer Intern",edu1_title:"BSc Management of Information Systems",edu2_title:"BSc Software Engineering",
+    exp1_desc:"Built and maintained iOS banking apps for 250K+ users using Clean Architecture and SwiftUI. Delivered 99%+ bug-free releases through unit and UI testing. Integrated QR payments, RIA Money Transfer, JWT authentication, Keychain credential storage, and SSL pinning for end-to-end security. Enhanced UX with WidgetKit home screen widgets and Lottie animation sequences. Managed CI/CD pipelines with Bitrise in an Agile environment across Istanbul, Albania, and remote Europe.",
+    exp2_desc:"Delivered production iOS apps for Nike, Under Armour ME, Bloomingdale's, and Dropkick — serving users across the UAE, Saudi Arabia, and Kuwait. Built pixel-perfect UIs with SnapKit and Core Animation. Integrated Apple Pay, Face ID/Touch ID, and Click & Collect location flows. Led Objective-C → Swift migration for legacy modules. Managed CircleCI pipelines with SonarQube static analysis.",
+    exp3_desc:"Built automated ETL data pipelines in Python and Apache Airflow for the carbon.ninja energy intelligence platform. Developed and validated supervised ML models — regression and ensemble approaches — for electricity consumption forecasting and demand-peak prevention. Performed feature engineering, hyperparameter tuning, cross-validation, and produced data visualisations in R and Python.",
+    exp4_desc:"Designed and implemented automated data ingestion pipelines using Apache NiFi, Java, and regex-based text processing to collect and normalise electricity market data from the EPIAS REST API. Structured raw market data into relational schemas in MySQL for downstream analysis and reporting.",
+    edu1_desc:"Part-time open education degree pursued alongside a full professional career. Coursework in information systems, business analytics, database programming, algorithms, and data mining — providing a complementary perspective on the business and systems context of software and AI applications.",
+    edu2_desc:"Full-time software engineering programme, all instruction 100% in English. Covered algorithms, data structures, software architecture, operating systems, databases, NLP, AI, mobile development, and mobile robotics. Graduated with A / A− on both Senior Design Projects. KMK-evaluated as equivalent to a German Bachelor's degree (August 2025).",
+    ref1_role:"Software Engineering Dept. · PhD from IIT Chicago",ref2_role:"Head of Software Engineering Dept.",ref3_role:"Department of Software Engineering",ref4_role:"CEO, Onur Enerji & carbon.ninja",ref5_role:"AI GTM Lead, Google · Former Manager at OBSS",ref6_role:"Mobile Tech Lead, EPAM Systems",
+    ref_src_acad:"Academic · Yaşar University",ref_src_onur:"Industry · Onur Enerji",ref_src_obss:"Industry · OBSS",ref_src_epam:"Industry · EPAM Systems",
+    pd_sana:"SwiftUI health app integrating the Claude AI API (Anthropic) for personalised meal recommendations and calorie tracking. Real-time inference on HealthKit data, allergy and diet personalisation, and full 6-language localisation (TR, DE, EN, ES, PT, FR).",
+    pd_bkt:"Core developer of two banking apps serving 250K+ users. Built National ID onboarding, account management, fund transfers, cardless withdrawals, QR payments, and RIA Money Transfer. Secured with SSL pinning, Wultra Shield, Keychain, and JWT.",
+    pd_nike:"Built foundational architecture and core features for Nike's regional iOS app: splash screen, fluid animations, Arabic-English RTL localisation, user registration flows, and main navigation. Analytics via SnowplowTracker and Firebase.",
+    pd_ua:"Key iOS developer for product detail pages, address management, and multi-step checkout across UAE, Saudi Arabia, and Kuwait. Full Arabic-English RTL support. Implemented Click & Collect with Google Maps, MapKit, and CoreLocation.",
+    pd_bloom:"Contributed to the Bloomingdale's iOS app across UAE, Saudi Arabia, and Kuwait. Developed product browse, wishlist and bag management, and Apple Pay checkout. Implemented Face ID / Touch ID biometric auth with pixel-perfect luxury UI.",
+    pd_dropkick:"Built the Dropkick sneaker and streetwear app from scratch using MVVM-R: product listings, size selectors, time-limited and raffle purchase flows, push notifications for exclusive drops, and full App Store submission pipeline.",
+    pd_that:"Developed core shopping flows and modular UI for this UAE luxury retail app. Secure payment flows with Keychain, optimised background processing with GCD, networking via Alamofire and URLSession.",
+    pd_nice:"Built a full MVC-R shopping app from scratch for the Nice Stores fashion brand — implementing core shopping flows, modular reusable components, Firebase and Salesforce analytics, and App Store submission pipeline. Managed all networking via Alamofire/URLSession and optimised UI performance using GCD.",
+    pd_carbon:"Built automated ML data pipelines for large-scale energy and weather data ingestion. Developed and validated regression and time-series models for electricity consumption forecasting and demand-peak prevention.",
+    pd_xray:"End-to-end deep learning pipeline for pneumonia detection from chest X-rays. Fine-tuned EfficientNet-B0 with transfer learning on the NIH dataset; Grad-CAM integration for transparent, interpretable predictions.",
+    pd_mljob:"Scrapes and analyses ML and AI job listings to extract skill trends, salary ranges, and employer demand signals — built to understand what the market requires from ML engineers and guide learning priorities.",
+    pd_voice:"Voice-controlled assistant combining speech recognition, intent parsing, and TTS synthesis — an exploration of applied NLP and human-computer interaction in a constrained, real-time environment.",
+    pd_ros:"A mobile robotics project built with ROS and Python — implementing concentric circular motion patterns for autonomous robot navigation. Developed for the Mobile Robotics Programming course at Yaşar University.",
     beyond_music_title:'Music',beyond_travel_title:'Travel',beyond_art_title:'Art',beyond_volunteer_title:'Volunteering',
     beyond_music:"I play the <strong>ukulele</strong> — something about the warmth of it suits evenings well. On the other end of the spectrum, I'm deeply drawn to electronic music and want to learn to <strong>DJ</strong> properly; the craft of mixing, reading a room, building energy over time fascinates me as much as any engineering problem.",
     beyond_travel:"I've explored quite a bit: <strong>USA, UK, Scotland, Egypt, Germany, Albania, Belgium, Georgia, Czech Republic, France,</strong> and <strong>Netherlands</strong>. What draws me most are places with deep history — old quarters, archaeology, standing somewhere alive for centuries.",
@@ -1173,6 +1196,29 @@ const translations = {
     languages_title:'Sprachen',certs_title:'Zertifikate',
     kmk_label:'Offizielle deutsche Anerkennung',kmk_title:'KMK Zeugnisbewertung — Gleichwertig mit deutschem Bachelor',kmk_desc:'Ausgestellt von der KMK Zentralstelle für ausländisches Bildungswesen, Bonn. Reg.-Nr. LN2025/77597-1, August 2025. Offiziell anerkannt als gleichwertig mit einem deutschen Hochschulabschluss auf Bachelor-Ebene.',
     ref_intro:'Empfehlungsschreiben von akademischen Betreuern der Yaşar Universität und von Vorgesetzten bei OBSS, EPAM Systems und Onur Enerji. Alle auf Anfrage erhältlich.',
+    sk_ios:"iOS / Swift",sk_aiml:"KI / ML / Daten",sk_eng:"Entwicklung",sk_core:"Kern",sk_fw:"Frameworks & Tools",sk_lib:"Bibliotheken & Tools",sk_tools:"Tools & Methoden",lang_native:"Muttersprache",
+    exp1_title:"iOS Engineer",exp2_title:"iOS-Entwickler",exp3_title:"Softwareentwickler & Junior Data Scientist",exp4_title:"Software-Praktikant",edu1_title:"B.Sc. Wirtschaftsinformatik",edu2_title:"B.Sc. Softwaretechnik",
+    exp1_desc:"Entwicklung und Wartung von iOS-Banking-Apps für 250K+ Nutzer mit Clean Architecture und SwiftUI. Über 99 % fehlerfreie Releases durch Unit- und UI-Tests. Integration von QR-Zahlungen, RIA Money Transfer, JWT-Authentifizierung, Keychain-Speicherung von Zugangsdaten und SSL-Pinning für durchgängige Sicherheit. UX-Verbesserungen mit WidgetKit-Homescreen-Widgets und Lottie-Animationen. Verwaltung der CI/CD-Pipelines mit Bitrise in einem agilen Umfeld über Istanbul, Albanien und das Remote-Europa.",
+    exp2_desc:"Lieferung produktiver iOS-Apps für Nike, Under Armour ME, Bloomingdale's und Dropkick — für Nutzer in den VAE, Saudi-Arabien und Kuwait. Pixelgenaue UIs mit SnapKit und Core Animation. Integration von Apple Pay, Face ID/Touch ID und Click-&-Collect-Standortflows. Leitung der Objective-C-→-Swift-Migration für Legacy-Module. Verwaltung der CircleCI-Pipelines mit statischer SonarQube-Analyse.",
+    exp3_desc:"Aufbau automatisierter ETL-Datenpipelines in Python und Apache Airflow für die Energieplattform carbon.ninja. Entwicklung und Validierung überwachter ML-Modelle — Regressions- und Ensemble-Ansätze — zur Prognose des Stromverbrauchs und zur Vermeidung von Lastspitzen. Feature-Engineering, Hyperparameter-Tuning, Kreuzvalidierung und Datenvisualisierungen in R und Python.",
+    exp4_desc:"Konzeption und Umsetzung automatisierter Datenaufnahme-Pipelines mit Apache NiFi, Java und Regex-basierter Textverarbeitung zur Erfassung und Normalisierung von Strommarktdaten aus der EPIAS-REST-API. Strukturierung von Rohdaten in relationale Schemata in MySQL für nachgelagerte Analysen und Berichte.",
+    edu1_desc:"Berufsbegleitendes Fernstudium parallel zur vollen beruflichen Tätigkeit. Schwerpunkte in Informationssystemen, Business Analytics, Datenbankprogrammierung, Algorithmen und Data Mining — eine ergänzende Perspektive auf den geschäftlichen und systemischen Kontext von Software- und KI-Anwendungen.",
+    edu2_desc:"Vollzeit-Studium der Softwaretechnik, vollständig auf Englisch. Inhalte: Algorithmen, Datenstrukturen, Softwarearchitektur, Betriebssysteme, Datenbanken, NLP, KI, Mobile-Entwicklung und mobile Robotik. Abschluss mit A / A− in beiden Abschlussprojekten. Von der KMK als gleichwertig mit einem deutschen Bachelorabschluss bewertet (August 2025).",
+    ref1_role:"Fachbereich Softwaretechnik · PhD vom IIT Chicago",ref2_role:"Leiter des Fachbereichs Softwaretechnik",ref3_role:"Fachbereich Softwaretechnik",ref4_role:"CEO, Onur Enerji & carbon.ninja",ref5_role:"AI GTM Lead, Google · ehem. Managerin bei OBSS",ref6_role:"Mobile Tech Lead, EPAM Systems",
+    ref_src_acad:"Akademisch · Yaşar Universität",ref_src_onur:"Industrie · Onur Enerji",ref_src_obss:"Industrie · OBSS",ref_src_epam:"Industrie · EPAM Systems",
+    pd_sana:"SwiftUI-Gesundheits-App mit Integration der Claude AI API (Anthropic) für personalisierte Mahlzeitenempfehlungen und Kalorienzählung. Echtzeit-Inferenz auf HealthKit-Daten, Allergie- und Ernährungspersonalisierung sowie vollständige Lokalisierung in 6 Sprachen (TR, DE, EN, ES, PT, FR).",
+    pd_bkt:"Kernentwickler zweier Banking-Apps für über 250K Nutzer. Umsetzung von Onboarding per nationalem Ausweis, Kontoverwaltung, Überweisungen, kardenlosen Abhebungen, QR-Zahlungen und RIA Money Transfer. Abgesichert mit SSL-Pinning, Wultra Shield, Keychain und JWT.",
+    pd_nike:"Aufbau der grundlegenden Architektur und Kernfunktionen für Nikes regionale iOS-App: Splash Screen, flüssige Animationen, arabisch-englische RTL-Lokalisierung, Registrierungsflows und Hauptnavigation. Analytics über SnowplowTracker und Firebase.",
+    pd_ua:"Wesentlicher iOS-Entwickler für Produktdetailseiten, Adressverwaltung und mehrstufigen Checkout in den VAE, Saudi-Arabien und Kuwait. Vollständige arabisch-englische RTL-Unterstützung. Umsetzung von Click & Collect mit Google Maps, MapKit und CoreLocation.",
+    pd_bloom:"Mitarbeit an der Bloomingdale's-iOS-App in den VAE, Saudi-Arabien und Kuwait. Entwicklung von Produktsuche, Wunschlisten- und Warenkorbverwaltung sowie Apple-Pay-Checkout. Umsetzung der Face-ID-/Touch-ID-Authentifizierung mit pixelgenauer Luxus-UI.",
+    pd_dropkick:"Vollständige Neuentwicklung der Sneaker- und Streetwear-App Dropkick mit MVVM-R: Produktlisten, Größenauswahl, zeitlich begrenzte und Verlosungs-Kaufflows, Push-Benachrichtigungen für exklusive Drops und kompletter App-Store-Einreichungsprozess.",
+    pd_that:"Entwicklung der zentralen Shopping-Flows und der modularen UI für diese Luxus-Retail-App aus den VAE. Sichere Zahlungsflows mit Keychain, optimierte Hintergrundverarbeitung mit GCD, Networking über Alamofire und URLSession.",
+    pd_nice:"Vollständige Neuentwicklung einer MVC-R-Shopping-App für die Modemarke Nice Stores — mit zentralen Shopping-Flows, modularen wiederverwendbaren Komponenten, Firebase- und Salesforce-Analytics sowie App-Store-Einreichung. Gesamtes Networking über Alamofire/URLSession und UI-Performance-Optimierung mit GCD.",
+    pd_carbon:"Aufbau automatisierter ML-Datenpipelines für die Aufnahme großer Energie- und Wetterdatenmengen. Entwicklung und Validierung von Regressions- und Zeitreihenmodellen zur Prognose des Stromverbrauchs und zur Vermeidung von Lastspitzen.",
+    pd_xray:"Durchgängige Deep-Learning-Pipeline zur Pneumonie-Erkennung aus Röntgen-Thoraxbildern. Feinabstimmung von EfficientNet-B0 mit Transfer Learning auf dem NIH-Datensatz; Grad-CAM-Integration für transparente, interpretierbare Vorhersagen.",
+    pd_mljob:"Scraping und Analyse von ML- und KI-Stellenanzeigen zur Ermittlung von Skill-Trends, Gehaltsspannen und Nachfragesignalen — entwickelt, um zu verstehen, was der Markt von ML-Ingenieuren erwartet, und um Lernprioritäten zu setzen.",
+    pd_voice:"Sprachgesteuerter Assistent mit Spracherkennung, Intent-Parsing und TTS-Synthese — eine Erkundung von angewandtem NLP und Mensch-Computer-Interaktion in einer eingeschränkten Echtzeitumgebung.",
+    pd_ros:"Ein mobiles Robotik-Projekt mit ROS und Python — Umsetzung konzentrischer Kreisbewegungsmuster für die autonome Roboternavigation. Entwickelt für den Kurs Mobile Robotics Programming an der Yaşar Universität.",
     beyond_music_title:'Musik',beyond_travel_title:'Reisen',beyond_art_title:'Kunst',beyond_volunteer_title:'Ehrenamt',
     beyond_music:"Ich spiele <strong>Ukulele</strong> — die Wärme des Instruments passt gut zu ruhigen Abenden. Gleichzeitig bin ich tief von elektronischer Musik fasziniert und möchte ernsthaft lernen, richtig <strong>aufzulegen</strong>.",
     beyond_travel:"Ich hatte das Glück, einiges zu erkunden: <strong>USA, Großbritannien, Schottland, Ägypten, Deutschland, Albanien, Belgien, Georgien, Tschechien, Frankreich</strong> und die <strong>Niederlande</strong>.",
@@ -1207,6 +1253,29 @@ const translations = {
     languages_title:'Diller',certs_title:'Sertifikalar',
     kmk_label:'Resmi Alman Tanıması',kmk_title:'KMK Zeugnisbewertung — Alman lisans derecesiyle eşdeğer',kmk_desc:'KMK Zentralstelle für ausländisches Bildungswesen, Bonn tarafından verilmiştir. Kayıt No. LN2025/77597-1, Ağustos 2025.',
     ref_intro:"Yaşar Üniversitesi'ndeki akademik danışmanlarımdan ve OBSS, EPAM Systems ile Onur Enerji'deki yöneticilerimden tavsiye mektupları. Tümü talep üzerine sunulabilir.",
+    sk_ios:"iOS / Swift",sk_aiml:"YZ / ML / Veri",sk_eng:"Mühendislik",sk_core:"Temel",sk_fw:"Çerçeveler & Araçlar",sk_lib:"Kütüphaneler & Araçlar",sk_tools:"Araçlar & Pratikler",lang_native:"Ana dil",
+    exp1_title:"iOS Mühendisi",exp2_title:"iOS Geliştirici",exp3_title:"Yazılım Geliştirici & Junior Veri Bilimci",exp4_title:"Yazılım Mühendisi Stajyeri",edu1_title:"Yönetim Bilişim Sistemleri Lisansı",edu2_title:"Yazılım Mühendisliği Lisansı",
+    exp1_desc:"Clean Architecture ve SwiftUI kullanarak 250K+ kullanıcıya hizmet veren iOS bankacılık uygulamaları geliştirdim ve sürdürdüm. Birim ve UI testleriyle %99+ hatasız sürümler sağladım. QR ödemeleri, RIA Money Transfer, JWT kimlik doğrulama, Keychain ile kimlik bilgisi saklama ve uçtan uca güvenlik için SSL pinning entegre ettim. WidgetKit ana ekran widget'ları ve Lottie animasyonlarıyla kullanıcı deneyimini geliştirdim. İstanbul, Arnavutluk ve uzaktan Avrupa ekipleriyle çevik bir ortamda Bitrise CI/CD süreçlerini yönettim.",
+    exp2_desc:"Nike, Under Armour ME, Bloomingdale's ve Dropkick için BAE, Suudi Arabistan ve Kuveyt'teki kullanıcılara yönelik üretim iOS uygulamaları teslim ettim. SnapKit ve Core Animation ile piksel mükemmelliğinde arayüzler geliştirdim. Apple Pay, Face ID/Touch ID ve Click & Collect konum akışlarını entegre ettim. Legacy modüller için Objective-C → Swift geçişini yönettim. SonarQube statik analiziyle CircleCI süreçlerini yönettim.",
+    exp3_desc:"carbon.ninja enerji platformu için Python ve Apache Airflow ile otomatik ETL veri pipeline'ları kurdum. Elektrik tüketimi tahmini ve talep-zirvesi önleme için denetimli ML modelleri — regresyon ve ensemble yaklaşımları — geliştirip doğruladım. Öznitelik mühendisliği, hiperparametre ayarı ve çapraz doğrulama yaptım; R ile Python'da veri görselleştirmeleri ürettim.",
+    exp4_desc:"EPIAS REST API'sinden elektrik piyasası verilerini toplamak ve normalleştirmek için Apache NiFi, Java ve regex tabanlı metin işleme kullanarak otomatik veri alım pipeline'ları tasarladım ve uyguladım. Ham piyasa verilerini sonraki analiz ve raporlama için MySQL'de ilişkisel şemalara yapılandırdım.",
+    edu1_desc:"Tam zamanlı profesyonel kariyerimle birlikte yürüttüğüm yarı zamanlı açıköğretim derecesi. Bilişim sistemleri, iş analitiği, veritabanı programlama, algoritmalar ve veri madenciliği dersleri — yazılım ve yapay zeka uygulamalarının iş ve sistem bağlamına tamamlayıcı bir bakış açısı sağladı.",
+    edu2_desc:"Tamamı %100 İngilizce verilen tam zamanlı yazılım mühendisliği programı. Algoritmalar, veri yapıları, yazılım mimarisi, işletim sistemleri, veritabanları, NLP, yapay zeka, mobil geliştirme ve mobil robotik konularını kapsadı. Her iki bitirme projesinden de A / A− ile mezun oldum. KMK tarafından Almanya lisans derecesiyle eşdeğer olarak değerlendirildi (Ağustos 2025).",
+    ref1_role:"Yazılım Mühendisliği Bölümü · IIT Chicago Doktoralı",ref2_role:"Yazılım Mühendisliği Bölüm Başkanı",ref3_role:"Yazılım Mühendisliği Bölümü",ref4_role:"CEO, Onur Enerji & carbon.ninja",ref5_role:"AI GTM Lead, Google · OBSS'deki eski Yöneticim",ref6_role:"Mobile Tech Lead, EPAM Systems",
+    ref_src_acad:"Akademik · Yaşar Üniversitesi",ref_src_onur:"Sektör · Onur Enerji",ref_src_obss:"Sektör · OBSS",ref_src_epam:"Sektör · EPAM Systems",
+    pd_sana:"Kişiselleştirilmiş öğün önerileri ve kalori takibi için Claude AI API (Anthropic) entegrasyonlu SwiftUI sağlık uygulaması. HealthKit verileri üzerinde gerçek zamanlı çıkarım, alerji ve diyet kişiselleştirmesi ve 6 dilde tam yerelleştirme (TR, DE, EN, ES, PT, FR).",
+    pd_bkt:"250K+ kullanıcıya hizmet veren iki bankacılık uygulamasının çekirdek geliştiricisi. Kimlik kartıyla onboarding, hesap yönetimi, para transferi, kartsız para çekme, QR ödemeleri ve RIA Money Transfer geliştirdim. SSL pinning, Wultra Shield, Keychain ve JWT ile güvenli hale getirildi.",
+    pd_nike:"Nike'ın bölgesel iOS uygulaması için temel mimariyi ve çekirdek özellikleri geliştirdim: açılış ekranı, akıcı animasyonlar, Arapça-İngilizce RTL yerelleştirmesi, kullanıcı kayıt akışları ve ana navigasyon. SnowplowTracker ve Firebase ile analitik.",
+    pd_ua:"BAE, Suudi Arabistan ve Kuveyt'te ürün detay sayfaları, adres yönetimi ve çok adımlı ödeme için kilit iOS geliştiricisi. Tam Arapça-İngilizce RTL desteği. Google Maps, MapKit ve CoreLocation ile Click & Collect uygulaması.",
+    pd_bloom:"BAE, Suudi Arabistan ve Kuveyt'te Bloomingdale's iOS uygulamasına katkıda bulundum. Ürün gezinme, istek listesi ve sepet yönetimi ile Apple Pay ödeme geliştirdim. Piksel mükemmelliğinde lüks arayüzle Face ID / Touch ID biyometrik kimlik doğrulama uyguladım.",
+    pd_dropkick:"Dropkick sneaker ve streetwear uygulamasını MVVM-R ile sıfırdan geliştirdim: ürün listeleri, beden seçiciler, süreli ve çekilişli satın alma akışları, özel lansmanlar için push bildirimleri ve eksiksiz App Store gönderim süreci.",
+    pd_that:"BAE merkezli bu lüks perakende uygulaması için çekirdek alışveriş akışlarını ve modüler arayüzü geliştirdim. Keychain ile güvenli ödeme akışları, GCD ile optimize edilmiş arka plan işleme, Alamofire ve URLSession ile ağ iletişimi.",
+    pd_nice:"Nice Stores moda markası için sıfırdan tam bir MVC-R alışveriş uygulaması geliştirdim — çekirdek alışveriş akışları, modüler yeniden kullanılabilir bileşenler, Firebase ve Salesforce analitiği ve App Store gönderim süreci. Tüm ağ iletişimini Alamofire/URLSession ile yönettim ve GCD ile UI performansını optimize ettim.",
+    pd_carbon:"Büyük ölçekli enerji ve hava durumu verisi alımı için otomatik ML veri pipeline'ları kurdum. Elektrik tüketimi tahmini ve talep-zirvesi önleme için regresyon ve zaman serisi modelleri geliştirip doğruladım.",
+    pd_xray:"Göğüs röntgenlerinden pnömoni tespiti için uçtan uca derin öğrenme pipeline'ı. NIH veri kümesinde transfer öğrenme ile EfficientNet-B0 ince ayarı; şeffaf ve yorumlanabilir tahminler için Grad-CAM entegrasyonu.",
+    pd_mljob:"Beceri trendlerini, maaş aralıklarını ve işveren talep sinyallerini çıkarmak için ML ve YZ iş ilanlarını tarar ve analiz eder — pazarın ML mühendislerinden ne beklediğini anlamak ve öğrenme önceliklerini belirlemek için geliştirildi.",
+    pd_voice:"Konuşma tanıma, niyet ayrıştırma ve TTS sentezini birleştiren sesli asistan — kısıtlı ve gerçek zamanlı bir ortamda uygulamalı NLP ve insan-bilgisayar etkileşimi keşfi.",
+    pd_ros:"ROS ve Python ile geliştirilen mobil robotik projesi — otonom robot navigasyonu için eşmerkezli dairesel hareket desenleri uygular. Yaşar Üniversitesi Mobil Robotik Programlama dersi için geliştirildi.",
     beyond_music_title:'Müzik',beyond_travel_title:'Seyahat',beyond_art_title:'Sanat',beyond_volunteer_title:'Gönüllülük',
     beyond_music:"Ukulele çalıyorum — o sıcaklık akşamları çok yakışıyor. Öte yandan elektronik müziğe derinden ilgi duyuyorum ve gerçek anlamda <strong>DJ olmayı</strong> öğrenmek istiyorum.",
     beyond_travel:"<strong>ABD, İngiltere, İskoçya, Mısır, Almanya, Arnavutluk, Belçika, Gürcistan, Çekya, Fransa</strong> ve <strong>Hollanda</strong>'yı gezdim.",
