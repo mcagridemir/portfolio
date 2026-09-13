@@ -256,7 +256,8 @@ section:hover .sec-num{color:var(--dim)}
 .lang-bar-wrap{margin-top:.85rem;height:2px;background:var(--border-hi);border-radius:1px;overflow:hidden}
 .lang-bar{height:100%;background:var(--accent);border-radius:1px;width:0;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
 .cert-list{display:flex;flex-direction:column;gap:1px;background:var(--border-hi);border:1px solid var(--border-hi);margin-bottom:3rem;counter-reset:cert}
-.cert-item{background:var(--surface);padding:1.1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;transition:background .2s;counter-increment:cert}
+.cert-item{background:var(--surface);padding:1.1rem 1.5rem;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.35rem 1rem;transition:background .2s;counter-increment:cert}
+.cert-name{flex:1 1 260px;min-width:0}
 .cert-item:hover{background:var(--card)}
 .cert-item::before{content:counter(cert,decimal-leading-zero);font-family:var(--mono);font-size:11px;color:var(--dim);flex-shrink:0}
 .cert-name{font-size:14px;font-weight:500}
@@ -566,6 +567,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
         <span class="badge">250K+ Users ✓</span>
         <span class="badge">AI / ML ✓</span>
         <span class="badge">Google AI ✓</span>
+        <span class="badge">Stanford ML ✓</span>
       </div>
       <div class="now-row">
         <p class="now-label" data-i18n="now_label">Now</p>
@@ -921,6 +923,8 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
     <div class="cert-item fade-up"><span class="cert-name">telc Deutsch C1 Hochschule — Befriedigend · 154/214 Pkt. (Schriftlich 115/166 · Mündlich 39/48)</span><span class="cert-meta">telc · Mar 2026</span></div>
     <div class="cert-item fade-up"><span class="cert-name">IELTS Academic — Overall Band 6.5 (L:7.5 R:6.5 W:6.0 S:6.5)</span><span class="cert-meta">British Council · Apr 2026</span></div>
     <div class="cert-item fade-up"><span class="cert-name">Deutschkurs DEZ C1.2 — Teilnahmebestätigung</span><span class="cert-meta">Goethe-Institut İzmir · Dec 2025</span></div>
+    <div class="cert-item fade-up"><span class="cert-name">Claude Code 101 — Course Completion Badge</span><span class="cert-meta">Anthropic / Claude Academy · Sep 2026<a class="cert-verify" href="https://academy.claude.com/verify/fb75a1c4c7e50cf7af84a460dcfeeb8a" target="_blank" rel="noopener noreferrer">Verify ↗</a></span></div>
+    <div class="cert-item fade-up"><span class="cert-name">Machine Learning Specialization — Andrew Ng · 3 courses (Supervised, Advanced Algorithms, Unsupervised &amp; RL)</span><span class="cert-meta">DeepLearning.AI &amp; Stanford Online / Coursera · Sep 2026<a class="cert-verify" href="https://coursera.org/verify/specialization/JKTIBMY02KUE" target="_blank" rel="noopener noreferrer">Verify ↗</a></span></div>
     <div class="cert-item fade-up"><span class="cert-name">Google AI Professional Certificate</span><span class="cert-meta">Google / Coursera · Jun 2026</span></div>
     <div class="cert-item fade-up"><span class="cert-name">SwiftUI Essential Training</span><span class="cert-meta">LinkedIn Learning · Dec 2022</span></div>
   </div>
