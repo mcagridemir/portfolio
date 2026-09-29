@@ -515,7 +515,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
     <div class="hero-btns">
       <a href="#contact" class="btn btn-primary" data-i18n="btn_contact">Get in touch</a>
       <a href="#projects" class="btn btn-secondary" data-i18n="btn_viewwork">View work ↓</a>
-      <a href="cv.pdf" download class="btn btn-ghost" data-i18n="btn_cv">Download CV ↓</a>
+      <a href="cv-en.pdf" download="Cagri_Demir_CV.pdf" id="cv-link" class="btn btn-ghost" data-i18n="btn_cv">Download CV ↓</a>
     </div>
   </div>
   <div class="hero-stats">
@@ -1330,6 +1330,11 @@ function setLang(lang){
   });
   document.documentElement.lang = lang==='tr'?'tr':lang==='de'?'de':'en';
   ['en','de','tr'].forEach(l=>document.getElementById('l-'+l)?.classList.toggle('active',l===lang));
+  const cv = document.getElementById('cv-link');
+  if(cv){ const de = lang==='de';
+    cv.href = de ? 'cv-de.pdf' : 'cv-en.pdf';
+    cv.setAttribute('download', de ? 'Cagri_Demir_Lebenslauf.pdf' : 'Cagri_Demir_CV.pdf');
+  }
   localStorage.setItem('pf-lang',lang);
 }
 const savedLang = localStorage.getItem('pf-lang') || 'en';
