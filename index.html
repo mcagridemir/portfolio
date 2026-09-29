@@ -528,7 +528,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
       <div class="stat-label" data-i18n="stat_users">App users</div>
     </div>
     <div class="hero-stat">
-      <div class="stat-num" data-target="9" data-suffix="">9</div>
+      <div class="stat-num" data-target="8" data-suffix="">8</div>
       <div class="stat-label" data-i18n="stat_apps">Apps shipped</div>
     </div>
     <div class="hero-stat">
@@ -686,7 +686,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
       <h3 class="proj-title">Sana — AI Health &amp; Nutrition</h3>
       <p class="proj-desc" data-i18n="pd_sana">SwiftUI health app integrating the Claude AI API (Anthropic) for personalised meal recommendations and calorie tracking. Real-time inference on HealthKit data, allergy and diet personalisation, and full 6-language localisation (TR, DE, EN, ES, PT, FR).</p>
       <div class="tech-tags"><span class="tech-tag">SwiftUI</span><span class="tech-tag">HealthKit</span><span class="tech-tag">Claude API</span><span class="tech-tag">Anthropic</span><span class="tech-tag">Core ML</span><span class="tech-tag">i18n</span></div>
-      <span class="proj-link" style="cursor:default">⊙ Coming soon · App Store</span>
+      <span class="proj-link" style="cursor:default" data-i18n="sana_status">⊙ In App Store review</span>
     </div>
     <div class="proj-card featured fade-up" data-cat="ios">
       <span class="proj-card-num">02</span>
@@ -804,8 +804,8 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
   <div class="stats-row">
     <div class="stat-cell"><div class="stat-cell-num">6+</div><div class="stat-cell-lbl" data-i18n="exp_stat_years">Years</div></div>
     <div class="stat-cell"><div class="stat-cell-num">3</div><div class="stat-cell-lbl" data-i18n="exp_stat_employers">Employers</div></div>
-    <div class="stat-cell"><div class="stat-cell-num">9</div><div class="stat-cell-lbl" data-i18n="exp_stat_apps">Apps Shipped</div></div>
-    <div class="stat-cell"><div class="stat-cell-num">5</div><div class="stat-cell-lbl" data-i18n="exp_stat_countries">Countries</div></div>
+    <div class="stat-cell"><div class="stat-cell-num">8</div><div class="stat-cell-lbl" data-i18n="exp_stat_apps">Apps Shipped</div></div>
+    <div class="stat-cell"><div class="stat-cell-num">5+</div><div class="stat-cell-lbl" data-i18n="exp_stat_countries">Countries</div></div>
   </div>
   <div class="timeline">
     <div class="tl-item fade-up">
@@ -894,7 +894,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
     </div>
     <div class="tl-item fade-up">
       <div class="tl-dot"></div>
-      <div class="tl-date"><div class="tl-year">2015</div>08/2015 – 07/2020</div>
+      <div class="tl-date"><div class="tl-year">2015</div>08/2015 – 08/2020</div>
       <div>
         <h3 class="tl-title" data-i18n="edu2_title">BSc Software Engineering</h3>
         <p class="tl-sub">Yaşar University · İzmir, Turkey · GPA 2.7 / 4.0</p>
@@ -934,6 +934,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
     <div class="cert-item fade-up"><span class="cert-name">Claude 101 — Course Completion Badge</span><span class="cert-meta">Anthropic / Claude Academy · 09/2026<a class="cert-verify" href="https://academy.claude.com/verify/d02d0120ba36d06841ece6fb2bbe95f9" target="_blank" rel="noopener noreferrer">Verify ↗</a></span></div>
     <div class="cert-item fade-up"><span class="cert-name">Claude Code 101 — Course Completion Badge</span><span class="cert-meta">Anthropic / Claude Academy · 09/2026<a class="cert-verify" href="https://academy.claude.com/verify/fb75a1c4c7e50cf7af84a460dcfeeb8a" target="_blank" rel="noopener noreferrer">Verify ↗</a></span></div>
     <div class="cert-item fade-up"><span class="cert-name">Machine Learning Specialization — Andrew Ng · 3 courses (Supervised, Advanced Algorithms, Unsupervised &amp; RL)</span><span class="cert-meta">DeepLearning.AI &amp; Stanford Online / Coursera · 09/2026<a class="cert-verify" href="https://coursera.org/verify/specialization/JKTIBMY02KUE" target="_blank" rel="noopener noreferrer">Verify ↗</a></span></div>
+    <div class="cert-item fade-up"><span class="cert-name">The LLM Course — Fundamentals of LLMs</span><span class="cert-meta">Hugging Face · 09/2026</span></div>
     <div class="cert-item fade-up"><span class="cert-name">Google AI Professional Certificate</span><span class="cert-meta">Google / Coursera · 06/2026</span></div>
     <div class="cert-item fade-up"><span class="cert-name">SwiftUI Essential Training</span><span class="cert-meta">LinkedIn Learning · 12/2022</span></div>
   </div>
@@ -1171,7 +1172,7 @@ const translations = {
     kmk_label:'Official German Recognition',kmk_title:'KMK Zeugnisbewertung — Degree equivalent to German Bachelor\'s',kmk_desc:'Issued by the Kultusministerkonferenz (KMK) Zentralstelle für ausländisches Bildungswesen, Bonn. Reg.-Nr.: LN2025/77597-1 · August 2025. Officially confirmed as equivalent to a German Hochschulabschluss auf Bachelor-Ebene.',
     ref_intro:'Reference letters from academic supervisors at Yaşar University and from industry managers at OBSS, EPAM Systems, and Onur Enerji. All available upon request.',
     rub_label:"Enrolled · Master's",rub_title:"M.Sc. Applied Computer Science — Ruhr-Universität Bochum",rub_desc:"Enrolled in the Angewandte Informatik (Applied Computer Science) Master's programme at Ruhr-Universität Bochum, Germany — Winter Semester 2026/27, expected graduation 09/2028. The next step in moving from iOS engineering into AI / ML.",
-    edu0_title:"M.Sc. Applied Computer Science",edu0_desc:"Focus on machine learning. Current coursework: Deep Learning, NLP with Deep Learning, Fundamentals of GPU Programming, Numerical Optimization, and Unsupervised Methods. Expected graduation 09/2028.",badge_accepted:"Enrolled",date_present:"Present",
+    edu0_title:"M.Sc. Applied Computer Science",edu0_desc:"Focus on machine learning. Current coursework: Deep Learning, NLP with Deep Learning, Fundamentals of GPU Programming, Numerical Optimization, and Unsupervised Methods. Expected graduation 09/2028.",badge_accepted:"Enrolled",sana_status:"⊙ In App Store review",date_present:"Present",
     sk_ios:"iOS / Swift",sk_aiml:"AI / ML / Data",sk_eng:"Engineering",sk_core:"Core",sk_fw:"Frameworks & Tools",sk_lib:"Libraries & Tools",sk_tools:"Tools & Practices",lang_native:"Native",
     exp1_title:"iOS Engineer",exp2_title:"iOS Developer",exp3_title:"Software Developer & Junior Data Scientist",exp4_title:"Software Engineer Intern",edu1_title:"BSc Management of Information Systems",edu2_title:"BSc Software Engineering",
     exp1_desc:"Built and maintained iOS banking apps for 250K+ users using Clean Architecture and SwiftUI. Delivered 99%+ bug-free releases through unit and UI testing. Integrated QR payments, RIA Money Transfer, JWT authentication, Keychain credential storage, and SSL pinning for end-to-end security. Enhanced UX with WidgetKit home screen widgets and Lottie animation sequences. Managed CI/CD pipelines with Bitrise in an Agile environment across Istanbul, Albania, and remote Europe.",
@@ -1230,7 +1231,7 @@ const translations = {
     kmk_label:'Offizielle deutsche Anerkennung',kmk_title:'KMK Zeugnisbewertung — Gleichwertig mit deutschem Bachelor',kmk_desc:'Ausgestellt von der KMK Zentralstelle für ausländisches Bildungswesen, Bonn. Reg.-Nr. LN2025/77597-1, August 2025. Offiziell anerkannt als gleichwertig mit einem deutschen Hochschulabschluss auf Bachelor-Ebene.',
     ref_intro:'Empfehlungsschreiben von akademischen Betreuern der Yaşar Universität und von Vorgesetzten bei OBSS, EPAM Systems und Onur Enerji. Alle auf Anfrage erhältlich.',
     rub_label:"Immatrikuliert · Master",rub_title:"M.Sc. Angewandte Informatik — Ruhr-Universität Bochum",rub_desc:"Immatrikuliert im Masterstudiengang Angewandte Informatik an der Ruhr-Universität Bochum, Deutschland — Wintersemester 2026/27, voraussichtlicher Abschluss 09/2028. Der nächste Schritt vom iOS-Engineering hin zu KI / ML.",
-    edu0_title:"M.Sc. Angewandte Informatik",edu0_desc:"Schwerpunkt maschinelles Lernen. Aktuelle Kurse: Deep Learning, NLP mit Deep Learning, Grundlagen der GPU-Programmierung, Numerische Optimierung und Unüberwachte Methoden. Voraussichtlicher Abschluss 09/2028.",badge_accepted:"Immatrikuliert",date_present:"heute",
+    edu0_title:"M.Sc. Angewandte Informatik",edu0_desc:"Schwerpunkt maschinelles Lernen. Aktuelle Kurse: Deep Learning, NLP mit Deep Learning, Grundlagen der GPU-Programmierung, Numerische Optimierung und Unüberwachte Methoden. Voraussichtlicher Abschluss 09/2028.",badge_accepted:"Immatrikuliert",sana_status:"⊙ In App-Store-Prüfung",date_present:"heute",
     sk_ios:"iOS / Swift",sk_aiml:"KI / ML / Daten",sk_eng:"Entwicklung",sk_core:"Kern",sk_fw:"Frameworks & Tools",sk_lib:"Bibliotheken & Tools",sk_tools:"Tools & Methoden",lang_native:"Muttersprache",
     exp1_title:"iOS Engineer",exp2_title:"iOS-Entwickler",exp3_title:"Softwareentwickler & Junior Data Scientist",exp4_title:"Software-Praktikant",edu1_title:"B.Sc. Wirtschaftsinformatik",edu2_title:"B.Sc. Softwaretechnik",
     exp1_desc:"Entwicklung und Wartung von iOS-Banking-Apps für 250K+ Nutzer mit Clean Architecture und SwiftUI. Über 99 % fehlerfreie Releases durch Unit- und UI-Tests. Integration von QR-Zahlungen, RIA Money Transfer, JWT-Authentifizierung, Keychain-Speicherung von Zugangsdaten und SSL-Pinning für durchgängige Sicherheit. UX-Verbesserungen mit WidgetKit-Homescreen-Widgets und Lottie-Animationen. Verwaltung der CI/CD-Pipelines mit Bitrise in einem agilen Umfeld über Istanbul, Albanien und das Remote-Europa.",
@@ -1289,7 +1290,7 @@ const translations = {
     kmk_label:'Resmi Alman Tanıması',kmk_title:'KMK Zeugnisbewertung — Alman lisans derecesiyle eşdeğer',kmk_desc:'KMK Zentralstelle für ausländisches Bildungswesen, Bonn tarafından verilmiştir. Kayıt No. LN2025/77597-1, Ağustos 2025.',
     ref_intro:"Yaşar Üniversitesi'ndeki akademik danışmanlarımdan ve OBSS, EPAM Systems ile Onur Enerji'deki yöneticilerimden tavsiye mektupları. Tümü talep üzerine sunulabilir.",
     rub_label:"Kayıtlı · Yüksek Lisans",rub_title:"M.Sc. Uygulamalı Bilgisayar Bilimleri — Ruhr-Universität Bochum",rub_desc:"Almanya'daki Ruhr-Universität Bochum'da Angewandte Informatik (Uygulamalı Bilgisayar Bilimleri) yüksek lisans programına kayıtlıyım — 2026/27 kış dönemi, tahmini mezuniyet 09/2028. iOS mühendisliğinden YZ / ML'ye geçişte bir sonraki adım.",
-    edu0_title:"M.Sc. Uygulamalı Bilgisayar Bilimleri",edu0_desc:"Makine öğrenmesi odaklı. Güncel dersler: Derin Öğrenme, Derin Öğrenme ile NLP, GPU Programlamanın Temelleri, Sayısal Optimizasyon ve Denetimsiz Yöntemler. Tahmini mezuniyet 09/2028.",badge_accepted:"Kayıtlı",date_present:"günümüz",
+    edu0_title:"M.Sc. Uygulamalı Bilgisayar Bilimleri",edu0_desc:"Makine öğrenmesi odaklı. Güncel dersler: Derin Öğrenme, Derin Öğrenme ile NLP, GPU Programlamanın Temelleri, Sayısal Optimizasyon ve Denetimsiz Yöntemler. Tahmini mezuniyet 09/2028.",badge_accepted:"Kayıtlı",sana_status:"⊙ App Store incelemesinde",date_present:"günümüz",
     sk_ios:"iOS / Swift",sk_aiml:"YZ / ML / Veri",sk_eng:"Mühendislik",sk_core:"Temel",sk_fw:"Çerçeveler & Araçlar",sk_lib:"Kütüphaneler & Araçlar",sk_tools:"Araçlar & Pratikler",lang_native:"Ana dil",
     exp1_title:"iOS Mühendisi",exp2_title:"iOS Geliştirici",exp3_title:"Yazılım Geliştirici & Junior Veri Bilimci",exp4_title:"Yazılım Mühendisi Stajyeri",edu1_title:"Yönetim Bilişim Sistemleri Lisansı",edu2_title:"Yazılım Mühendisliği Lisansı",
     exp1_desc:"Clean Architecture ve SwiftUI kullanarak 250K+ kullanıcıya hizmet veren iOS bankacılık uygulamaları geliştirdim ve sürdürdüm. Birim ve UI testleriyle %99+ hatasız sürümler sağladım. QR ödemeleri, RIA Money Transfer, JWT kimlik doğrulama, Keychain ile kimlik bilgisi saklama ve uçtan uca güvenlik için SSL pinning entegre ettim. WidgetKit ana ekran widget'ları ve Lottie animasyonlarıyla kullanıcı deneyimini geliştirdim. İstanbul, Arnavutluk ve uzaktan Avrupa ekipleriyle çevik bir ortamda Bitrise CI/CD süreçlerini yönettim.",
