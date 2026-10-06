@@ -61,7 +61,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Big+Shoulders+Display:wght@200;300&family=Inter:wght@400;500;600&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+Runic&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 img,svg{display:block;max-width:100%}
@@ -462,6 +462,100 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
   a[href^='http']::after{content:' (' attr(href) ')';font-size:10px;color:#888}
   .nav-logo::after,.btn::after{content:none}
 }
+
+/* ═══ PROMETHEUS THEME ═══════════════════════════════════════ */
+html{font-synthesis:none}
+:root{
+  --bg:#0a0705;--surface:#120c07;--card:#181009;
+  --border:rgba(232,176,74,.09);--border-hi:rgba(232,176,74,.18);
+  --text:#efe6d6;--muted:#a3937a;--dim:#4d3f2d;
+  --display:'Anton',Impact,'Arial Narrow',sans-serif;
+  --thin:'Big Shoulders Display','Arial Narrow',sans-serif;
+  --body:'Inter',system-ui,-apple-system,sans-serif;
+}
+[data-theme="light"]{
+  --bg:#f4ecdf;--surface:#fbf6ec;--card:#fffaf1;
+  --border:rgba(70,45,10,.10);--border-hi:rgba(70,45,10,.17);
+  --text:#1e150c;--muted:#6b5a43;--dim:#cdbd9e;
+}
+body{font-family:var(--body)}
+.form-input,.form-textarea{font-family:var(--body)}
+.sec-title,.sec-num,.stat-num,.stat-cell-num,.tl-year,.tl-title,.proj-title,.ref-name,.beyond-title,.lang-name,.edu-section-title,.kmk-icon{font-weight:400;letter-spacing:.005em}
+.sec-title{font-size:clamp(38px,5.4vw,68px);line-height:1}
+.sec-num{color:transparent;-webkit-text-stroke:1px var(--border-hi)}
+section:hover .sec-num{color:transparent;-webkit-text-stroke:1px var(--accent-25)}
+.tl-year{color:transparent;-webkit-text-stroke:1px var(--dim)}
+.tl-item:hover .tl-year{color:transparent;-webkit-text-stroke:1px var(--accent)}
+
+/* nav — name + numbered links */
+.nav-logo{font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+.nav-logo{white-space:nowrap}
+.nl-short{display:none}
+.nav-links{counter-reset:nav}
+.nav-links a::after{counter-increment:nav;content:counter(nav,decimal-leading-zero);font-size:8px;vertical-align:super;margin-left:3px;color:var(--dim);border:0}
+@media(max-width:1400px){.nl-full{display:none}.nl-short{display:inline}.nav-links{gap:1.25rem}}
+@media(max-width:1100px){.nav-links{display:none}.nav-hamburger{display:flex}.nl-full{display:inline}.nl-short{display:none}}
+@media(max-width:600px){.nl-full{display:none}.nl-short{display:inline}.nav-right{gap:.3rem}.lang-btn{padding:4px 6px;font-size:10px}.nav-hamburger{padding:6px 4px}.cert-meta,.cert-verify{white-space:normal}}
+
+/* hero */
+.hero{display:block;min-height:100vh;padding:calc(var(--nav-h) + 72px) var(--pad) 64px;
+  background:radial-gradient(55% 65% at 76% 50%,#3d1b07 0%,#170b04 45%,var(--bg) 82%)}
+[data-theme="light"] .hero{background:radial-gradient(55% 65% at 76% 50%,#f7d6a1 0%,#f3e3c8 45%,var(--bg) 82%)}
+.hero-bg,.hero-bg-grid{display:none}
+#embers{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2}
+.hero-content{position:relative;z-index:3;max-width:620px}
+.hero-h1{font-family:var(--display);font-weight:400;font-size:clamp(54px,7.6vw,108px);line-height:1.04;letter-spacing:.005em;margin:6px 0 26px;color:var(--text);opacity:0;animation:fadeUp .6s .2s ease forwards}
+.hero-h1 .o{color:transparent;-webkit-text-stroke:1.5px var(--accent);text-shadow:0 0 30px rgba(255,140,40,.45)}
+[data-theme="light"] .hero-h1 .o{text-shadow:none}
+.hero-desc{max-width:520px}
+.hero-art{position:absolute;right:calc(var(--pad) - 70px);top:50%;transform:translateY(-48%);width:min(640px,50vw);height:auto;z-index:1;pointer-events:none;opacity:0;animation:fadeIn 1.2s .3s ease forwards}
+.hero-art .g-line,.hero-art .g-stroke,.ravens-art .g-line,.ravens-art .g-stroke{stroke:var(--accent)}
+.hero-art .g-fill{fill:var(--bg)}
+.hero-art .g-text{fill:var(--accent);fill-opacity:.45}
+.hero-art .ring{transform-origin:310px 270px;animation:spin 90s linear infinite}
+.hero-art .flame{transform-origin:310px 312px;animation:flick 2.4s ease-in-out infinite}
+.hero-vert{position:absolute;right:16px;top:calc(var(--nav-h) + 40px);writing-mode:vertical-rl;font:400 11px var(--mono);letter-spacing:.55em;color:var(--accent);opacity:.32;z-index:3}
+.hero-stats{display:grid;grid-template-columns:repeat(4,auto);justify-content:start;gap:0 2.75rem;background:none;border:0;border-top:1px solid var(--border-hi);padding-top:1.4rem;margin-top:2.6rem;align-self:auto;width:auto}
+.hero-stat{background:none!important;padding:0;min-width:0}
+.stat-num{font-size:40px}
+@keyframes fadeIn{to{opacity:1}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes spinr{to{transform:rotate(-360deg)}}
+@keyframes flick{0%,100%{transform:scale(1,1)}30%{transform:scale(.97,1.05)}60%{transform:scale(1.03,.96)}}
+@media(max-width:860px){
+  .hero{padding-top:calc(var(--nav-h) + 40px)}
+  .hero-art{width:110vw;right:-38vw;top:auto;bottom:-6%;transform:none;opacity:.32;animation:none}
+  .hero-vert{display:none}
+  .hero-stats{grid-template-columns:repeat(2,auto);gap:1.2rem 2.5rem}
+}
+
+/* Huginn & Muninn band */
+.ravens{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:3rem;align-items:center;overflow:hidden;
+  background:radial-gradient(45% 70% at 76% 50%,rgba(232,176,74,.09),transparent 72%)}
+.ravens-title{font-family:var(--thin);font-weight:200;font-size:clamp(58px,8.4vw,118px);line-height:.86;text-transform:uppercase;margin:.2rem 0 1.6rem;color:var(--text)}
+.ravens-title span{color:var(--accent)}
+.ravens-text{color:var(--muted);font-size:16px;line-height:1.85;max-width:540px}
+.term{margin-top:1.8rem;max-width:460px;border:1px solid var(--border-hi);background:var(--surface)}
+.term-tabs{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--border-hi);font:500 11px var(--mono);color:var(--muted);text-align:center}
+.term-tabs div{padding:9px}.term-tabs .on{color:var(--accent);background:var(--accent-10)}
+.term code{display:block;padding:12px 14px;font:400 12px var(--mono);color:var(--text)}
+.term code b{color:var(--accent);font-weight:400}
+.ravens-art{width:100%;max-width:600px;justify-self:end}
+.ravens-art .rv-body{stroke:var(--accent)}
+.ravens-art .rv-far{fill:var(--bg);stroke:var(--accent);stroke-opacity:.5}
+.ravens-art .rv-eye{fill:var(--text)}
+.ravens-art .g-dot{fill:var(--accent)}
+.ravens-art .g-text{fill:var(--accent);fill-opacity:.85}
+.ravens-art .rune{font-family:'Noto Sans Runic',sans-serif;fill-opacity:.5}
+.ravens-art .runes{transform-origin:300px 280px;animation:spinr 120s linear infinite}
+@media(max-width:860px){.ravens{grid-template-columns:1fr}.ravens-art{justify-self:center}}
+
+/* floating fire channel */
+.fire-ch{position:fixed;right:1.5rem;bottom:1.5rem;z-index:700;font:500 10px var(--mono);letter-spacing:.2em;text-transform:uppercase;padding:9px 14px;border:1px solid var(--border-hi);background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);color:var(--accent)}
+.fire-ch i{display:inline-block;width:6px;height:6px;border-radius:50%;background:#ff5a1f;margin-right:8px;box-shadow:0 0 8px #ff5a1f;vertical-align:1px}
+@media(max-width:600px){.fire-ch{display:none}}
+@media(prefers-reduced-motion:reduce){.hero-art,.hero-art .ring,.hero-art .flame,.ravens-art .runes{animation:none;opacity:1}}
+@media print{#embers,.hero-art,.hero-vert,.fire-ch,.ravens-art{display:none!important}}
 </style>
 </head>
 <body>
@@ -471,7 +565,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
 
 <!-- ── NAV ─────────────────────────────────────────────── -->
 <nav class="nav">
-  <a href="#hero" class="nav-logo">mcagridemir</a>
+  <a href="#hero" class="nav-logo"><span class="nl-full">Muhammed Çağrı Demir</span><span class="nl-short">Ç. Demir</span></a>
   <ul class="nav-links">
     <li><a href="#about" data-i18n="nav_about">About</a></li>
     <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
@@ -505,35 +599,61 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
 
 <!-- ── HERO ────────────────────────────────────────────── -->
 <section class="hero" id="hero" aria-label="Introduction">
-  <div class="hero-bg"></div>
-  <div class="hero-bg-grid"></div>
+  <canvas id="embers" aria-hidden="true"></canvas>
+  <svg class="hero-art" viewBox="0 0 620 620" aria-hidden="true">
+    <defs>
+      <pattern id="hatchA" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line class="g-stroke" x1="0" y1="0" x2="0" y2="4" stroke-width="1.1"/></pattern>
+      <radialGradient id="glowA"><stop offset="0" stop-color="#ff9a3c" stop-opacity=".5"/><stop offset="1" stop-color="#ff9a3c" stop-opacity="0"/></radialGradient>
+      <linearGradient id="fOut" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#ff4d12"/><stop offset="1" stop-color="#ff9a3c" stop-opacity=".2"/></linearGradient>
+      <linearGradient id="fMid" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#ff8a24"/><stop offset="1" stop-color="#ffd27a"/></linearGradient>
+      <filter id="blurA"><feGaussianBlur stdDeviation="3"/></filter>
+      <path id="circA" d="M310,270 m-215,0 a215,215 0 1,1 430,0 a215,215 0 1,1 -430,0"/>
+    </defs>
+    <circle cx="310" cy="240" r="190" fill="url(#glowA)"/>
+    <g id="rays"></g>
+    <g class="ring">
+      <circle class="g-line" cx="310" cy="270" r="232" fill="none" stroke-opacity=".2"/>
+      <circle class="g-line" cx="310" cy="270" r="198" fill="none" stroke-opacity=".14" stroke-dasharray="2 6"/>
+      <text class="g-text" font-family="JetBrains Mono" font-size="12" letter-spacing="9"><textPath href="#circA">ΠΡΟΜΗΘΕΥΣ · ΠΥΡΦΟΡΟΣ · ΤΕΧΝΗ · ΠΡΟΜΗΘΕΥΣ · ΠΥΡΦΟΡΟΣ · ΤΕΧΝΗ ·</textPath></text>
+    </g>
+    <path class="g-line" d="M296 330 L324 330 L316 540 L304 540 Z" fill="url(#hatchA)" stroke-width="1.2"/>
+    <rect class="g-line g-fill" x="292" y="356" width="36" height="7"/>
+    <rect class="g-line g-fill" x="296" y="420" width="28" height="6"/>
+    <path class="g-line g-fill" d="M270 312 Q310 340 350 312 L340 332 Q310 348 280 332 Z" stroke-width="1.4"/>
+    <g class="flame">
+      <path d="M310 118 C346 176,372 206,363 258 C357 292,334 312,310 314 C286 312,262 292,256 258 C250 216,290 196,310 118 Z" fill="url(#fOut)" filter="url(#blurA)" opacity=".9"/>
+      <path d="M310 168 C332 208,348 230,341 266 C336 292,322 304,310 305 C298 304,283 292,279 266 C274 236,298 220,310 168 Z" fill="url(#fMid)"/>
+      <path d="M310 220 C322 244,329 258,325 278 C322 294,316 300,310 300 C304 300,297 294,295 278 C292 260,302 248,310 220 Z" fill="#fff3cf"/>
+    </g>
+  </svg>
+  <div class="hero-vert" aria-hidden="true">ΠΡΟΜΗΘΕΥΣ · PROMETHEUS</div>
   <div class="hero-content">
     <div class="avail-chip"><span class="avail-dot"></span><span data-i18n="available_pill">Available · Bochum</span></div>
     <p class="hero-tag" data-i18n="hero_tag">iOS Engineer → AI / ML · MSc @ RUB Bochum</p>
-    <h1 class="hero-name">Muhammed<br>Çağrı <em>Demir</em></h1>
+    <h1 class="hero-h1" data-i18n="hero_h1">I bring<br>fire to<br><span class="o">machines.</span></h1>
     <p class="hero-desc" data-i18n="hero_desc">iOS engineer with 6+ years delivering banking and e-commerce apps for 250K+ users&nbsp;— now moving to Bochum for an M.Sc. in Applied Computer Science at Ruhr-Universität Bochum, on the way to becoming an AI / ML engineer. Energy prediction pipelines, medical imaging models, on-device inference.</p>
     <div class="hero-btns">
       <a href="#contact" class="btn btn-primary" data-i18n="btn_contact">Get in touch</a>
       <a href="#projects" class="btn btn-secondary" data-i18n="btn_viewwork">View work ↓</a>
       <a href="cv-en.pdf" download="Cagri_Demir_CV.pdf" id="cv-link" class="btn btn-ghost" data-i18n="btn_cv">Download CV ↓</a>
     </div>
-  </div>
   <div class="hero-stats">
-    <div class="hero-stat">
-      <div class="stat-num" data-target="6" data-suffix="+">6+</div>
-      <div class="stat-label" data-i18n="stat_years_exp">Years experience</div>
-    </div>
-    <div class="hero-stat">
-      <div class="stat-num" data-target="250" data-suffix="K+">250K+</div>
-      <div class="stat-label" data-i18n="stat_users">App users</div>
-    </div>
-    <div class="hero-stat">
-      <div class="stat-num" data-target="9" data-suffix="">9</div>
-      <div class="stat-label" data-i18n="stat_apps">Apps shipped</div>
-    </div>
-    <div class="hero-stat">
-      <div class="stat-num" data-target="5" data-suffix="+">5+</div>
-      <div class="stat-label" data-i18n="stat_countries">Countries</div>
+      <div class="hero-stat">
+        <div class="stat-num" data-target="6" data-suffix="+">6+</div>
+        <div class="stat-label" data-i18n="stat_years_exp">Years experience</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-num" data-target="250" data-suffix="K+">250K+</div>
+        <div class="stat-label" data-i18n="stat_users">App users</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-num" data-target="9" data-suffix="">9</div>
+        <div class="stat-label" data-i18n="stat_apps">Apps shipped</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-num" data-target="5" data-suffix="+">5+</div>
+        <div class="stat-label" data-i18n="stat_countries">Countries</div>
+      </div>
     </div>
   </div>
 </section>
@@ -665,6 +785,36 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
       <span class="dashed-tag">MLX Framework</span>
     </div>
   </div>
+</section>
+
+<!-- ── HUGINN & MUNINN ───────────────────────────────────── -->
+<section class="ravens" id="ravens" aria-label="Huginn and Muninn">
+  <div class="ravens-copy">
+    <p class="sec-eyebrow" data-i18n="raven_eyebrow">Huginn &amp; Muninn</p>
+    <h2 class="ravens-title" data-i18n="raven_title">Thought <span>&amp;</span> Memory</h2>
+    <p class="ravens-text" data-i18n="raven_text">Prometheus brought fire. With it, I give machines two ravens: Huginn, thought — models that reason; and Muninn, memory — systems that remember what matters.</p>
+    <div class="term"><div class="term-tabs"><div class="on">huginn.think()</div><div>muninn.remember()</div></div><code><b>$</b> reason → retrieve → remember</code></div>
+  </div>
+  <svg class="ravens-art" viewBox="0 0 600 560" aria-hidden="true">
+    <defs>
+      <pattern id="hatchR" width="3.5" height="3.5" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)"><line class="g-stroke" x1="0" y1="0" x2="0" y2="3.5" stroke-width=".9"/></pattern>
+      <path id="circR" d="M300,280 m-238,0 a238,238 0 1,1 476,0 a238,238 0 1,1 -476,0"/>
+      <g id="raven">
+        <path class="rv-far" fill="#0a0705" stroke="#e8b04a" stroke-opacity=".5" d="M70 60 C86 46 100 32 118 22 L116 32 L128 28 L120 40 L132 40 L118 48 C108 52 96 56 86 60 Z" stroke-width=".8"/>
+        <path class="rv-body" stroke="#e8b04a" d="M4 70 L22 61 C28 54 36 49 46 48 C55 48 61 52 66 57 L76 58 C90 40 106 18 130 4 L125 17 L144 10 L136 23 L152 20 L140 31 L156 33 L141 41 L151 48 L134 52 C126 55 118 58 110 61 C128 64 150 67 168 69 L190 64 L201 80 L190 95 L168 90 C146 94 124 95 104 92 C86 90 70 86 58 80 C48 76 38 74 28 74 L16 74 Z" fill="url(#hatchR)" stroke-width="1.1" stroke-linejoin="round"/>
+        <circle class="rv-eye" cx="40" cy="58" r="2.4"/>
+      </g>
+    </defs>
+    <circle class="g-line" cx="300" cy="280" r="250" fill="none" stroke-opacity=".18"/>
+    <circle class="g-line" cx="300" cy="280" r="222" fill="none" stroke-opacity=".12"/>
+    <g class="runes"><text class="g-text rune" font-size="17" letter-spacing="10"><textPath href="#circR">ᚠᚢᚦᚨᚱᚲᚷᚹ ᚺᚾᛁᛃᛇᛈᛉᛊ ᛏᛒᛖᛗᛚᛜᛞᛟ ᚠᚢᚦᚨᚱᚲᚷᚹ ᚺᚾᛁᛃᛇᛈᛉᛊ ᛏᛒᛖᛗᛚᛜᛞᛟ</textPath></text></g>
+    <line class="g-line" x1="300" y1="120" x2="300" y2="440" stroke-opacity=".22" stroke-dasharray="3 6"/>
+    <circle class="g-line" cx="300" cy="280" r="5" fill="none"/><circle class="g-dot" cx="300" cy="280" r="1.6"/>
+    <use href="#raven" transform="translate(292,118) scale(-1.4,1.4)"/>
+    <use href="#raven" transform="translate(308,232) scale(1.4,1.4)"/>
+    <text class="g-text" x="44" y="104" font-family="JetBrains Mono" font-size="11" letter-spacing="3">HUGINN · THOUGHT</text>
+    <text class="g-text" x="410" y="392" font-family="JetBrains Mono" font-size="11" letter-spacing="3">MUNINN · MEMORY</text>
+  </svg>
 </section>
 
 <!-- ── PROJECTS ──────────────────────────────────────────── -->
@@ -1115,6 +1265,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
   <p>Built with precision · <a href="#hero">Back to top ↑</a></p>
 </footer>
 
+<div class="fire-ch" id="fire-ch" aria-hidden="true"><i></i><span id="fire-ch-txt">00 · Home</span></div>
 <button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
 
 <!-- ── TWEAKS PANEL ──────────────────────────────────────── -->
@@ -1172,7 +1323,7 @@ const translations = {
     kmk_label:'Official German Recognition',kmk_title:'KMK Zeugnisbewertung — Degree equivalent to German Bachelor\'s',kmk_desc:'Issued by the Kultusministerkonferenz (KMK) Zentralstelle für ausländisches Bildungswesen, Bonn. Reg.-Nr.: LN2025/77597-1 · August 2025. Officially confirmed as equivalent to a German Hochschulabschluss auf Bachelor-Ebene.',
     ref_intro:'Reference letters from academic supervisors at Yaşar University and from industry managers at OBSS, EPAM Systems, and Onur Enerji. All available upon request.',
     rub_label:"Enrolled · Master's",rub_title:"M.Sc. Applied Computer Science — Ruhr-Universität Bochum",rub_desc:"Enrolled in the Angewandte Informatik (Applied Computer Science) Master's programme at Ruhr-Universität Bochum, Germany — Winter Semester 2026/27, expected graduation 09/2028. The next step in moving from iOS engineering into AI / ML.",
-    edu0_title:"M.Sc. Applied Computer Science",edu0_desc:"Focus on machine learning. Current coursework: Deep Learning, NLP with Deep Learning, Fundamentals of GPU Programming, Numerical Optimization, and Unsupervised Methods. Expected graduation 09/2028.",badge_accepted:"Enrolled",date_present:"Present",
+    edu0_title:"M.Sc. Applied Computer Science",edu0_desc:"Focus on machine learning. Current coursework: Deep Learning, NLP with Deep Learning, Fundamentals of GPU Programming, Numerical Optimization, and Unsupervised Methods. Expected graduation 09/2028.",badge_accepted:"Enrolled",date_present:"Present",hero_h1:'I bring<br>fire to<br><span class="o">machines.</span>',fire_home:"Home",raven_eyebrow:"Huginn &amp; Muninn",raven_title:"Thought <span>&amp;</span> Memory",raven_text:"Prometheus brought fire. With it, I give machines two ravens: Huginn, thought — models that reason; and Muninn, memory — systems that remember what matters. In Norse myth they fly out every morning and bring back to Odin what they saw. That is the loop I build: reason, retrieve, remember.",
     sk_ios:"iOS / Swift",sk_aiml:"AI / ML / Data",sk_eng:"Engineering",sk_core:"Core",sk_fw:"Frameworks & Tools",sk_lib:"Libraries & Tools",sk_tools:"Tools & Practices",lang_native:"Native",
     exp1_title:"iOS Engineer",exp2_title:"iOS Developer",exp3_title:"Software Developer & Junior Data Scientist",exp4_title:"Software Engineer Intern",edu1_title:"BSc Management of Information Systems",edu2_title:"BSc Software Engineering",
     exp1_desc:"Built and maintained iOS banking apps for 250K+ users using Clean Architecture and SwiftUI. Delivered 99%+ bug-free releases through unit and UI testing. Integrated QR payments, RIA Money Transfer, JWT authentication, Keychain credential storage, and SSL pinning for end-to-end security. Enhanced UX with WidgetKit home screen widgets and Lottie animation sequences. Managed CI/CD pipelines with Bitrise in an Agile environment across Istanbul, Albania, and remote Europe.",
@@ -1231,7 +1382,7 @@ const translations = {
     kmk_label:'Offizielle deutsche Anerkennung',kmk_title:'KMK Zeugnisbewertung — Gleichwertig mit deutschem Bachelor',kmk_desc:'Ausgestellt von der KMK Zentralstelle für ausländisches Bildungswesen, Bonn. Reg.-Nr. LN2025/77597-1, August 2025. Offiziell anerkannt als gleichwertig mit einem deutschen Hochschulabschluss auf Bachelor-Ebene.',
     ref_intro:'Empfehlungsschreiben von akademischen Betreuern der Yaşar Universität und von Vorgesetzten bei OBSS, EPAM Systems und Onur Enerji. Alle auf Anfrage erhältlich.',
     rub_label:"Immatrikuliert · Master",rub_title:"M.Sc. Angewandte Informatik — Ruhr-Universität Bochum",rub_desc:"Immatrikuliert im Masterstudiengang Angewandte Informatik an der Ruhr-Universität Bochum, Deutschland — Wintersemester 2026/27, voraussichtlicher Abschluss 09/2028. Der nächste Schritt vom iOS-Engineering hin zu KI / ML.",
-    edu0_title:"M.Sc. Angewandte Informatik",edu0_desc:"Schwerpunkt maschinelles Lernen. Aktuelle Kurse: Deep Learning, NLP mit Deep Learning, Grundlagen der GPU-Programmierung, Numerische Optimierung und Unüberwachte Methoden. Voraussichtlicher Abschluss 09/2028.",badge_accepted:"Immatrikuliert",date_present:"heute",
+    edu0_title:"M.Sc. Angewandte Informatik",edu0_desc:"Schwerpunkt maschinelles Lernen. Aktuelle Kurse: Deep Learning, NLP mit Deep Learning, Grundlagen der GPU-Programmierung, Numerische Optimierung und Unüberwachte Methoden. Voraussichtlicher Abschluss 09/2028.",badge_accepted:"Immatrikuliert",date_present:"heute",hero_h1:'Ich bringe<br>Maschinen<br><span class="o">das Feuer.</span>',fire_home:"Start",raven_eyebrow:"Hugin &amp; Munin",raven_title:"Denken <span>&amp;</span> Gedächtnis",raven_text:"Prometheus brachte das Feuer. Mit diesem Feuer gebe ich Maschinen zwei Raben: Hugin, das Denken – Modelle, die schlussfolgern; und Munin, das Gedächtnis – Systeme, die sich an das Wesentliche erinnern. In der nordischen Mythologie fliegen sie jeden Morgen aus und berichten Odin, was sie gesehen haben. Genau diese Schleife baue ich: schlussfolgern, abrufen, erinnern.",
     sk_ios:"iOS / Swift",sk_aiml:"KI / ML / Daten",sk_eng:"Entwicklung",sk_core:"Kern",sk_fw:"Frameworks & Tools",sk_lib:"Bibliotheken & Tools",sk_tools:"Tools & Methoden",lang_native:"Muttersprache",
     exp1_title:"iOS Engineer",exp2_title:"iOS-Entwickler",exp3_title:"Softwareentwickler & Junior Data Scientist",exp4_title:"Software-Praktikant",edu1_title:"B.Sc. Wirtschaftsinformatik",edu2_title:"B.Sc. Softwaretechnik",
     exp1_desc:"Entwicklung und Wartung von iOS-Banking-Apps für 250K+ Nutzer mit Clean Architecture und SwiftUI. Über 99 % fehlerfreie Releases durch Unit- und UI-Tests. Integration von QR-Zahlungen, RIA Money Transfer, JWT-Authentifizierung, Keychain-Speicherung von Zugangsdaten und SSL-Pinning für durchgängige Sicherheit. UX-Verbesserungen mit WidgetKit-Homescreen-Widgets und Lottie-Animationen. Verwaltung der CI/CD-Pipelines mit Bitrise in einem agilen Umfeld über Istanbul, Albanien und das Remote-Europa.",
@@ -1290,7 +1441,7 @@ const translations = {
     kmk_label:'Resmi Alman Tanıması',kmk_title:'KMK Zeugnisbewertung — Alman lisans derecesiyle eşdeğer',kmk_desc:'KMK Zentralstelle für ausländisches Bildungswesen, Bonn tarafından verilmiştir. Kayıt No. LN2025/77597-1, Ağustos 2025.',
     ref_intro:"Yaşar Üniversitesi'ndeki akademik danışmanlarımdan ve OBSS, EPAM Systems ile Onur Enerji'deki yöneticilerimden tavsiye mektupları. Tümü talep üzerine sunulabilir.",
     rub_label:"Kayıtlı · Yüksek Lisans",rub_title:"M.Sc. Uygulamalı Bilgisayar Bilimleri — Ruhr-Universität Bochum",rub_desc:"Almanya'daki Ruhr-Universität Bochum'da Angewandte Informatik (Uygulamalı Bilgisayar Bilimleri) yüksek lisans programına kayıtlıyım — 2026/27 kış dönemi, tahmini mezuniyet 09/2028. iOS mühendisliğinden YZ / ML'ye geçişte bir sonraki adım.",
-    edu0_title:"M.Sc. Uygulamalı Bilgisayar Bilimleri",edu0_desc:"Makine öğrenmesi odaklı. Güncel dersler: Derin Öğrenme, Derin Öğrenme ile NLP, GPU Programlamanın Temelleri, Sayısal Optimizasyon ve Denetimsiz Yöntemler. Tahmini mezuniyet 09/2028.",badge_accepted:"Kayıtlı",date_present:"günümüz",
+    edu0_title:"M.Sc. Uygulamalı Bilgisayar Bilimleri",edu0_desc:"Makine öğrenmesi odaklı. Güncel dersler: Derin Öğrenme, Derin Öğrenme ile NLP, GPU Programlamanın Temelleri, Sayısal Optimizasyon ve Denetimsiz Yöntemler. Tahmini mezuniyet 09/2028.",badge_accepted:"Kayıtlı",date_present:"günümüz",hero_h1:'Makinelere<br>ateşi<br><span class="o">getiriyorum.</span>',fire_home:"Giriş",raven_eyebrow:"Huginn &amp; Muninn",raven_title:"Düşünce <span>&amp;</span> Hafıza",raven_text:"Prometheus ateşi getirdi. Ben o ateşle makinelere iki kuzgun veriyorum: Huginn, düşünce — akıl yürüten modeller; Muninn, hafıza — önemli olanı hatırlayan sistemler. İskandinav mitolojisinde her sabah dünyayı dolaşıp gördüklerini Odin'e anlatırlar. Benim kurduğum döngü de bu: akıl yürüt, bul, hatırla.",
     sk_ios:"iOS / Swift",sk_aiml:"YZ / ML / Veri",sk_eng:"Mühendislik",sk_core:"Temel",sk_fw:"Çerçeveler & Araçlar",sk_lib:"Kütüphaneler & Araçlar",sk_tools:"Araçlar & Pratikler",lang_native:"Ana dil",
     exp1_title:"iOS Mühendisi",exp2_title:"iOS Geliştirici",exp3_title:"Yazılım Geliştirici & Junior Veri Bilimci",exp4_title:"Yazılım Mühendisi Stajyeri",edu1_title:"Yönetim Bilişim Sistemleri Lisansı",edu2_title:"Yazılım Mühendisliği Lisansı",
     exp1_desc:"Clean Architecture ve SwiftUI kullanarak 250K+ kullanıcıya hizmet veren iOS bankacılık uygulamaları geliştirdim ve sürdürdüm. Birim ve UI testleriyle %99+ hatasız sürümler sağladım. QR ödemeleri, RIA Money Transfer, JWT kimlik doğrulama, Keychain ile kimlik bilgisi saklama ve uçtan uca güvenlik için SSL pinning entegre ettim. WidgetKit ana ekran widget'ları ve Lottie animasyonlarıyla kullanıcı deneyimini geliştirdim. İstanbul, Arnavutluk ve uzaktan Avrupa ekipleriyle çevik bir ortamda Bitrise CI/CD süreçlerini yönettim.",
@@ -1350,7 +1501,7 @@ const savedLang = localStorage.getItem('pf-lang') || 'en';
 setLang(savedLang);
 
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
-  "accent": "oklch(0.74 0.16 68)",
+  "accent": "oklch(0.79 0.13 78)",
   "theme": "dark",
   "fontSize": 16
 }/*EDITMODE-END*/;
@@ -1391,6 +1542,7 @@ function toggleTheme(){ setTheme(document.documentElement.dataset.theme==='dark'
 function setTheme(t){
   document.documentElement.dataset.theme = t;
   localStorage.setItem('pf-theme', t);
+  applyAccent(themeAccent());
   document.getElementById('btn-dark').classList.toggle('active', t==='dark');
   document.getElementById('btn-light').classList.toggle('active', t==='light');
   window.parent.postMessage({type:'__edit_mode_set_keys', edits:{theme:t}}, '*');
@@ -1410,7 +1562,8 @@ function setAccent(el){
   document.querySelectorAll('.tw-swatch').forEach(s => s.classList.toggle('active', s===el));
   window.parent.postMessage({type:'__edit_mode_set_keys', edits:{accent:el.dataset.accent}}, '*');
 }
-applyAccent(TWEAK_DEFAULTS.accent);
+function themeAccent(){ return document.documentElement.dataset.theme==="light" ? "oklch(0.56 0.12 65)" : TWEAK_DEFAULTS.accent; }
+applyAccent(themeAccent());
 
 /* ── FONT SIZE ────────────────────────────────────────── */
 function setFontSize(v){
@@ -1601,6 +1754,34 @@ const tlLineObs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('tl-in');});
 },{threshold:.05});
 document.querySelectorAll('.timeline').forEach(t=>tlLineObs.observe(t));
+
+/* ── PROMETHEUS: engraving rays ───────────────────────── */
+(()=>{const g=document.getElementById('rays');if(!g)return;let sd=7;const r=()=>(sd=(sd*16807)%2147483647)/2147483647;
+  for(let i=0;i<150;i++){const a=i/150*Math.PI*2,r1=88+r()*20,r2=170+r()*140,l=document.createElementNS('http://www.w3.org/2000/svg','line');
+    l.setAttribute('x1',310+Math.cos(a)*r1);l.setAttribute('y1',240+Math.sin(a)*r1);l.setAttribute('x2',310+Math.cos(a)*r2);l.setAttribute('y2',240+Math.sin(a)*r2);
+    l.setAttribute('class','g-line');l.setAttribute('stroke-opacity',(.12+r()*.3).toFixed(2));l.setAttribute('stroke-width',(.5+r()*.7).toFixed(2));g.appendChild(l)}})();
+
+/* ── PROMETHEUS: rising embers (only while hero is visible) ── */
+(()=>{const c=document.getElementById('embers'),hero=document.getElementById('hero'),art=document.querySelector('.hero-art');
+  if(!c||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  const x=c.getContext('2d');let w,h,ps=[],run=false,raf;
+  const size=()=>{w=c.width=hero.clientWidth;h=c.height=hero.clientHeight};size();addEventListener('resize',size);
+  const spawn=()=>{const hr=hero.getBoundingClientRect(),ar=art.getBoundingClientRect();
+    return{x:ar.left-hr.left+ar.width*(.38+Math.random()*.24),y:ar.top-hr.top+ar.height*(.3+Math.random()*.12),vy:.4+Math.random()*1.1,vx:(Math.random()-.5)*.5,r:.6+Math.random()*1.8,l:1}};
+  const tick=()=>{x.clearRect(0,0,w,h);if(ps.length<80)ps.push(spawn());
+    ps.forEach(p=>{p.y-=p.vy;p.x+=p.vx+Math.sin(p.y/30)*.3;p.l-=.006;x.beginPath();x.arc(p.x,p.y,p.r,0,7);
+      x.fillStyle=`rgba(255,${140+Math.floor(p.l*90)},60,${Math.max(p.l,0)})`;x.shadowBlur=8;x.shadowColor='#ff7a1a';x.fill()});
+    ps=ps.filter(p=>p.l>0&&p.y>0);if(run)raf=requestAnimationFrame(tick)};
+  new IntersectionObserver(([e])=>{run=e.isIntersecting;if(run){cancelAnimationFrame(raf);tick()}}).observe(hero)})();
+
+/* ── FIRE CHANNEL: shows the section you are in ─────────── */
+(()=>{const out=document.getElementById('fire-ch-txt');if(!out)return;const secs=[...document.querySelectorAll('section[id]')];
+  const upd=()=>{let cur=secs[0];secs.forEach(s=>{if(window.scrollY>=s.offsetTop-160)cur=s});
+    const t=translations[currentLang]||translations.en;
+    const num=cur.querySelector('.sec-num')?.textContent||(cur.id==='hero'?'00':'ᚺᛗ');
+    const name=cur.id==='hero'?t.fire_home:cur.id==='ravens'?'Huginn & Muninn':(document.querySelector(`.nav-links a[href="#${cur.id}"]`)?.textContent||cur.id);
+    out.textContent=num+' · '+name};
+  addEventListener('scroll',upd,{passive:true});document.querySelectorAll('.lang-btn').forEach(b=>b.addEventListener('click',()=>setTimeout(upd)));upd()})();
 </script>
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2c2b4d73abf04850baff73d55a8df1ea"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
