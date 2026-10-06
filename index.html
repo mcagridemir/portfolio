@@ -61,7 +61,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@300;500;700&family=Inter:wght@400;500;600&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 img,svg{display:block;max-width:100%}
@@ -462,6 +462,74 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
   a[href^='http']::after{content:' (' attr(href) ')';font-size:10px;color:#888}
   .nav-logo::after,.btn::after{content:none}
 }
+
+/* ═══ THEME B — one bold colour (red field, cream ink) ═══════ */
+html{font-synthesis:none}
+:root{
+  --bg:#8e2410;--surface:#86210e;--card:#7d1f0d;
+  --border:rgba(246,230,200,.16);--border-hi:rgba(246,230,200,.3);
+  --text:#fbf1de;--muted:#f0cdb9;--dim:#c97c62;
+  --display:'Big Shoulders Display','Arial Narrow',sans-serif;
+  --body:'Inter',system-ui,-apple-system,sans-serif;
+}
+[data-theme="light"]{
+  --bg:#f6ead3;--surface:#fbf3e3;--card:#fff9ee;
+  --border:rgba(142,36,16,.14);--border-hi:rgba(142,36,16,.26);
+  --text:#3a0d05;--muted:#7a3c2a;--dim:#d9b9a2;
+}
+body{font-family:var(--body)}
+body::before{opacity:.05}
+.form-input,.form-textarea{font-family:var(--body)}
+.form-input::placeholder,.form-textarea::placeholder{color:var(--dim)}
+::-webkit-scrollbar-track{background:var(--bg)}
+#cursor-glow{display:none}
+.btn-primary{color:var(--bg)}
+.sec-title,.hero-name,.stat-num,.stat-cell-num,.tl-year,.edu-section-title{font-weight:300;text-transform:uppercase;letter-spacing:.01em}
+.sec-title{font-size:clamp(46px,6.6vw,92px);line-height:.88}
+.proj-title,.tl-title,.ref-name,.beyond-title,.lang-name,.kmk-icon{font-weight:500;letter-spacing:.01em}
+.proj-title,.tl-title{text-transform:uppercase;font-size:24px}
+.sec-num{display:none}
+.tl-year{color:var(--dim)}
+.tl-item:hover .tl-year{color:var(--accent)}
+.badge,.skill-tag.core,.kmk-box{background:rgba(0,0,0,.08)}
+
+/* nav */
+.nav-logo{font-size:12px;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap}
+.nl-short{display:none}
+.nav-links{counter-reset:nav}
+.nav-links a::after{counter-increment:nav;content:counter(nav,decimal-leading-zero);font-size:8px;vertical-align:super;margin-left:3px;opacity:.55;border:0}
+@media(max-width:1400px){.nl-full{display:none}.nl-short{display:inline}.nav-links{gap:1.25rem}}
+@media(max-width:1100px){.nav-links{display:none}.nav-hamburger{display:flex}.nl-full{display:inline}.nl-short{display:none}}
+@media(max-width:600px){.nl-full{display:none}.nl-short{display:inline}.nav-right{gap:.3rem}.lang-btn{padding:4px 6px;font-size:10px}.nav-hamburger{padding:6px 4px}.cert-meta,.cert-verify{white-space:normal}}
+
+/* hero */
+.hero{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:3.5rem;align-items:stretch;padding-top:calc(var(--nav-h) + 56px);padding-bottom:56px}
+.hero-bg,.hero-bg-grid{display:none}
+.hero-content{align-self:center}
+.hero-name{font-size:clamp(64px,8.6vw,128px);line-height:.86;margin-bottom:1.6rem}
+.hero-name em{font-style:normal}
+.hero-desc{color:var(--muted)}
+.hero-art{margin:0;position:relative;border:1px solid var(--border-hi);overflow:hidden;min-height:420px;opacity:0;animation:fadeUp .8s .3s ease forwards}
+.hero-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:30% 22%}
+.hero-stats{display:flex;flex-direction:row;gap:2.75rem;background:none;border:0;border-top:1px solid var(--border-hi);padding-top:1.3rem;margin-top:2.4rem;align-self:auto;opacity:1;animation:none}
+.hero-stat{background:none!important;padding:0;min-width:0}
+.stat-num{font-size:44px;font-weight:500;color:var(--text)}
+@media(max-width:860px){
+  .hero{grid-template-columns:1fr;gap:2.5rem}
+  .hero-art{min-height:0;aspect-ratio:1600/1048}
+  .hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem 2rem}
+}
+
+/* engraving plates beside section headers */
+.sec-head{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:3rem;align-items:start;margin-bottom:2.5rem}
+.sec-head .sec-intro{margin-bottom:0}
+.sec-plate{margin:0;border:1px solid var(--border-hi);max-height:360px;overflow:hidden}
+.sec-plate img{width:100%;height:100%;max-height:360px;object-fit:cover;display:block}
+@media(max-width:860px){.sec-head{grid-template-columns:1fr}.sec-plate{max-height:260px}.sec-plate img{max-height:260px}}
+
+.marquee-wrap{background:rgba(0,0,0,.08)}
+footer .art-credit{opacity:.7}
+@media print{.hero-art,.sec-plate{display:none!important}}
 </style>
 </head>
 <body>
@@ -471,7 +539,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
 
 <!-- ── NAV ─────────────────────────────────────────────── -->
 <nav class="nav">
-  <a href="#hero" class="nav-logo">mcagridemir</a>
+  <a href="#hero" class="nav-logo"><span class="nl-full">Muhammed Çağrı Demir</span><span class="nl-short">Ç. Demir</span></a>
   <ul class="nav-links">
     <li><a href="#about" data-i18n="nav_about">About</a></li>
     <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
@@ -517,25 +585,26 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
       <a href="#projects" class="btn btn-secondary" data-i18n="btn_viewwork">View work ↓</a>
       <a href="cv-en.pdf" download="Cagri_Demir_CV.pdf" id="cv-link" class="btn btn-ghost" data-i18n="btn_cv">Download CV ↓</a>
     </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="stat-num" data-target="6" data-suffix="+">6+</div>
+        <div class="stat-label" data-i18n="stat_years_exp">Years experience</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-num" data-target="250" data-suffix="K+">250K+</div>
+        <div class="stat-label" data-i18n="stat_users">App users</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-num" data-target="9" data-suffix="">9</div>
+        <div class="stat-label" data-i18n="stat_apps">Apps shipped</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-num" data-target="5" data-suffix="+">5+</div>
+        <div class="stat-label" data-i18n="stat_countries">Countries</div>
+      </div>
+    </div>
   </div>
-  <div class="hero-stats">
-    <div class="hero-stat">
-      <div class="stat-num" data-target="6" data-suffix="+">6+</div>
-      <div class="stat-label" data-i18n="stat_years_exp">Years experience</div>
-    </div>
-    <div class="hero-stat">
-      <div class="stat-num" data-target="250" data-suffix="K+">250K+</div>
-      <div class="stat-label" data-i18n="stat_users">App users</div>
-    </div>
-    <div class="hero-stat">
-      <div class="stat-num" data-target="9" data-suffix="">9</div>
-      <div class="stat-label" data-i18n="stat_apps">Apps shipped</div>
-    </div>
-    <div class="hero-stat">
-      <div class="stat-num" data-target="5" data-suffix="+">5+</div>
-      <div class="stat-label" data-i18n="stat_countries">Countries</div>
-    </div>
-  </div>
+  <figure class="hero-art"><img src="img/hero.jpg" alt="Heinrich Füger, Prometheus Brings Fire to Mankind (1817)" width="1600" height="1048"></figure>
 </section>
 
 <!-- ── MARQUEE ───────────────────────────────────────────── -->
@@ -670,9 +739,11 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
 <!-- ── PROJECTS ──────────────────────────────────────────── -->
 <section id="projects" aria-label="Projects">
   <span class="sec-num">03</span>
+  <div class="sec-head"><div>
   <p class="sec-eyebrow" data-i18n="nav_projects">Projects</p>
   <h2 class="sec-title" data-i18n="title_projects">Work &amp; Projects</h2>
   <p class="sec-intro" data-i18n="projects_intro">Production apps shipped for global brands and financial institutions, plus personal machine learning projects.</p>
+  </div><figure class="sec-plate"><img src="img/raven-manet.jpg" alt="Édouard Manet, The Raven (1875)" width="900" height="1308" loading="lazy"></figure></div>
   <div class="filter-bar">
     <button class="filter-btn active" data-filter="all" data-i18n="filter_all">All</button>
     <button class="filter-btn" data-filter="ios" data-i18n="filter_ios">iOS</button>
@@ -798,9 +869,11 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
 <!-- ── EXPERIENCE ────────────────────────────────────────── -->
 <section id="experience" aria-label="Work Experience">
   <span class="sec-num">04</span>
+  <div class="sec-head"><div>
   <p class="sec-eyebrow" data-i18n="nav_experience">Experience</p>
   <h2 class="sec-title" data-i18n="title_experience">Work History</h2>
   <p class="sec-intro" data-i18n="exp_intro">6+ years across fintech, global retail, and energy tech — from İzmir to Istanbul, with teams spanning Europe, the UK, the Middle East, and the Balkans.</p>
+  </div><figure class="sec-plate"><img src="img/raven-audubon.jpg" alt="John James Audubon, Common Raven (1830)" width="1200" height="992" loading="lazy"></figure></div>
   <div class="stats-row">
     <div class="stat-cell"><div class="stat-cell-num">6+</div><div class="stat-cell-lbl" data-i18n="exp_stat_years">Years</div></div>
     <div class="stat-cell"><div class="stat-cell-num">3</div><div class="stat-cell-lbl" data-i18n="exp_stat_employers">Employers</div></div>
@@ -1112,6 +1185,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9997;pointer-events:none;
 
 <footer>
   <p>© 2026 Muhammed Çağrı Demir · iOS & AI/ML Engineer · Bochum</p>
+  <p class="art-credit">Art: H. F. Füger (1817), É. Manet (1875), J. J. Audubon (1830) — public domain</p>
   <p>Built with precision · <a href="#hero">Back to top ↑</a></p>
 </footer>
 
@@ -1350,7 +1424,7 @@ const savedLang = localStorage.getItem('pf-lang') || 'en';
 setLang(savedLang);
 
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
-  "accent": "oklch(0.74 0.16 68)",
+  "accent": "oklch(0.93 0.04 80)",
   "theme": "dark",
   "fontSize": 16
 }/*EDITMODE-END*/;
@@ -1391,6 +1465,7 @@ function toggleTheme(){ setTheme(document.documentElement.dataset.theme==='dark'
 function setTheme(t){
   document.documentElement.dataset.theme = t;
   localStorage.setItem('pf-theme', t);
+  applyAccent(themeAccent());
   document.getElementById('btn-dark').classList.toggle('active', t==='dark');
   document.getElementById('btn-light').classList.toggle('active', t==='light');
   window.parent.postMessage({type:'__edit_mode_set_keys', edits:{theme:t}}, '*');
@@ -1410,7 +1485,8 @@ function setAccent(el){
   document.querySelectorAll('.tw-swatch').forEach(s => s.classList.toggle('active', s===el));
   window.parent.postMessage({type:'__edit_mode_set_keys', edits:{accent:el.dataset.accent}}, '*');
 }
-applyAccent(TWEAK_DEFAULTS.accent);
+function themeAccent(){ return document.documentElement.dataset.theme==="light" ? "oklch(0.47 0.16 33)" : TWEAK_DEFAULTS.accent; }
+applyAccent(themeAccent());
 
 /* ── FONT SIZE ────────────────────────────────────────── */
 function setFontSize(v){
