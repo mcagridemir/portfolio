@@ -529,6 +529,8 @@ body::before{opacity:.05}
 
 .marquee-wrap{background:rgba(0,0,0,.08)}
 footer .art-credit{opacity:.7}
+.sec-map{border:0;max-height:none;overflow:visible}
+.map-mask{width:100%;aspect-ratio:4/3;background-color:var(--text);-webkit-mask:url(img/route-map.svg) center/contain no-repeat;mask:url(img/route-map.svg) center/contain no-repeat}
 .marquee-wrap{border-top:1px solid var(--border);background:transparent}
 .marquee-inner{animation-duration:60s}
 .m-item{font-family:var(--display);font-weight:300;font-size:clamp(30px,3.8vw,52px);letter-spacing:.02em;text-transform:none;padding:.5rem 2.4rem;color:var(--text);opacity:.4;border-right:0;line-height:1.1}
@@ -880,7 +882,7 @@ footer .art-credit{opacity:.7}
   <p class="sec-eyebrow" data-i18n="nav_experience">Experience</p>
   <h2 class="sec-title" data-i18n="title_experience">Work History</h2>
   <p class="sec-intro" data-i18n="exp_intro">6+ years across fintech, global retail, and energy tech — from İzmir to Istanbul, with teams spanning Europe, the UK, the Middle East, and the Balkans.</p>
-  </div><figure class="sec-plate"><img src="img/raven-audubon.jpg" alt="John James Audubon, Common Raven (1830)" width="1200" height="992" loading="lazy"></figure></div>
+  </div><figure class="sec-plate sec-map" role="img" aria-label="İzmir → İstanbul → Bochum"><div class="map-mask"></div></figure></div>
   <div class="stats-row">
     <div class="stat-cell"><div class="stat-cell-num">6+</div><div class="stat-cell-lbl" data-i18n="exp_stat_years">Years</div></div>
     <div class="stat-cell"><div class="stat-cell-num">3</div><div class="stat-cell-lbl" data-i18n="exp_stat_employers">Employers</div></div>
@@ -934,8 +936,10 @@ footer .art-credit{opacity:.7}
 <!-- ── EDUCATION ─────────────────────────────────────────── -->
 <section id="education" aria-label="Education and Credentials">
   <span class="sec-num">05</span>
+  <div class="sec-head"><div>
   <p class="sec-eyebrow" data-i18n="nav_education">Education &amp; Credentials</p>
   <h2 class="sec-title" data-i18n="title_education">Academic Background</h2>
+  </div><figure class="sec-plate"><img src="img/raven-audubon.jpg" alt="John James Audubon, Common Raven (1830)" width="1200" height="992" loading="lazy"></figure></div>
   <div class="kmk-box">
     <div class="kmk-icon">★</div>
     <div>
