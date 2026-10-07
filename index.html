@@ -172,7 +172,7 @@ section:not(.cob) .sec-title{color:var(--deep)}
 .hero-stats{display:flex;flex-wrap:wrap;gap:22px clamp(24px,4vw,48px);margin-top:2.5rem;padding-top:1.4rem;border-top:1px solid var(--rim)}
 .stat-num{font-family:var(--serif);font-weight:300;font-size:40px;line-height:1;color:var(--deep);margin-bottom:6px}
 .stat-label{font-family:var(--mono);font-size:10px;color:var(--mu);letter-spacing:.12em;text-transform:uppercase}
-.hero-art{margin:0;aspect-ratio:1/1.1;-webkit-mask-image:linear-gradient(90deg,transparent,#000 22%,#000 78%,transparent),linear-gradient(180deg,transparent,#000 18%,#000 82%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent,#000 22%,#000 78%,transparent),linear-gradient(180deg,transparent,#000 18%,#000 82%,transparent);mask-composite:intersect}
+.hero-art{margin:0;aspect-ratio:1/1.1;-webkit-mask-image:linear-gradient(90deg,transparent,#000 11%,#000 89%,transparent),linear-gradient(180deg,transparent,#000 9%,#000 91%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent,#000 11%,#000 89%,transparent),linear-gradient(180deg,transparent,#000 9%,#000 91%,transparent);mask-composite:intersect}
 .hero-art img{width:100%;height:100%;object-fit:cover;object-position:47% 40%;mix-blend-mode:multiply}
 
 /* MARQUEE — a porcelain ribbon between plates */
@@ -433,7 +433,7 @@ footer .frieze{margin:0;height:46px;border-bottom:0}
     <div class="avail-chip"><span class="avail-dot"></span><span data-i18n="available_pill">Available · Bochum</span></div>
     <p class="hero-tag" data-i18n="hero_tag">iOS Engineer → AI / ML · MSc @ RUB Bochum</p>
     <h1 class="hero-name">Muhammed<br>Çağrı <em>Demir</em></h1>
-    <p class="hero-desc" data-i18n="hero_desc">iOS engineer with 6+ years delivering banking and e-commerce apps for 250K+ users&nbsp;— now moving to Bochum for an M.Sc. in Applied Computer Science at Ruhr-Universität Bochum, on the way to becoming an AI / ML engineer. Energy prediction pipelines, medical imaging models, on-device inference.</p>
+    <p class="hero-desc" data-i18n="hero_desc">iOS engineer with 6+ years delivering banking and e-commerce apps for 250K+ users&nbsp;— now in Bochum for an M.Sc. in Applied Computer Science at Ruhr-Universität Bochum, on the way to becoming an AI / ML engineer. Energy prediction pipelines, medical imaging models, on-device inference.</p>
     <div class="hero-btns">
       <a href="#contact" class="btn btn-primary" data-i18n="btn_contact">Get in touch</a>
       <a href="#projects" class="btn" data-i18n="btn_viewwork">View work ↓</a>
@@ -496,9 +496,9 @@ footer .frieze{margin:0;height:46px;border-bottom:0}
       </div>
       <div class="now-row">
         <p class="now-label" data-i18n="now_label">Now</p>
-        <div class="now-item"><span class="now-dot"></span><span data-i18n="now_job">iOS Engineer @ OBSS &amp; BKT — Banking</span></div>
+        <div class="now-item"><span class="now-dot"></span><span data-i18n="now_job">M.Sc. Applied Computer Science @ RUB Bochum</span></div>
         <div class="now-item"><span class="now-dot"></span><span data-i18n="now_ml">Exploring deep learning &amp; Core ML</span></div>
-        <div class="now-item"><span class="now-dot"></span><span data-i18n="now_location">Moving to Bochum, Germany</span></div>
+        <div class="now-item"><span class="now-dot"></span><span data-i18n="now_location">Based in Bochum, Germany</span></div>
       </div>
     </div>
   </div>
@@ -997,7 +997,7 @@ footer .frieze{margin:0;height:46px;border-bottom:0}
   <h2 class="sec-title" data-i18n="title_contact">Get in Touch</h2>
   <div class="contact-grid">
     <div>
-      <p class="contact-intro" data-i18n="contact_desc">Whether you're a program coordinator, a potential collaborator, or an employer — I'd be glad to talk. Feel free to reach out anytime.</p>
+      <p class="contact-intro" data-i18n="contact_desc">Now based in Bochum, Germany for my Master's — open to Werkstudent roles, AI/ML opportunities, and collaborations. Whether you're a fellow student, a researcher, or an employer, I'd be glad to connect. Feel free to reach out anytime.</p>
       <div class="contact-links">
         <a href="mailto:cagriidemirr@gmail.com" class="contact-link">
           <span class="contact-link-type">Email</span>
@@ -1058,7 +1058,7 @@ const translations = {
   en: {
     nav_about:'About',nav_skills:'Skills',nav_projects:'Projects',nav_experience:'Experience',nav_education:'Education',nav_references:'References',nav_beyond:'Beyond',nav_contact:'Contact',
     hero_tag:'iOS Engineer → AI / ML · MSc @ RUB Bochum',
-    hero_desc:'iOS engineer with 6+ years delivering banking and e-commerce apps for 250K+ users — now moving to Bochum for an M.Sc. in Applied Computer Science at Ruhr-Universität Bochum, on the way to becoming an AI / ML engineer — energy prediction pipelines, medical imaging models, on-device inference.',
+    hero_desc:'iOS engineer with 6+ years delivering banking and e-commerce apps for 250K+ users — now in Bochum for an M.Sc. in Applied Computer Science at Ruhr-Universität Bochum, on the way to becoming an AI / ML engineer — energy prediction pipelines, medical imaging models, on-device inference.',
     available_pill:'Available · Bochum',
     title_about:'Who I am',title_skills:'Technical Expertise',title_projects:'Work & Projects',title_experience:'Work History',title_education:'Academic Background',title_references:'Recommendations',title_beyond:'Outside of Work',title_contact:"Get in Touch",
     about_p1:"Until July 2026 I was an iOS Engineer at OBSS & BKT — building the banking apps that hundreds of thousands of customers in Kosovo and Albania rely on every day. I am now in Bochum for my Master's in Applied Computer Science.",
@@ -1066,7 +1066,7 @@ const translations = {
     about_p3:'Alongside iOS, my work has naturally taken me toward machine learning. At <strong>carbon.ninja</strong> I built ETL pipelines and trained forecasting models. I\'ve explored deep learning — a pneumonia detection model using <strong>EfficientNet-B0 with Grad-CAM</strong> — and brought on-device inference into iOS via <strong>Core ML</strong>. Most recently I built <strong>Sana</strong> — an AI health & nutrition app (now on the App Store) that integrates the <strong>Claude API</strong> to bring large-language-model reasoning directly into a SwiftUI product.',
     about_p4:'My degree has been officially evaluated by the <strong>KMK Zentralstelle</strong> as equivalent to a German Bachelor\'s. I hold a <strong>telc Deutsch C1 Hochschule</strong> certificate (March 2026) and <strong>IELTS Academic 6.5</strong> (April 2026). In 2026 I was admitted to the <strong>M.Sc. in Applied Computer Science</strong> at <strong>Ruhr-Universität Bochum</strong>, where I\'ll focus on AI and machine learning.',
     pull_quote:'"Six years in, I care about code that ships, teams that communicate, and problems worth solving."',
-    now_label:'Now',now_job:'M.Sc. Applied Computer Science @ RUB Bochum',now_ml:'Exploring deep learning & Core ML',now_location:'Moving to Bochum, Germany',
+    now_label:'Now',now_job:'M.Sc. Applied Computer Science @ RUB Bochum',now_ml:'Exploring deep learning & Core ML',now_location:'Based in Bochum, Germany',
     btn_contact:'Get in touch',btn_viewwork:'View work ↓',btn_cv:'Download CV ↓',
     stat_years_exp:'Years experience',stat_users:'App users',stat_apps:'Apps shipped',stat_countries:'Countries',
     exp_stat_years:'Years',exp_stat_employers:'Employers',exp_stat_apps:'Apps Shipped',exp_stat_countries:'Countries',
@@ -1108,7 +1108,7 @@ const translations = {
     beyond_travel:"I've explored quite a bit: <strong>USA, UK, Scotland, Egypt, Germany, Albania, Belgium, Georgia, Czech Republic, France,</strong> and <strong>Netherlands</strong>. What draws me most are places with deep history — old quarters, archaeology, standing somewhere alive for centuries.",
     beyond_art:"Museums and galleries are one of my favourite ways to spend time in a new city. I'm especially drawn to <strong>colour and light</strong> — three works I keep returning to mentally, each encountered in a different country.",
     beyond_volunteer:"During university, I volunteered regularly at a local <strong>community kitchen</strong>, helping prepare and serve meals for people in need. Genuinely grounding — a reminder that meaningful work often has nothing to do with a screen.",
-    contact_desc:"Soon based in Bochum, Germany for my Master's — open to Werkstudent roles, AI/ML opportunities, and collaborations. Whether you're a fellow student, a researcher, or an employer, I'd be glad to connect. Feel free to reach out anytime.",
+    contact_desc:"Now based in Bochum, Germany for my Master's — open to Werkstudent roles, AI/ML opportunities, and collaborations. Whether you're a fellow student, a researcher, or an employer, I'd be glad to connect. Feel free to reach out anytime.",
     form_name:'Name',form_email:'Email',form_message:'Message',form_send:'Send message →',
     form_name_ph:'Your name',form_email_ph:'your@email.com',form_message_ph:"What's on your mind?",
     form_success:"Message sent — I'll be in touch soon.",
@@ -1117,7 +1117,7 @@ const translations = {
   de: {
     nav_about:'Über mich',nav_skills:'Kenntnisse',nav_projects:'Projekte',nav_experience:'Erfahrung',nav_education:'Ausbildung',nav_references:'Referenzen',nav_beyond:'Persönliches',nav_contact:'Kontakt',
     hero_tag:'iOS-Engineer → KI / ML · M.Sc. @ RUB Bochum',
-    hero_desc:'iOS-Engineer mit 6+ Jahren Erfahrung in Banking- und E-Commerce-Apps für 250K+ Nutzer — jetzt auf dem Weg nach Bochum für den M.Sc. Angewandte Informatik an der Ruhr-Universität Bochum, mit dem Ziel, KI/ML-Engineer zu werden. Energievorhersage-Pipelines, medizinische Bildgebung, On-Device-Inferenz.',
+    hero_desc:'iOS-Engineer mit 6+ Jahren Erfahrung in Banking- und E-Commerce-Apps für 250K+ Nutzer — jetzt in Bochum für den M.Sc. Angewandte Informatik an der Ruhr-Universität Bochum, mit dem Ziel, KI/ML-Engineer zu werden. Energievorhersage-Pipelines, medizinische Bildgebung, On-Device-Inferenz.',
     available_pill:'Verfügbar · Bochum',
     title_about:'Über mich',title_skills:'Technische Kenntnisse',title_projects:'Arbeiten & Projekte',title_experience:'Berufserfahrung',title_education:'Akademischer Hintergrund',title_references:'Empfehlungen',title_beyond:'Außerhalb der Arbeit',title_contact:'Kontakt aufnehmen',
     about_p1:"Bis Juli 2026 war ich iOS-Engineer bei OBSS & BKT — ich entwickelte die Banking-Apps, auf die hunderttausende Kunden in Kosovo und Albanien täglich angewiesen sind. Jetzt bin ich für meinen Master in Angewandter Informatik in Bochum.",
@@ -1125,7 +1125,7 @@ const translations = {
     about_p3:'Neben iOS hat mich meine Arbeit natürlich in Richtung Machine Learning und Daten geführt. Bei <strong>carbon.ninja</strong> habe ich automatisierte ETL-Pipelines aufgebaut und Vorhersagemodelle trainiert. Ich habe Deep Learning erkundet — ein Pneumonie-Erkennungsmodell mit <strong>EfficientNet-B0 und Grad-CAM</strong> — und On-Device-Inferenz in iOS via <strong>Core ML</strong> integriert. Zuletzt habe ich <strong>Sana</strong> entwickelt — eine KI-App für Gesundheit und Ernährung (jetzt im App Store), die die <strong>Claude API</strong> integriert und die Leistung großer Sprachmodelle direkt in ein SwiftUI-Produkt bringt.',
     about_p4:'Mein türkisches Abschlusszeugnis wurde von der <strong>KMK Zentralstelle</strong> als äquivalent zu einem deutschen Bachelorabschluss anerkannt. Ich besitze das <strong>telc Deutsch C1 Hochschule</strong>-Zertifikat (März 2026) sowie <strong>IELTS Academic 6.5</strong> (April 2026). 2026 wurde ich für den <strong>M.Sc. Angewandte Informatik</strong> an der <strong>Ruhr-Universität Bochum</strong> zugelassen, wo ich mich auf KI und maschinelles Lernen konzentrieren werde.',
     pull_quote:'"Nach sechs Jahren kümmere ich mich um Code, der läuft, Teams die kommunizieren, und Probleme, die es wert sind gelöst zu werden."',
-    now_label:'Aktuell',now_job:'M.Sc. Angewandte Informatik @ RUB Bochum',now_ml:'Deep Learning & Core ML erkunden',now_location:'Umzug nach Bochum, Deutschland',
+    now_label:'Aktuell',now_job:'M.Sc. Angewandte Informatik @ RUB Bochum',now_ml:'Deep Learning & Core ML erkunden',now_location:'In Bochum, Deutschland',
     btn_contact:'Kontakt aufnehmen',btn_viewwork:'Projekte ansehen ↓',btn_cv:'Lebenslauf herunterladen ↓',
     stat_years_exp:'Jahre Erfahrung',stat_users:'App-Nutzer',stat_apps:'Apps veröffentlicht',stat_countries:'Länder',
     exp_stat_years:'Jahre',exp_stat_employers:'Arbeitgeber',exp_stat_apps:'Apps',exp_stat_countries:'Länder',
@@ -1167,7 +1167,7 @@ const translations = {
     beyond_travel:"Ich hatte das Glück, einiges zu erkunden: <strong>USA, Großbritannien, Schottland, Ägypten, Deutschland, Albanien, Belgien, Georgien, Tschechien, Frankreich</strong> und die <strong>Niederlande</strong>.",
     beyond_art:"Museen und Galerien sind eine meiner liebsten Arten, Zeit in einer neuen Stadt zu verbringen. Drei Werke, zu denen ich immer wieder zurückkehre:",
     beyond_volunteer:'Während meines Studiums habe ich regelmäßig in einer gemeinnützigen Gemeinschaftsküche mitgeholfen — beim Zubereiten und Ausgeben von Mahlzeiten für Menschen in Not.',
-    contact_desc:'Bald in Bochum, Deutschland für meinen Master — offen für Werkstudentenstellen, KI/ML-Chancen und Kooperationen. Ob Kommilitone, Forscher oder Arbeitgeber — ich freue mich über eine Nachricht. Melden Sie sich gern jederzeit.',
+    contact_desc:'Jetzt in Bochum, Deutschland für meinen Master — offen für Werkstudentenstellen, KI/ML-Chancen und Kooperationen. Ob Kommilitone, Forscher oder Arbeitgeber — ich freue mich über eine Nachricht. Melden Sie sich gern jederzeit.',
     form_name:'Name',form_email:'E-Mail',form_message:'Nachricht',form_send:'Nachricht senden →',
     form_name_ph:'Ihr Name',form_email_ph:'ihre@email.de',form_message_ph:'Ich würde gerne über... sprechen.',
     form_success:'Nachricht gesendet — ich melde mich bald.',
@@ -1176,7 +1176,7 @@ const translations = {
   tr: {
     nav_about:'Hakkımda',nav_skills:'Beceriler',nav_projects:'Projeler',nav_experience:'Deneyim',nav_education:'Eğitim',nav_references:'Referanslar',nav_beyond:'Kişisel',nav_contact:'İletişim',
     hero_tag:'iOS Mühendisi → YZ / ML · RUB Bochum Y.Lisans',
-    hero_desc:"6+ yıl boyunca 250K+ kullanıcı için bankacılık ve e-ticaret uygulamaları geliştirmiş bir iOS mühendisi — şimdi Ruhr-Universität Bochum'da Uygulamalı Bilgisayar Bilimleri yüksek lisansı için Bochum'a taşınıyorum; hedefim YZ/ML mühendisi olmak. Enerji tahmin pipeline'ları, tıbbi görüntüleme modelleri ve cihaz üstü çıkarım.",
+    hero_desc:"6+ yıl boyunca 250K+ kullanıcı için bankacılık ve e-ticaret uygulamaları geliştirmiş bir iOS mühendisi — şimdi Bochum'dayım ve Ruhr-Universität Bochum'da Uygulamalı Bilgisayar Bilimleri yüksek lisansı yapıyorum; hedefim YZ/ML mühendisi olmak. Enerji tahmin pipeline'ları, tıbbi görüntüleme modelleri ve cihaz üstü çıkarım.",
     available_pill:'Müsait · Bochum',
     title_about:'Hakkımda',title_skills:'Teknik Yetkinlikler',title_projects:'İşler & Projeler',title_experience:'İş Geçmişi',title_education:'Akademik Geçmiş',title_references:'Tavsiye Mektupları',title_beyond:'İş Dışında',title_contact:'İletişime Geçin',
     about_p1:"Temmuz 2026'ya kadar OBSS & BKT'de iOS mühendisi olarak Kosova ve Arnavutluk'taki yüz binlerce müşterinin her gün kullandığı bankacılık uygulamalarını geliştirdim. Şimdi Uygulamalı Bilgisayar Bilimleri yüksek lisansım için Bochum'dayım.",
@@ -1184,7 +1184,7 @@ const translations = {
     about_p3:"iOS'un yanı sıra çalışmalarım makine öğrenmesine yöneldi. <strong>carbon.ninja</strong>'da ETL pipeline'ları kurdum ve elektrik tüketimi tahmin modelleri eğittim. <strong>EfficientNet-B0 ve Grad-CAM</strong> ile pnömoni tespiti yaptım, <strong>Core ML</strong> ile iOS'a on-device çıkarım entegre ettim. En son, büyük dil modellerini doğrudan bir SwiftUI ürününe taşıyan, <strong>Claude API</strong> entegrasyonlu yapay zeka destekli sağlık ve beslenme uygulaması <strong>Sana</strong>'yı geliştirdim (artık App Store'da).",
     about_p4:"Yazılım Mühendisliği diplomam <strong>KMK</strong> tarafından Almanya lisans derecesiyle eşdeğer olarak tanındı. <strong>telc Deutsch C1 Hochschule</strong> (Mart 2026) ve <strong>IELTS Academic 6.5</strong> (Nisan 2026) sertifikalarına sahibim. 2026'da <strong>Ruhr-Universität Bochum</strong>'da <strong>Uygulamalı Bilgisayar Bilimleri yüksek lisansına</strong> kabul edildim; burada yapay zeka ve makine öğrenmesine odaklanacağım.",
     pull_quote:'"Altı yılın sonunda önem verdiğim şeyler: işe yarayan kod, iyi iletişim kuran ekipler ve çözmeye değer problemler."',
-    now_label:'Şu An',now_job:'RUB Bochum — M.Sc. Uygulamalı Bilgisayar Bilimleri',now_ml:'Derin öğrenme & Core ML araştırıyorum',now_location:"Bochum, Almanya'ya taşınıyorum",
+    now_label:'Şu An',now_job:'RUB Bochum — M.Sc. Uygulamalı Bilgisayar Bilimleri',now_ml:'Derin öğrenme & Core ML araştırıyorum',now_location:"Bochum, Almanya'da yaşıyorum",
     btn_contact:'İletişime Geç',btn_viewwork:'Çalışmalarımı Gör ↓',btn_cv:'CV İndir ↓',
     stat_years_exp:'Yıl Deneyim',stat_users:'Uygulama Kullanıcısı',stat_apps:'Uygulama',stat_countries:'Ülke',
     exp_stat_years:'Yıl',exp_stat_employers:'İşveren',exp_stat_apps:'Uygulama',exp_stat_countries:'Ülke',
@@ -1226,7 +1226,7 @@ const translations = {
     beyond_travel:"<strong>ABD, İngiltere, İskoçya, Mısır, Almanya, Arnavutluk, Belçika, Gürcistan, Çekya, Fransa</strong> ve <strong>Hollanda</strong>'yı gezdim.",
     beyond_art:"Müzeler ve sanat galerileri yeni bir şehirde en sevdiğim aktiviteler arasında. Sürekli aklıma gelen üç eser:",
     beyond_volunteer:"Üniversite yıllarımda yerel bir toplum mutfağında düzenli olarak gönüllü çalıştım.",
-    contact_desc:"Yüksek lisansım için yakında Almanya, Bochum'dayım — Werkstudent (yarı zamanlı öğrenci) pozisyonlarına, YZ/ML fırsatlarına ve iş birliklerine açığım. İster öğrenci, ister araştırmacı, ister işveren olun — iletişime geçmekten memnuniyet duyarım.",
+    contact_desc:"Yüksek lisansım için artık Almanya, Bochum'dayım — Werkstudent (yarı zamanlı öğrenci) pozisyonlarına, YZ/ML fırsatlarına ve iş birliklerine açığım. İster öğrenci, ister araştırmacı, ister işveren olun — iletişime geçmekten memnuniyet duyarım.",
     form_name:'İsim',form_email:'E-posta',form_message:'Mesaj',form_send:'Mesaj Gönder →',
     form_name_ph:'Adınız',form_email_ph:'siz@ornek.com',form_message_ph:'Şunları konuşmak istiyorum...',
     form_success:'Mesajınız gönderildi — yakında yazarım.',
