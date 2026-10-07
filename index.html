@@ -166,14 +166,14 @@ section:not(.cob) .sec-title{color:var(--deep)}
 @keyframes ping{0%{box-shadow:0 0 0 0 rgba(47,168,102,.5)}70%{box-shadow:0 0 0 7px rgba(47,168,102,0)}100%{box-shadow:0 0 0 0 rgba(47,168,102,0)}}
 .hero-tag{font-family:var(--mono);font-size:11px;color:var(--cobalt);letter-spacing:.2em;text-transform:uppercase;margin-bottom:1rem}
 .hero-name{font-family:var(--serif);font-weight:300;font-size:clamp(52px,6.6vw,100px);line-height:.94;letter-spacing:-.015em;color:var(--deep);margin-bottom:1.5rem;overflow-wrap:break-word}
-.hero-name em{font-style:italic;color:var(--cobalt)}
+.hero-name em{font-style:italic}
 .hero-desc{font-size:16.5px;color:var(--mu);max-width:560px;line-height:1.8;margin-bottom:2rem}
 .hero-btns{display:flex;gap:10px;flex-wrap:wrap}
 .hero-stats{display:flex;flex-wrap:wrap;gap:22px clamp(24px,4vw,48px);margin-top:2.5rem;padding-top:1.4rem;border-top:1px solid var(--rim)}
 .stat-num{font-family:var(--serif);font-weight:300;font-size:40px;line-height:1;color:var(--deep);margin-bottom:6px}
 .stat-label{font-family:var(--mono);font-size:10px;color:var(--mu);letter-spacing:.12em;text-transform:uppercase}
-.hero .frame{aspect-ratio:1/1.08;display:flex;flex-direction:column}
-.hero .frame img{flex:1;min-height:0;height:100%;object-position:47% 40%}
+.hero-art{margin:0;aspect-ratio:1/1.1;-webkit-mask-image:linear-gradient(90deg,transparent,#000 22%,#000 78%,transparent),linear-gradient(180deg,transparent,#000 18%,#000 82%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent,#000 22%,#000 78%,transparent),linear-gradient(180deg,transparent,#000 18%,#000 82%,transparent);mask-composite:intersect}
+.hero-art img{width:100%;height:100%;object-fit:cover;object-position:47% 40%;mix-blend-mode:multiply}
 
 /* MARQUEE — a porcelain ribbon between plates */
 .marquee-wrap{max-width:1180px;margin:-16px auto 64px;overflow:hidden;background:var(--glaze);border:1px solid var(--rim);box-shadow:0 0 0 5px var(--glaze),0 0 0 6px var(--rim),0 20px 40px -24px rgba(4,14,50,.5)}
@@ -264,8 +264,6 @@ section:not(.cob) .sec-title{color:var(--deep)}
 .lang-name{font-family:var(--serif);font-size:24px;font-weight:400;color:var(--deep);margin-bottom:2px}
 .lang-level{font-family:var(--mono);font-size:11px;color:var(--cobalt);letter-spacing:.1em;text-transform:uppercase}
 .lang-note{font-size:12px;color:var(--mu);margin-top:4px;line-height:1.5}
-.lang-bar-wrap{margin-top:.9rem;height:3px;background:var(--wash);overflow:hidden}
-.lang-bar{height:100%;background:var(--cobalt);width:0;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
 .cert-list{display:flex;flex-direction:column;border-top:1px solid var(--rim);counter-reset:cert}
 .cert-item{padding:1rem 0;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.35rem 1rem;border-bottom:1px solid var(--ln);counter-increment:cert}
 .cert-item::before{content:counter(cert,decimal-leading-zero);font-family:var(--serif);font-style:italic;font-size:14px;color:var(--rim);flex-shrink:0;width:28px}
@@ -341,7 +339,7 @@ footer .frieze{margin:0;height:46px;border-bottom:0}
 @media(max-width:960px){
   .nav-links{display:none}.nav-hamburger{display:flex}
   .hero,.about-grid{grid-template-columns:minmax(0,1fr)}
-  .hero .frame{max-width:520px;width:100%;justify-self:center}
+  .hero-art{max-width:520px;width:100%;justify-self:center}
   .about-prints{justify-content:center;margin-bottom:2rem}
   .edu-top{grid-template-columns:1fr}.edu-top .frame{max-width:520px}
   .skills-grid,.lang-grid,.ref-grid,.contact-grid{grid-template-columns:1fr}
@@ -460,7 +458,7 @@ footer .frieze{margin:0;height:46px;border-bottom:0}
       </div>
     </div>
   </div>
-  <figure class="frame"><img src="img/athena.jpg" alt="Athena, relief from the Pergamon Altar (plaster cast)" width="1500" height="867"><figcaption>Athena · Pergamon Altar</figcaption></figure>
+  <figure class="hero-art"><img src="img/athena.jpg" alt="Athena, relief from the Pergamon Altar (plaster cast)" width="1500" height="867"></figure>
 </section>
 
 <!-- ── MARQUEE ───────────────────────────────────────────── -->
@@ -842,19 +840,16 @@ footer .frieze{margin:0;height:46px;border-bottom:0}
     <div class="lang-item fade-up">
       <div class="lang-name">Turkish</div>
       <div class="lang-level" data-i18n="lang_native">Native</div>
-      <div class="lang-bar-wrap"><div class="lang-bar" data-width="100"></div></div>
     </div>
     <div class="lang-item fade-up">
       <div class="lang-name">English</div>
       <div class="lang-level">C1 — IELTS 6.5</div>
       <div class="lang-note">L:7.5 R:6.5 W:6.0 S:6.5 · 04/2026</div>
-      <div class="lang-bar-wrap"><div class="lang-bar" data-width="88"></div></div>
     </div>
     <div class="lang-item fade-up">
       <div class="lang-name">Deutsch</div>
       <div class="lang-level">telc C1 Hochschule</div>
       <div class="lang-note">Befriedigend · 154/214 Pkt. · 23.03.2026</div>
-      <div class="lang-bar-wrap"><div class="lang-bar" data-width="82"></div></div>
     </div>
   </div>
 
@@ -1271,7 +1266,6 @@ function onScroll(){
   $progress.style.width = pct + '%';
   $backTop.classList.toggle('visible', window.scrollY > 400);
   updateNav();
-  tryBars();
 }
 
 /* ── ACTIVE NAV ───────────────────────────────────────── */
@@ -1312,20 +1306,6 @@ function runCounters(){
 }
 setTimeout(runCounters, 400);
 window.addEventListener('load', () => setTimeout(runCounters, 200));
-
-/* ── LANGUAGE BARS ────────────────────────────────────── */
-let barsRan = false;
-function tryBars(){
-  if(barsRan) return;
-  const edu = document.getElementById('education');
-  if(!edu) return;
-  if(edu.getBoundingClientRect().top < window.innerHeight * .85){
-    barsRan = true;
-    document.querySelectorAll('.lang-bar').forEach(b => {
-      setTimeout(() => b.style.width = b.dataset.width + '%', 200);
-    });
-  }
-}
 
 /* ── SCROLL REVEAL ────────────────────────────────────── */
 const revealObs = new IntersectionObserver(entries => {
