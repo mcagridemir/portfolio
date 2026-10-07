@@ -529,6 +529,13 @@ body::before{opacity:.05}
 
 .marquee-wrap{background:rgba(0,0,0,.08)}
 footer .art-credit{opacity:.7}
+footer{position:relative;border-top:1px solid var(--border-hi)}
+.footer-cat{position:absolute;right:var(--pad);bottom:calc(100% - 14px);width:clamp(140px,16vw,220px);height:auto;pointer-events:none}
+.sec-print{background:#f6e6c8;padding:14px 14px 0;display:flex;justify-content:center;max-height:420px}
+.sec-print img{width:auto;max-width:100%;max-height:406px;object-fit:contain}
+.sec-cat{margin:0;justify-self:end;align-self:end;margin-bottom:-2.5rem}
+.sec-cat img{display:block;height:clamp(200px,24vw,320px);width:auto}
+@media(max-width:860px){.sec-cat{justify-self:start;margin-bottom:0}.sec-cat img{height:200px}}
 .sec-map{border:0;max-height:none;overflow:visible}
 .map-mask{width:100%;aspect-ratio:4/3;background-color:var(--text);-webkit-mask:url(img/route-map.svg) center/contain no-repeat;mask:url(img/route-map.svg) center/contain no-repeat}
 .marquee-wrap{border-top:1px solid var(--border);background:transparent}
@@ -1091,8 +1098,10 @@ footer .art-credit{opacity:.7}
 <!-- ── BEYOND ─────────────────────────────────────────────── -->
 <section id="beyond" aria-label="Beyond Code">
   <span class="sec-num">07</span>
+  <div class="sec-head"><div>
   <p class="sec-eyebrow" data-i18n="nav_beyond">Beyond Code</p>
   <h2 class="sec-title" data-i18n="title_beyond">Outside of Work</h2>
+  </div><figure class="sec-plate sec-print"><img src="img/cagri-karamel.png" alt="Muhammed Çağrı Demir with his cat Karamel" width="507" height="900" loading="lazy"></figure></div>
   <div class="beyond-grid">
     <div class="beyond-card fade-up">
       <span class="beyond-icon">🎵</span>
@@ -1148,8 +1157,10 @@ footer .art-credit{opacity:.7}
 <!-- ── CONTACT ────────────────────────────────────────────── -->
 <section id="contact" aria-label="Contact">
   <span class="sec-num">08</span>
+  <div class="sec-head"><div>
   <p class="sec-eyebrow" data-i18n="nav_contact">Contact</p>
   <h2 class="sec-title" data-i18n="title_contact">Get in Touch</h2>
+  </div><figure class="sec-cat"><img src="img/karamel-sit.png" alt="Karamel, a calico cat, sitting" width="440" height="900" loading="lazy"></figure></div>
   <div class="contact-grid">
     <div>
       <p class="contact-intro" data-i18n="contact_desc">Whether you're a program coordinator, a potential collaborator, or an employer — I'd be glad to talk. Feel free to reach out anytime.</p>
@@ -1195,6 +1206,7 @@ footer .art-credit{opacity:.7}
 </section>
 
 <footer>
+  <img class="footer-cat" src="img/karamel-sleep.png" alt="Karamel sleeping" width="900" height="658" loading="lazy">
   <p>© 2026 Muhammed Çağrı Demir · iOS & AI/ML Engineer · Bochum</p>
   <p class="art-credit">Art: H. F. Füger (1817), É. Manet (1875), J. J. Audubon (1830) — public domain</p>
   <p>Built with precision · <a href="#hero">Back to top ↑</a></p>
