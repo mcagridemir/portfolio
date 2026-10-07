@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- Source for og-image.png (1200×630). Render with:
+     "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --hide-scrollbars --window-size=1200,800 --virtual-time-budget=5000 --screenshot=og-raw.png http://localhost:3002/og-image.html
+     then crop og-raw.png to the top 1200×630 (headless Chrome eats ~85px of window height) -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex">
+<title>og-image</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{background:#f8f6f0}
+body{position:relative;width:1200px;height:630px;overflow:hidden;background:#f8f6f0 url(img/wall-iznik.jpg) 0 0/300px 300px}
+.plate{position:absolute;inset:44px 56px;background:#f8f6f0;border:1px solid rgba(11,42,120,.38);box-shadow:0 0 0 9px #f8f6f0,0 0 0 10px rgba(11,42,120,.38),0 40px 70px -30px rgba(4,14,50,.6);display:grid;grid-template-columns:1fr 420px;overflow:hidden}
+.frieze{position:absolute;left:0;right:0;top:0;height:44px;background:url(img/strip.jpg) left center/auto 100% repeat-x;border-bottom:1px solid rgba(11,42,120,.38)}
+.txt{padding:96px 0 0 56px}
+.tag{font:500 13px 'JetBrains Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:#1f4fbf;margin-bottom:22px}
+h1{font:300 92px/.95 Fraunces,Georgia,serif;letter-spacing:-.015em;color:#0b2a78}
+h1 em{font-style:italic}
+.sub{font:500 13px 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#4a5a86;margin-top:34px;padding-top:20px;border-top:1px solid rgba(11,42,120,.25);width:560px}
+.art{margin-top:44px;background:url(img/athena.jpg) 47% 40%/cover;mix-blend-mode:multiply;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 14%,#000 92%,transparent),linear-gradient(180deg,transparent,#000 10%,#000 90%,transparent);-webkit-mask-composite:source-in}
+</style>
+</head>
+<body>
+<div class="plate">
+  <div class="frieze"></div>
+  <div class="txt">
+    <p class="tag">iOS Engineer → AI / ML · M.Sc. @ RUB Bochum</p>
+    <h1>Muhammed<br>Çağrı <em>Demir</em></h1>
+    <p class="sub">6+ years · 250K+ users · 9 apps shipped</p>
+  </div>
+  <div class="art"></div>
+</div>
+</body>
+</html>
