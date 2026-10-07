@@ -172,8 +172,9 @@ section:not(.cob) .sec-title{color:var(--deep)}
 .hero-stats{display:flex;flex-wrap:wrap;gap:22px clamp(24px,4vw,48px);margin-top:2.5rem;padding-top:1.4rem;border-top:1px solid var(--rim)}
 .stat-num{font-family:var(--serif);font-weight:300;font-size:40px;line-height:1;color:var(--deep);margin-bottom:6px}
 .stat-label{font-family:var(--mono);font-size:10px;color:var(--mu);letter-spacing:.12em;text-transform:uppercase}
-.hero-art{margin:0;aspect-ratio:1/1.1;-webkit-mask-image:linear-gradient(90deg,transparent,#000 11%,#000 89%,transparent),linear-gradient(180deg,transparent,#000 9%,#000 91%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent,#000 11%,#000 89%,transparent),linear-gradient(180deg,transparent,#000 9%,#000 91%,transparent);mask-composite:intersect}
-.hero-art img{width:100%;height:100%;object-fit:cover;object-position:47% 40%;mix-blend-mode:multiply}
+.hero-art{margin:0}
+.hero-art img{width:100%;height:auto;aspect-ratio:1/1.05;object-fit:cover;object-position:47% 40%;mix-blend-mode:multiply;-webkit-mask-image:linear-gradient(90deg,transparent,#000 11%,#000 89%,transparent),linear-gradient(180deg,transparent,#000 9%,#000 91%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent,#000 11%,#000 89%,transparent),linear-gradient(180deg,transparent,#000 9%,#000 91%,transparent);mask-composite:intersect}
+.hero-art figcaption{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mu);text-align:center;margin-top:6px}
 
 /* MARQUEE — a porcelain ribbon between plates */
 .marquee-wrap{max-width:1180px;margin:-16px auto 64px;overflow:hidden;background:var(--glaze);border:1px solid var(--rim);box-shadow:0 0 0 5px var(--glaze),0 0 0 6px var(--rim),0 20px 40px -24px rgba(4,14,50,.5)}
@@ -458,7 +459,7 @@ footer .frieze{margin:0;height:46px;border-bottom:0}
       </div>
     </div>
   </div>
-  <figure class="hero-art"><img src="img/athena.jpg" alt="Athena, relief from the Pergamon Altar (plaster cast)" width="1500" height="867"></figure>
+  <figure class="hero-art"><img src="img/athena.jpg" alt="Athena, relief from the Pergamon Altar (plaster cast)" width="1500" height="867"><figcaption>Athena · Pergamon Altar</figcaption></figure>
 </section>
 
 <!-- ── MARQUEE ───────────────────────────────────────────── -->
